@@ -4,12 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta property="qc:admins" content="465267610762567726375">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>C# 教程 | 菜鸟教程</title>
+	<title>C# 接口（Interface） | 菜鸟教程</title>
 
   
-<link rel="canonical" href="http://www.runoob.com/csharp/csharp-tutorial.html">
-<meta name="keywords" content="C# 教程,C#">
-<meta name="description" content="C# 教程   C# 是一个简单的、现代的、通用的、面向对象的编程语言，它是由微软（Microsoft）开发的。 本教程将告诉您基础的 C# 编程，同时将向您讲解 C# 编程语言相关的各种先进理念。 现在开始学习 C#！ C# 在线工具   谁适合阅读本教程？ 本教程有助于初学者理解基础的 C# 编程。在学习完本教程后，您将到达一个中级的 C# 编程水平。  阅读本教程前，您需要了解的知识： C# 编程是基于 C 和 C++ 编程语言的..">
+<link rel="canonical" href="http://www.runoob.com/csharp/csharp-interface.html">
+<meta name="keywords" content="C# 接口（Interface）">
+<meta name="description" content="C# 接口（Interface）   接口定义了所有类继承接口时应遵循的语法合同。接口定义了语法合同 “是什么” 部分，派生类定义了语法合同 “怎么做” 部分。  接口定义了属性、方法和事件，这些都是接口的成员。接口只包含了成员的声明。成员的定义是派生类的责任。接口提供了派生类应遵循的标准结构。 接口使得实现接口的类或结构在形式上保持一致。 抽象类在某种程度上与接口类似，但是，它们大多只是用在当只有少数方法由基类声明由派生类实现时。  ..">
 		
 	
 	<link rel="stylesheet" href="static/css/style-1.154.css" type="text/css" media="all">	
@@ -68,7 +68,7 @@
 				<li><a href="java-tutorial.html">Java</a></li>
 				<li><a href="c-tutorial.html">C</a></li>
 				<li><a href="cpp-tutorial.html">C++</a></li>
-				<li><a href="">C#</a></li>
+				<li><a href="csharp-tutorial.html">C#</a></li>
 				<li><a href="sql-tutorial.html">SQL</a></li>
 				<li><a href="mysql-tutorial.html">MySQL</a></li>
 				<li><a href="php-tutorial.html">PHP</a></li>
@@ -103,7 +103,7 @@
 	</div>
 	<div class="sidebar-box gallery-list">
 		<div class="design" id="leftcolumn">
-						<a target="_top" title="C# 教程" href="">
+						<a target="_top" title="C# 教程" href="csharp-tutorial.html">
 			C# 教程			</a>
 						<a target="_top" title="C# 简介" href="csharp-intro.html">
 			C# 简介			</a>
@@ -149,7 +149,7 @@
 			C# 多态性			</a>
 						<a target="_top" title="C# 运算符重载" href="csharp-operator-overloading.html">
 			C# 运算符重载			</a>
-						<a target="_top" title="C# 接口（Interface）" href="csharp-interface.html">
+						<a target="_top" title="C# 接口（Interface）" href="">
 			C# 接口（Interface）			</a>
 						<a target="_top" title="C# 命名空间（Namespace）" href="csharp-namespace.html">
 			C# 命名空间（Namespace）			</a>
@@ -194,62 +194,121 @@
 		
 		</div>
 		<div class="previous-next-links">
-			<div class="previous-design-link"> </div>
-			<div class="next-design-link"><a href="csharp-intro.html" rel="next"> C# 简介</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-operator-overloading.html');" rel="prev"> C# 运算符重载</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-namespace.html');" rel="next"> C# 命名空间（Namespace）</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
 		<div class="article-body">
 		
 			<div class="article-intro" id="content">
 			
-			<h1>C# <span class="color_h1">教程</span></h1>
+			<h1>C# <span class="color_h1">接口（Interface）</span></h1>
 
 <div class="tutintro">
-<p>C# 是一个简单的、现代的、通用的、面向对象的编程语言，它是由微软（Microsoft）开发的。</p>
-<p>本教程将告诉您基础的 C# 编程，同时将向您讲解 C# 编程语言相关的各种先进理念。</p>
-<p><b><a href="csharp-intro.html">现在开始学习 C#！</a></b></p>
-<p><a href="showcs-helloworld.html" target="_blank">C# 在线工具</a></p>
+<p>接口定义了所有类继承接口时应遵循的语法合同。接口定义了语法合同 <b>"是什么"</b> 部分，派生类定义了语法合同 <b>"怎么做"</b> 部分。</p>
+
+<p>接口定义了属性、方法和事件，这些都是接口的成员。接口只包含了成员的声明。成员的定义是派生类的责任。接口提供了派生类应遵循的标准结构。</p>
+<p>接口使得实现接口的类或结构在形式上保持一致。</p>
+<p>抽象类在某种程度上与接口类似，但是，它们大多只是用在当只有少数方法由基类声明由派生类实现时。</p>
 </div>
 
-<h2 class="tutheader">谁适合阅读本教程？</h2>
-<p>本教程有助于初学者理解基础的 C# 编程。在学习完本教程后，您将到达一个中级的 C# 编程水平。</p>
+<hr>
+<h2>定义接口: MyInterface.cs</h2>
+<p>接口使用 <b>interface</b> 关键字声明，它与类的声明类似。接口声明默认是 public 的。下面是一个接口声明的实例：</p>
+<div class="example"> 
+<div class="example_code">
 
-<h2 class="tutheader">阅读本教程前，您需要了解的知识：</h2>
-<p>C# 编程是基于 C 和 C++ 编程语言的，因此如果您对 C 和 C++ 编程有基本的了解，将有助于您学习 C# 编程语言。</p>
+<span style="color: #6666cc; font-weight: bold;">interface</span> IMyInterface<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">void</span> MethodToImplement<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+<span style="color: #008000;">&#125;</span><br>
 
-<h2 class="tutheader">编译/执行 C# 程序</h2>
-<p>菜鸟教程提供了在线的 C# 在线编译环境，您只需进行简单的点击动作，即可在高端的服务器上体验真实的编程经验。这是完全免费的在线工具。</p>
+</div>
+</div>
+<p>以上代码定义了接口 IMyInterface。通常接口命令以 <span class="marked">I</span> 字母开头，这个接口只有一个方法 MethodToImplement()，没有参数和返回值，当然我们可以按照需求设置参数和返回值。</p>
+<p>值得注意的是，该方法并没有具体的实现。</p>
+<h3>接下来我们来实现以上接口：InterfaceImplementer.cs</h3>
 <div class="example"> 
 <h2 class="example">实例</h2> 
 <div class="example_code">
 
 <span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
-<span style="color: #05a; font-weight: bold;">namespace</span> HelloWorldApplication<br>
+<br>
+<span style="color: #6666cc; font-weight: bold;">interface</span> IMyInterface<br>
 <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 类名为 HelloWorld */</span><br>
-&nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">class</span> HelloWorld<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">// 接口成员</span><br>
+&nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">void</span> MethodToImplement<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+<span style="color: #008000;">&#125;</span><br>
+<br>
+<span style="color: #6666cc; font-weight: bold;">class</span> InterfaceImplementer <span style="color: #008000;">:</span> IMyInterface<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
 &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* main函数 */</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 我的第一个 C# 程序 */</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Hello World!&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; InterfaceImplementer iImp <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> InterfaceImplementer<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; iImp<span style="color: #008000;">.</span><span style="color: #05a;">MethodToImplement</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+<br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">void</span> MethodToImplement<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;MethodToImplement() called.&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
 &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
 <span style="color: #008000;">&#125;</span><br>
 
-</div><br>
-<a target="_blank" href="showcs-helloworld.html" class="showbtn">运行实例 »</a>
 </div>
-<h2 class="tutheader">C# 有用的资源</h2>
-<p>本教程列出了 C# 网站、书籍和文章。</p>
-<h3>C# 有用的网站</h3>
-<ul class="list">
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://msdn.microsoft.com/en-us/library/67ef8sbd.aspx');">C# Programming Guide</a> - 介绍了有关关键的 C# 语言特征以及如何通过 .NET 框架访问 C# 的详细信息。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('https://visualstudio.microsoft.com/zh-hans/downloads/');">Visual Studio</a> - 下载作为 C# 集成开发环境的 Visual Studio 的最新版本。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://www.mono-project.com/Main_Page');">Go Mono</a> - Mono 是一个允许开发人员简单地创建跨平台应用程序的软件平台。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://en.wikipedia.org/wiki/C_Sharp_(programming_language)');">C Sharp (programming language) </a> - 维基百科解释 C#（编程语言）。</li>
-</ul>
+</div>
+<p>
+InterfaceImplementer 类实现了 IMyInterface 接口，接口的实现与类的继承语法格式类似：</p>
+<pre>class InterfaceImplementer : IMyInterface</pre>
+<p>继承接口后，我们需要实现接口的方法 MethodToImplement() , 方法名必须与接口定义的方法名一致。</p>
+
+<hr>
+<h2>接口继承: InterfaceInheritance.cs</h2>
+<p>以下实例定义了两个接口 IMyInterface 和 IParentInterface。</p>
+<p>如果一个接口继承其他接口，那么实现类或结构就需要实现所有接口的成员。</p>
+<p>以下实例 IMyInterface 继承了 IParentInterface 接口，因此接口实现类必须实现 MethodToImplement()  和 ParentInterfaceMethod() 方法：</p>
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+
+<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
+<br>
+<span style="color: #6666cc; font-weight: bold;">interface</span> IParentInterface<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">void</span> ParentInterfaceMethod<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+<span style="color: #008000;">&#125;</span><br>
+<br>
+<span style="color: #6666cc; font-weight: bold;">interface</span> IMyInterface <span style="color: #008000;">:</span> IParentInterface<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">void</span> MethodToImplement<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+<span style="color: #008000;">&#125;</span><br>
+<br>
+<span style="color: #6666cc; font-weight: bold;">class</span> InterfaceImplementer <span style="color: #008000;">:</span> IMyInterface<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; InterfaceImplementer iImp <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> InterfaceImplementer<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; iImp<span style="color: #008000;">.</span><span style="color: #05a;">MethodToImplement</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; iImp<span style="color: #008000;">.</span><span style="color: #05a;">ParentInterfaceMethod</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+<br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">void</span> MethodToImplement<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;MethodToImplement() called.&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+<br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">void</span> ParentInterfaceMethod<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;ParentInterfaceMethod() called.&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+<span style="color: #008000;">&#125;</span><br>
+
+</div>
+</div>
+<p>实例输出结果为：</p>
+<pre>
+MethodToImplement() called.
+ParentInterfaceMethod() called.
+</pre>
+
 			<!-- 其他扩展 -->
 						
 			</div>
@@ -257,8 +316,8 @@
 		</div>
 		
 		<div class="previous-next-links">
-			<div class="previous-design-link"> </div>
-			<div class="next-design-link"><a href="csharp-intro.html" rel="next"> C# 简介</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-operator-overloading.html');" rel="prev"> C# 运算符重载</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-namespace.html');" rel="next"> C# 命名空间（Namespace）</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
 		<!-- 笔记列表 -->
 		<style>
@@ -365,113 +424,172 @@
     <div class="altblock">
 				<i style="font-size:28px;margin-top: 8px;" class="fa fa-plus-square" aria-hidden="true"></i>
 		    </div>
-    <span class="mw-headline" id="qa_headline">4  篇笔记</span>
+    <span class="mw-headline" id="qa_headline">3  篇笔记</span>
 	<span class="mw-headline" id="user_add_note" style="float:right;line-height: 62px;padding-right: 14px;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>  写笔记</span>
     </h2>
 </div>
 
 <div id="postcomments" style="display:none;">
 	<ol class="commentlist">
-		<li class="comment even thread-even depth-1" id="comment-17323"><span class="comt-f">#4</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;暗黑系青菜</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;129***1362@qq.com</p></div><div id="runoobvote-id-17323" data-commid="17323" class="upvotejs"><a class="upvote"></a> <span class="count">32</span></div></div><div class="comt-main" id="div-comment-17323"><pre>Console.Write("Hello World!");
-与
-Console.WriteLine("Hello World!");</pre>
-<p data-title="C# Console.Write 与 Console.WriteLine 区别"><strong>区别：</strong>前者输出后不换行，后者输出后自动换行</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="17323.html">暗黑系青菜</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;暗黑系青菜</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;129***1362@qq.com</p></div></span>2年前 (2017-09-09)</div></div></li><!-- #comment-## -->
-<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-25633"><span class="comt-f">#3</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ZPK4229</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;zha***ngkunwork@163.com</p></div><div id="runoobvote-id-25633" data-commid="25633" class="upvotejs"><a class="upvote"></a> <span class="count">24</span></div></div><div class="comt-main" id="div-comment-25633"><p>这里简单介绍一下下面这段语句的作用：</p>
+		<li class="comment even thread-even depth-1" id="comment-28175"><span class="comt-f">#3</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;樱花树下约定</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;100***2797@qq.com</p></div><div id="runoobvote-id-28175" data-commid="28175" class="upvotejs"><a class="upvote"></a> <span class="count">42</span></div></div><div class="comt-main" id="div-comment-28175"><p>接口注意的几点：</p><ol><li>接口方法不能用public abstract等修饰。接口内不能有字段变量，构造函数。</li><li>接口内可以定义属性（有get和set的方法）。如string color { get ; set ; }这种。</li><li>实现接口时，必须和接口的格式一致。</li><li>必须实现接口的所有方法。</li></ol><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">樱花树下约定</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;樱花树下约定</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;100***2797@qq.com</p></div></span>2年前 (2018-06-07)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-29883"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Lost丶先生</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;102***8263@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://www.cnblogs.com/fangyz/p/5259619.html');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-29883" data-commid="29883" class="upvotejs"><a class="upvote"></a> <span class="count">39</span></div></div><div class="comt-main" id="div-comment-29883"><h2>1.接口的特点</h2>
 
-<pre>Console.ReadKey();</pre>
-<p>编写 <strong>Console.Readkey();</strong> 这个函数是为了在控制台窗口停留一下，直到敲击键盘为止。</p>
-
-<p>不然运行时，"Hello World!" 这句话会在控制台窗口一闪而过，没法查看。</p>
-
-<pre>Console.Readkey();
-//与
-Console.Readline();
-//与
-Console.Read();</pre>
-<p><strong>区别：</strong>第一个在键盘敲击任意键退出；后两个差不多，都是输入任意东西后按回车才会退出。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">ZPK4229</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ZPK4229</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;zha***ngkunwork@163.com</p></div></span>2年前 (2018-03-28)</div></div></li><!-- #comment-## -->
-<li class="comment even thread-even depth-1" id="comment-28431"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Cristiano Ronaldo</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;843***547@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://blog.csdn.net/u010594850/article/details/18940023');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-28431" data-commid="28431" class="upvotejs"><a class="upvote"></a> <span class="count">23</span></div></div><div class="comt-main" id="div-comment-28431"><p data-title="C# Console.ReadLine() 与 Console.ReadKey() 用法" data-commid="25633"><span class="marked">Console.ReadLine()</span> 会等待直到用户按下回车，一次读入一行。</p>
-<p><span class="marked">Console.ReadKey()</span>  则是等待用户按下任意键，一次读入一个字符。</p>
-
+<p>接口的定义是指定一组函数成员而不实现成员的引用类型，其它类型和接口可以继承接口。定义还是很好理解的，但是没有反映特点，接口主要有以下特点：</p>
+<ul><li>
+(1)通过接口可以实现多重继承，C# 接口的成员不能有 public、protected、internal、private 等修饰符。原因很简单，接口里面的方法都需要由外面接口实现去实现方法体，那么其修饰符必然是 public。C# 接口中的成员默认是 public 的，java 中是可以加 public 的。
+</li><li>
+(2)接口成员不能有 new、static、abstract、override、virtual 修饰符。有一点要注意，当一个接口实现一个接口，这2个接口中有相同的方法时，可用 new 关键字隐藏父接口中的方法。
+</li><li>
+(3)接口中只包含成员的签名，接口没有构造函数，所有不能直接使用 new 对接口进行实例化。接口中只能包含方法、属性、事件和索引的组合。接口一旦被实现，实现类必须实现接口中的所有成员，除非实现类本身是抽象类。
+</li><li>
+(4)C# 是单继承，接口是解决 C# 里面类可以同时继承多个基类的问题。</li></ul>
+<h2>2.接口的简单使用</h2>
 <pre>class Program
 {
-   private List&lt;Student&gt; allStu = newList&lt;Student&gt;();
-   string yesORno;
-   bool flag = true;
-   
-   public void AddStudent()
-   {
-       while (flag)
-       {
-           Student s = new Student();
-           Console.WriteLine("请输入学生姓名:");
-           s.StuName = Console.ReadLine();
-           Console.WriteLine("请输入学生学号");
-           s.StuNum = Console.ReadLine();
-           allStu.Add(s);
-
-           Console.WriteLine("是否继续输入:请输入y或者n");
-           yesORno =Console.ReadKey().Key.ToString();
-           
-           switch (yesORno)
-           {
-               case "Y":
-                   flag = true;
-                   break;
-               case "N":
-                   flag = false;
-                   break;
-           }
-       }
-   }
-
-   public void ShowStu()
-   {
-       for (int i = 0; i &lt; allStu.Count; i++)
-       {
-           Console.WriteLine(allStu[i].ToString());
-       }
-   }
-
-   static void Main(string[] args)
-   {
-       Program p = new Program();
-       p.AddStudent();
-       p.ShowStu();
-       Console.ReadLine();
-   }
+    static void Main(string[] args)
+    {
+        IWorker james1 = new James1();
+        IWorker james2 = new James2();
+        james1.work("设计");
+        james2.work("编程");
+        //从这个例子我体会到了有接口的好处，可以想象如果又来了新的员工。
+        //如果不采用接口，而是每个员工都有一个单独的类，这样就会容易出错。
+        //如果有接口这种协议约束的话，那么只要实现了接口就肯定有接口里声明的方法，我们只需拿来调用。
+    }
 }
-
- 
-
-class Student
+public interface IWorker{ void work(string s); }
+class James1 : IWorker
 {
-   private string stuName;
+    public void work(string s)
+    {
+        Console.WriteLine("我的名字是James1，我的工作是" +s);
+    }
+}
+class James2 : IWorker
+{
+    public void work(string s)
+    {
+        Console.WriteLine("我的名字是James2，我的工作是"+s);
+    }
+}</pre>
+<h2>3.一个可以实例化接口的特例</h2>
+<pre>class Program
+{
+    static void Main(string[] args)
+    {
+        //C#中COM接口是可以实例化的，但其实这种写法是使接口&ldquo;映射&rdquo;到某一个类上，实际上创建的是这个类的实例。
+        IWorker worker = new IWorker();
+    }
+}
+[ComImport, CoClass(typeof(James1))]
+[Guid("d60908eb-fd5a-4d3c-9392-8646fcd1edce")]
+public interface IWorker{ void work(string s); }
+//ComImport特性发生在tlbimp.exe导入COM类型类库的时候，生成的托管类型会标记有ComImport特性
+//Guid特性是一个GUID标识，COM类型是用GUID来标识的。</pre>
 
-   public string StuName
-   {
-       get { return stuName; }
-       set { stuName = value; }
-   }
+<p>利用 .NET Reflector 查看时可以很明显的看到 Main 方法里面的代码是：</p><pre>IWorker worker=new James1();</pre>
+<p><img src="static/picture/728358-20160310201535725-1404938.png"></p>
 
-   private string stuNum;
+<h2>4.接口和抽象类的区别
+</h2>
+<p>接口用于规范，抽象类用于共性。抽象类是类，所以只能被单继承，但是接口却可以一次实现多个。</p><p>
+接口中只能声明方法，属性，事件，索引器。而抽象类中可以有方法的实现，也可以定义非静态的类变量。</p><p>
+抽象类可以提供某些方法的部分实现，接口不可以。抽象类的实例是它的子类给出的。接口的实例是实现接口的类给出的。</p><p>
+在抽象类中加入一个方法，那么它的子类就同时有了这个方法。而在接口中加入新的方法，那么实现它的类就要重新编写（这就是为什么说接口是一个类的规范了）。</p><p>
+接口成员被定义为公共的，但抽象类的成员也可以是私有的、受保护的、内部的或受保护的内部成员（其中受保护的内部成员只能在应用程序的代码或派生类中访问）。</p><p>此外接口不能包含字段、构造函数、析构函数、静态成员或常量。</p><p>
+还有一点，我们在VS中实现接口时会发现有2个选项，一个是实现接口，一个是显示实现接口。实现接口就是我们平常理解的实现接口，而显示实现接口的话，实现的方法是属于接口的，而不是属于实现类的。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Lost丶先生</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Lost丶先生</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;102***8263@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://www.cnblogs.com/fangyz/p/5259619.html');">&nbsp;&nbsp;参考地址</a></p></div></span>2年前 (2018-07-20)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-49406"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;_(:I</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;156***5375@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://blog.csdn.net/weixin_43271759/article/details/87352753');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-49406" data-commid="49406" class="upvotejs"><a class="upvote"></a> <span class="count">1</span></div></div><div class="comt-main" id="div-comment-49406"><p>接口中定义事件，索引器，属性，方法:</p>
 
-   public string StuNum
-   {
-       get { return stuNum; }
-       set { stuNum = value; }
-   }
+<pre>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-   public override string ToString()
-   {
-       return "姓名" + stuName + "......." + "学号" + stuNum;
-   }
-}</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="28431.html">Cristiano Ronaldo</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Cristiano Ronaldo</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;843***547@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://blog.csdn.net/u010594850/article/details/18940023');">&nbsp;&nbsp;参考地址</a></p></div></span>2年前 (2018-06-15)</div></div></li><!-- #comment-## -->
-<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-43802"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Modrila</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;330***7468@qq.com</p></div><div id="runoobvote-id-43802" data-commid="43802" class="upvotejs"><a class="upvote"></a> <span class="count">33</span></div></div><div class="comt-main" id="div-comment-43802"><p><strong>输入与输出</strong></p>
-<pre>Console.Write();      输出不换行
-Console.WriteLine();  输出并换行
-Console.ReadLine();   读取键盘输入的所有字符，返回字符串。按下回车键退出 
-Console.Read();       读取键盘输入的第一个字符，返回其对应的ASCII值。按下回车键退出
-Console.ReadKey();    等待用户按下任意键并执行退出，(此函数的作用是为了在控制台窗口停留一下，直到用户敲击键盘为止。不然运行时，"Hello World!" 这句话会在控制台窗口一闪而过，没法查看。)</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Modrila</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Modrila</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;330***7468@qq.com</p></div></span>8个月前 (06-20)</div></div></li><!-- #comment-## -->
+namespace ConsoleApplication1
+{
+    delegate void Delegate();
+    interface I&lt;T&gt;
+    {
+        event Delegate DE;
+        T this[int i]
+        {
+            get;
+            set;
+        }
+  
+        List&lt;T&gt; age
+        {
+            get;
+            set;
+        }
+        void Say();
+    }
+    class c : I&lt;c&gt;
+    {
+        public event Delegate DE;
+      public  c this[int i]
+        {
+            get {  return age[i]; }
+            set { DE(); Say(); age[i] = value; }
+        }
+      public  List&lt;c&gt; age
+        {
+            get;
+            set;
+        }
+      public   void Say()
+      {
+          Console.WriteLine("123");
+      }
+    }
+    class b : I&lt;c&gt;
+    {
+        public event Delegate DE;
+
+        public c this[int i]
+        {
+            get { return age[i]; }
+            set { DE();Say(); age[i] = value; }
+        }
+        public List&lt;c&gt; age
+        {
+            get;
+            set;
+        }
+        public void Say()
+        {
+            Console.WriteLine("456");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            I&lt;c&gt; Ic = new c();
+            I&lt;c&gt; lb = new b();
+            
+            Ic.DE += deC;
+            lb.DE += deB;
+            lb = Ic;
+            lb.age = new List&lt;c&gt;();
+            lb.age.Add(new c());
+            lb[0] = new c();
+            Console.WriteLine("S");
+            Console.ReadKey();
+
+        }
+      static  void deC()
+        {
+            Console.WriteLine("c");
+        }
+       static void deB()
+        {
+            Console.WriteLine("B");
+        }
+    }
+}</pre>
+<div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">_(:I</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;_(:I</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;156***5375@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://blog.csdn.net/weixin_43271759/article/details/87352753');">&nbsp;&nbsp;参考地址</a></p></div></span>2个月前 (12-18)</div></div></li><!-- #comment-## -->
 	</ol>
 	<div class="pagenav">
 			</div>
@@ -496,7 +614,7 @@ Console.ReadKey();    等待用户按下任意键并执行退出，(此函数的
 			<div id="mded"></div>
 			
 				<div class="comt-ctrl">
-					<div class="comt-tips"><input type='hidden' name='comment_post_ID' value='6575' id='comment_post_ID'>
+					<div class="comt-tips"><input type='hidden' name='comment_post_ID' value='6645' id='comment_post_ID'>
 <input type='hidden' name='comment_parent' id='comment_parent' value='0'>
 </div>
 					<button type="submit" name="submit" id="submit" tabindex="5"><i class="fa fa-pencil" aria-hidden="true"></i> 分享笔记</button>
@@ -564,7 +682,7 @@ $(function() {
 		// 系列化表单数据
 		var comment_parent = 0;
 		var is_user_logged_in = $("#is_user_logged_in").val();
-		var comment_post_ID =  6575;
+		var comment_post_ID =  6645;
 		var _wp_unfiltered_html_comment = $("#_wp_unfiltered_html_comment").val();
 		var comment = noteContent;
 		var author = $("#author").val();
@@ -652,9 +770,9 @@ $(function() {
 		}
 	};
 	if($('#comments').length){
-		$('.upvotejs').upvote({id: 6575, callback: callback});
+		$('.upvotejs').upvote({id: 6645, callback: callback});
 		
-		$.post(ajaxurl,{"action":"pinglun_zan","postid":6575},function(data){  
+		$.post(ajaxurl,{"action":"pinglun_zan","postid":6645},function(data){  
 			$(data).each(function(key,value) {
 				$("#runoobvote-id-" + value.commid + " .upvote").addClass(value.upvotejs_class);
 				$("#runoobvote-id-" + value.commid + " .downvote").addClass(value.downvote_class);
@@ -738,7 +856,7 @@ function isBlank(str) {
 	<div class="sidebar-box sidebar-cate">
 		
 		<div class="sidebar-tree">
-			<ul><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> HTML / CSS</a><ul class="double-li"><li><a title="HTML 教程" href="html-tutorial.html">HTML 教程</a></li><li><a title="HTML5 教程" href="html5-intro.html">HTML5 教程</a></li><li><a title="CSS 教程" href="css-tutorial.html">CSS 教程</a></li><li><a title="CSS3 教程" href="css3-tutorial.html">CSS3 教程</a></li><li><a title="Bootstrap3 教程" href="bootstrap-tutorial.html">Bootstrap3 教程</a></li><li><a title="Bootstrap4 教程" href="bootstrap4-tutorial.html">Bootstrap4 教程</a></li><li><a title="Font Awesome 教程" href="fontawesome-tutorial.html">Font Awesome 教程</a></li><li><a title="Foundation 教程" href="foundation-tutorial.html">Foundation 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> JavaScript</a><ul class="double-li"><li><a title="JavaScript 教程" href="js-tutorial.html">JavaScript 教程</a></li><li><a title="HTML DOM 教程" href="htmldom-tutorial.html">HTML DOM 教程</a></li><li><a title="jQuery 教程" href="jquery-tutorial.html">jQuery 教程</a></li><li><a title="AngularJS 教程" href="angularjs-tutorial.html">AngularJS 教程</a></li><li><a title="AngularJS2 教程" href="angularjs2-tutorial.html">AngularJS2 教程</a></li><li><a title="Vue.js 教程" href="vue-tutorial.html">Vue.js 教程</a></li><li><a title="React 教程" href="react-tutorial.html">React 教程</a></li><li><a title="TypeScript 教程" href="ts-tutorial.html">TypeScript 教程</a></li><li><a title="jQuery UI 教程" href="jqueryui-tutorial.html">jQuery UI 教程</a></li><li><a title="jQuery EasyUI 教程" href="jqueryeasyui-tutorial.html">jQuery EasyUI 教程</a></li><li><a title="Node.js 教程" href="nodejs-tutorial.html">Node.js 教程</a></li><li><a title="AJAX 教程" href="ajax-tutorial.html">AJAX 教程</a></li><li><a title="JSON 教程" href="json-tutorial.html">JSON 教程</a></li><li><a title="Echarts 教程" href="echarts-tutorial.html">Echarts 教程</a></li><li><a title="Highcharts 教程" href="highcharts-tutorial.html">Highcharts 教程</a></li><li><a title="Google 地图 教程" href="google-maps-basic.html">Google 地图 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 服务端</a><ul class="double-li"><li><a title="Python 教程" href="python3-tutorial.html">Python 教程</a></li><li><a title="Python2.x 教程" href="python-tutorial.html">Python2.x 教程</a></li><li><a title="Linux 教程" href="linux-tutorial.html">Linux 教程</a></li><li><a title="Docker 教程" href="docker-tutorial.html">Docker 教程</a></li><li><a title="Ruby 教程" href="ruby-tutorial.html">Ruby 教程</a></li><li><a title="Java 教程" href="java-tutorial.html">Java 教程</a></li><li><a title="C 教程" href="c-tutorial.html">C 教程</a></li><li><a title="C++ 教程" href="cpp-tutorial.html">C++ 教程</a></li><li><a title="Perl 教程" href="perl-tutorial.html">Perl 教程</a></li><li><a title="Servlet 教程" href="servlet-tutorial.html">Servlet 教程</a></li><li><a title="JSP 教程" href="jsp-tutorial.html">JSP 教程</a></li><li><a title="Lua 教程" href="lua-tutorial.html">Lua 教程</a></li><li><a title="Scala 教程" href="scala-tutorial.html">Scala 教程</a></li><li><a title="Go 教程" href="go-tutorial.html">Go 教程</a></li><li><a title="PHP 教程" href="php-tutorial.html">PHP 教程</a></li><li><a title="Django 教程" href="django-tutorial.html">Django 教程</a></li><li><a title="设计模式" href="design-pattern-tutorial.html">设计模式</a></li><li><a title="正则表达式" href="regexp-tutorial.html">正则表达式</a></li><li><a title="Maven 教程" href="maven-tutorial.html">Maven 教程</a></li><li><a title="NumPy 教程" href="numpy-tutorial.html">NumPy 教程</a></li><li><a title="ASP 教程" href="asp-tutorial.html">ASP 教程</a></li><li><a title="AppML 教程" href="appml-tutorial.html">AppML 教程</a></li><li><a title="VBScript 教程" href="vbscript-tutorial.html">VBScript 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 数据库</a><ul class="double-li"><li><a title="SQL 教程" href="sql-tutorial.html">SQL 教程</a></li><li><a title="Mysql 教程" href="mysql-tutorial.html">Mysql 教程</a></li><li><a title="PostgreSQL 教程" href="postgresql-tutorial.html">PostgreSQL 教程</a></li><li><a title="SQLite 教程" href="sqlite-tutorial.html">SQLite 教程</a></li><li><a title="MongoDB 教程" href="mongodb-tutorial.html">MongoDB 教程</a></li><li><a title="Redis 教程" href="redis-tutorial.html">Redis 教程</a></li><li><a title="Memcached 教程" href="memcached-tutorial.html">Memcached 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 移动端</a><ul class="double-li"><li><a title="Android 教程" href="android-tutorial-intro.html">Android 教程</a></li><li><a title="Swift 教程" href="swift-tutorial.html">Swift 教程</a></li><li><a title="jQuery Mobile 教程" href="jquerymobile-tutorial.html">jQuery Mobile 教程</a></li><li><a title="ionic 教程" href="ionic-tutorial.html">ionic 教程</a></li><li><a title="Kotlin 教程" href="kotlin-tutorial.html">Kotlin 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> XML 教程</a><ul class="double-li"><li><a title="XML 教程" href="xml-tutorial.html">XML 教程</a></li><li><a title="DTD 教程" href="dtd-tutorial.html">DTD 教程</a></li><li><a title="XML DOM 教程" href="dom-tutorial.html">XML DOM 教程</a></li><li><a title="XSLT 教程" href="xsl-tutorial.html">XSLT 教程</a></li><li><a title="XPath 教程" href="xpath-tutorial.html">XPath 教程</a></li><li><a title="XQuery 教程" href="xquery-tutorial.html">XQuery 教程</a></li><li><a title="XLink 教程" href="xlink-tutorial.html">XLink 教程</a></li><li><a title="XPointer 教程" href="xlink-tutorial.html">XPointer 教程</a></li><li><a title="XML Schema 教程" href="schema-tutorial.html">XML Schema 教程</a></li><li><a title="XSL-FO 教程" href="xslfo-tutorial.html">XSL-FO 教程</a></li><li><a title="SVG 教程" href="svg-tutorial.html">SVG 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> ASP.NET</a><ul class="double-li"><li><a title="ASP.NET 教程" href="aspnet-tutorial.html">ASP.NET 教程</a></li><li><a title="C# 教程" href="">C# 教程</a></li><li><a title="Web Pages 教程" href="webpages-intro.html">Web Pages 教程</a></li><li><a title="Razor 教程" href="razor-intro.html">Razor 教程</a></li><li><a title="MVC 教程" href="mvc-intro.html">MVC 教程</a></li><li><a title="Web Forms 教程" href="aspnet-intro.html">Web Forms 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> Web Service</a><ul class="double-li"><li><a title="Web Service 教程" href="webservices-tutorial.html">Web Service 教程</a></li><li><a title="WSDL 教程" href="wsdl-tutorial.html">WSDL 教程</a></li><li><a title="SOAP 教程" href="soap-tutorial.html">SOAP 教程</a></li><li><a title="RSS 教程" href="rss-tutorial.html">RSS 教程</a></li><li><a title="RDF 教程" href="rdf-tutorial.html">RDF 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 开发工具</a><ul class="double-li"><li><a title="Eclipse 教程" href="eclipse-tutorial.html">Eclipse 教程</a></li><li><a title="Git 教程" href="git-tutorial.html">Git 教程</a></li><li><a title="Svn 教程" href="svn-tutorial.html">Svn 教程</a></li><li><a title="Markdown 教程" href="md-tutorial.html">Markdown 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 网站建设</a><ul class="double-li"><li><a title="HTTP 教程" href="http-tutorial.html">HTTP 教程</a></li><li><a title="网站建设指南" href="web-buildingprimer.html">网站建设指南</a></li><li><a title="浏览器信息" href="browser-information.html">浏览器信息</a></li><li><a title="网站主机教程" href="hosting-tutorial.html">网站主机教程</a></li><li><a title="TCP/IP 教程" href="tcpip-tutorial.html">TCP/IP 教程</a></li><li><a title="W3C 教程" href="w3c-tutorial.html">W3C 教程</a></li><li><a title="网站品质" href="quality-tutorial.html">网站品质</a></li></ul></li></ul>			</div>
+			<ul><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> HTML / CSS</a><ul class="double-li"><li><a title="HTML 教程" href="html-tutorial.html">HTML 教程</a></li><li><a title="HTML5 教程" href="html5-intro.html">HTML5 教程</a></li><li><a title="CSS 教程" href="css-tutorial.html">CSS 教程</a></li><li><a title="CSS3 教程" href="css3-tutorial.html">CSS3 教程</a></li><li><a title="Bootstrap3 教程" href="bootstrap-tutorial.html">Bootstrap3 教程</a></li><li><a title="Bootstrap4 教程" href="bootstrap4-tutorial.html">Bootstrap4 教程</a></li><li><a title="Font Awesome 教程" href="fontawesome-tutorial.html">Font Awesome 教程</a></li><li><a title="Foundation 教程" href="foundation-tutorial.html">Foundation 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> JavaScript</a><ul class="double-li"><li><a title="JavaScript 教程" href="js-tutorial.html">JavaScript 教程</a></li><li><a title="HTML DOM 教程" href="htmldom-tutorial.html">HTML DOM 教程</a></li><li><a title="jQuery 教程" href="jquery-tutorial.html">jQuery 教程</a></li><li><a title="AngularJS 教程" href="angularjs-tutorial.html">AngularJS 教程</a></li><li><a title="AngularJS2 教程" href="angularjs2-tutorial.html">AngularJS2 教程</a></li><li><a title="Vue.js 教程" href="vue-tutorial.html">Vue.js 教程</a></li><li><a title="React 教程" href="react-tutorial.html">React 教程</a></li><li><a title="TypeScript 教程" href="ts-tutorial.html">TypeScript 教程</a></li><li><a title="jQuery UI 教程" href="jqueryui-tutorial.html">jQuery UI 教程</a></li><li><a title="jQuery EasyUI 教程" href="jqueryeasyui-tutorial.html">jQuery EasyUI 教程</a></li><li><a title="Node.js 教程" href="nodejs-tutorial.html">Node.js 教程</a></li><li><a title="AJAX 教程" href="ajax-tutorial.html">AJAX 教程</a></li><li><a title="JSON 教程" href="json-tutorial.html">JSON 教程</a></li><li><a title="Echarts 教程" href="echarts-tutorial.html">Echarts 教程</a></li><li><a title="Highcharts 教程" href="highcharts-tutorial.html">Highcharts 教程</a></li><li><a title="Google 地图 教程" href="google-maps-basic.html">Google 地图 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 服务端</a><ul class="double-li"><li><a title="Python 教程" href="python3-tutorial.html">Python 教程</a></li><li><a title="Python2.x 教程" href="python-tutorial.html">Python2.x 教程</a></li><li><a title="Linux 教程" href="linux-tutorial.html">Linux 教程</a></li><li><a title="Docker 教程" href="docker-tutorial.html">Docker 教程</a></li><li><a title="Ruby 教程" href="ruby-tutorial.html">Ruby 教程</a></li><li><a title="Java 教程" href="java-tutorial.html">Java 教程</a></li><li><a title="C 教程" href="c-tutorial.html">C 教程</a></li><li><a title="C++ 教程" href="cpp-tutorial.html">C++ 教程</a></li><li><a title="Perl 教程" href="perl-tutorial.html">Perl 教程</a></li><li><a title="Servlet 教程" href="servlet-tutorial.html">Servlet 教程</a></li><li><a title="JSP 教程" href="jsp-tutorial.html">JSP 教程</a></li><li><a title="Lua 教程" href="lua-tutorial.html">Lua 教程</a></li><li><a title="Scala 教程" href="scala-tutorial.html">Scala 教程</a></li><li><a title="Go 教程" href="go-tutorial.html">Go 教程</a></li><li><a title="PHP 教程" href="php-tutorial.html">PHP 教程</a></li><li><a title="Django 教程" href="django-tutorial.html">Django 教程</a></li><li><a title="设计模式" href="design-pattern-tutorial.html">设计模式</a></li><li><a title="正则表达式" href="regexp-tutorial.html">正则表达式</a></li><li><a title="Maven 教程" href="maven-tutorial.html">Maven 教程</a></li><li><a title="NumPy 教程" href="numpy-tutorial.html">NumPy 教程</a></li><li><a title="ASP 教程" href="asp-tutorial.html">ASP 教程</a></li><li><a title="AppML 教程" href="appml-tutorial.html">AppML 教程</a></li><li><a title="VBScript 教程" href="vbscript-tutorial.html">VBScript 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 数据库</a><ul class="double-li"><li><a title="SQL 教程" href="sql-tutorial.html">SQL 教程</a></li><li><a title="Mysql 教程" href="mysql-tutorial.html">Mysql 教程</a></li><li><a title="PostgreSQL 教程" href="postgresql-tutorial.html">PostgreSQL 教程</a></li><li><a title="SQLite 教程" href="sqlite-tutorial.html">SQLite 教程</a></li><li><a title="MongoDB 教程" href="mongodb-tutorial.html">MongoDB 教程</a></li><li><a title="Redis 教程" href="redis-tutorial.html">Redis 教程</a></li><li><a title="Memcached 教程" href="memcached-tutorial.html">Memcached 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 移动端</a><ul class="double-li"><li><a title="Android 教程" href="android-tutorial-intro.html">Android 教程</a></li><li><a title="Swift 教程" href="swift-tutorial.html">Swift 教程</a></li><li><a title="jQuery Mobile 教程" href="jquerymobile-tutorial.html">jQuery Mobile 教程</a></li><li><a title="ionic 教程" href="ionic-tutorial.html">ionic 教程</a></li><li><a title="Kotlin 教程" href="kotlin-tutorial.html">Kotlin 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> XML 教程</a><ul class="double-li"><li><a title="XML 教程" href="xml-tutorial.html">XML 教程</a></li><li><a title="DTD 教程" href="dtd-tutorial.html">DTD 教程</a></li><li><a title="XML DOM 教程" href="dom-tutorial.html">XML DOM 教程</a></li><li><a title="XSLT 教程" href="xsl-tutorial.html">XSLT 教程</a></li><li><a title="XPath 教程" href="xpath-tutorial.html">XPath 教程</a></li><li><a title="XQuery 教程" href="xquery-tutorial.html">XQuery 教程</a></li><li><a title="XLink 教程" href="xlink-tutorial.html">XLink 教程</a></li><li><a title="XPointer 教程" href="xlink-tutorial.html">XPointer 教程</a></li><li><a title="XML Schema 教程" href="schema-tutorial.html">XML Schema 教程</a></li><li><a title="XSL-FO 教程" href="xslfo-tutorial.html">XSL-FO 教程</a></li><li><a title="SVG 教程" href="svg-tutorial.html">SVG 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> ASP.NET</a><ul class="double-li"><li><a title="ASP.NET 教程" href="aspnet-tutorial.html">ASP.NET 教程</a></li><li><a title="C# 教程" href="csharp-tutorial.html">C# 教程</a></li><li><a title="Web Pages 教程" href="webpages-intro.html">Web Pages 教程</a></li><li><a title="Razor 教程" href="razor-intro.html">Razor 教程</a></li><li><a title="MVC 教程" href="mvc-intro.html">MVC 教程</a></li><li><a title="Web Forms 教程" href="aspnet-intro.html">Web Forms 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> Web Service</a><ul class="double-li"><li><a title="Web Service 教程" href="webservices-tutorial.html">Web Service 教程</a></li><li><a title="WSDL 教程" href="wsdl-tutorial.html">WSDL 教程</a></li><li><a title="SOAP 教程" href="soap-tutorial.html">SOAP 教程</a></li><li><a title="RSS 教程" href="rss-tutorial.html">RSS 教程</a></li><li><a title="RDF 教程" href="rdf-tutorial.html">RDF 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 开发工具</a><ul class="double-li"><li><a title="Eclipse 教程" href="eclipse-tutorial.html">Eclipse 教程</a></li><li><a title="Git 教程" href="git-tutorial.html">Git 教程</a></li><li><a title="Svn 教程" href="svn-tutorial.html">Svn 教程</a></li><li><a title="Markdown 教程" href="md-tutorial.html">Markdown 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 网站建设</a><ul class="double-li"><li><a title="HTTP 教程" href="http-tutorial.html">HTTP 教程</a></li><li><a title="网站建设指南" href="web-buildingprimer.html">网站建设指南</a></li><li><a title="浏览器信息" href="browser-information.html">浏览器信息</a></li><li><a title="网站主机教程" href="hosting-tutorial.html">网站主机教程</a></li><li><a title="TCP/IP 教程" href="tcpip-tutorial.html">TCP/IP 教程</a></li><li><a title="W3C 教程" href="w3c-tutorial.html">W3C 教程</a></li><li><a title="网站品质" href="quality-tutorial.html">网站品质</a></li></ul></li></ul>			</div>
 	
 	</div>
 	</div>
@@ -762,7 +880,7 @@ function isBlank(str) {
 </div>
 
 <script>
-var aid = 6575;
+var aid = 6645;
 function coll() {
 	$.post( '/wp-content/themes/runoob/option/user/userinfo.php', {aid:aid, action:"collarticle", opt:'add'},function( data ) {
 		if(data.error==0) {

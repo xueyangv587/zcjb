@@ -4,12 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta property="qc:admins" content="465267610762567726375">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>C# 教程 | 菜鸟教程</title>
+	<title>C# 数据类型 | 菜鸟教程</title>
 
   
-<link rel="canonical" href="http://www.runoob.com/csharp/csharp-tutorial.html">
-<meta name="keywords" content="C# 教程,C#">
-<meta name="description" content="C# 教程   C# 是一个简单的、现代的、通用的、面向对象的编程语言，它是由微软（Microsoft）开发的。 本教程将告诉您基础的 C# 编程，同时将向您讲解 C# 编程语言相关的各种先进理念。 现在开始学习 C#！ C# 在线工具   谁适合阅读本教程？ 本教程有助于初学者理解基础的 C# 编程。在学习完本教程后，您将到达一个中级的 C# 编程水平。  阅读本教程前，您需要了解的知识： C# 编程是基于 C 和 C++ 编程语言的..">
+<link rel="canonical" href="http://www.runoob.com/csharp/csharp-data-types.html">
+<meta name="keywords" content="C# 数据类型">
+<meta name="description" content="C# 数据类型   在 C# 中，变量分为以下几种类型：  值类型（Value types） 引用类型（Reference types） 指针类型（Pointer types）    值类型（Value types） 值类型变量可以直接分配给一个值。它们是从类 System.ValueType 中派生的。 值类型直接包含数据。比如 int、char、float，它们分别存储数字、字符、浮点数。当您声明一个 int 类型时，系统分配内存来..">
 		
 	
 	<link rel="stylesheet" href="static/css/style-1.154.css" type="text/css" media="all">	
@@ -68,7 +68,7 @@
 				<li><a href="java-tutorial.html">Java</a></li>
 				<li><a href="c-tutorial.html">C</a></li>
 				<li><a href="cpp-tutorial.html">C++</a></li>
-				<li><a href="">C#</a></li>
+				<li><a href="csharp-tutorial.html">C#</a></li>
 				<li><a href="sql-tutorial.html">SQL</a></li>
 				<li><a href="mysql-tutorial.html">MySQL</a></li>
 				<li><a href="php-tutorial.html">PHP</a></li>
@@ -103,7 +103,7 @@
 	</div>
 	<div class="sidebar-box gallery-list">
 		<div class="design" id="leftcolumn">
-						<a target="_top" title="C# 教程" href="">
+						<a target="_top" title="C# 教程" href="csharp-tutorial.html">
 			C# 教程			</a>
 						<a target="_top" title="C# 简介" href="csharp-intro.html">
 			C# 简介			</a>
@@ -113,7 +113,7 @@
 			C# 程序结构			</a>
 						<a target="_top" title="C# 基本语法" href="csharp-basic-syntax.html">
 			C# 基本语法			</a>
-						<a target="_top" title="C# 数据类型" href="csharp-data-types.html">
+						<a target="_top" title="C# 数据类型" href="">
 			C# 数据类型			</a>
 						<a target="_top" title="C# 类型转换" href="csharp-type-conversion.html">
 			C# 类型转换			</a>
@@ -194,71 +194,136 @@
 		
 		</div>
 		<div class="previous-next-links">
-			<div class="previous-design-link"> </div>
-			<div class="next-design-link"><a href="csharp-intro.html" rel="next"> C# 简介</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-basic-syntax.html');" rel="prev"> C# 基本语法</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-type-conversion.html');" rel="next"> C# 类型转换</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
 		<div class="article-body">
 		
 			<div class="article-intro" id="content">
 			
-			<h1>C# <span class="color_h1">教程</span></h1>
+			<h1>C# <span class="color_h1">数据类型</span></h1>
 
 <div class="tutintro">
-<p>C# 是一个简单的、现代的、通用的、面向对象的编程语言，它是由微软（Microsoft）开发的。</p>
-<p>本教程将告诉您基础的 C# 编程，同时将向您讲解 C# 编程语言相关的各种先进理念。</p>
-<p><b><a href="csharp-intro.html">现在开始学习 C#！</a></b></p>
-<p><a href="showcs-helloworld.html" target="_blank">C# 在线工具</a></p>
-</div>
-
-<h2 class="tutheader">谁适合阅读本教程？</h2>
-<p>本教程有助于初学者理解基础的 C# 编程。在学习完本教程后，您将到达一个中级的 C# 编程水平。</p>
-
-<h2 class="tutheader">阅读本教程前，您需要了解的知识：</h2>
-<p>C# 编程是基于 C 和 C++ 编程语言的，因此如果您对 C 和 C++ 编程有基本的了解，将有助于您学习 C# 编程语言。</p>
-
-<h2 class="tutheader">编译/执行 C# 程序</h2>
-<p>菜鸟教程提供了在线的 C# 在线编译环境，您只需进行简单的点击动作，即可在高端的服务器上体验真实的编程经验。这是完全免费的在线工具。</p>
-<div class="example"> 
-<h2 class="example">实例</h2> 
-<div class="example_code">
-
-<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
-<span style="color: #05a; font-weight: bold;">namespace</span> HelloWorldApplication<br>
-<span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 类名为 HelloWorld */</span><br>
-&nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">class</span> HelloWorld<br>
-&nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* main函数 */</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 我的第一个 C# 程序 */</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Hello World!&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
-&nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
-<span style="color: #008000;">&#125;</span><br>
-
-</div><br>
-<a target="_blank" href="showcs-helloworld.html" class="showbtn">运行实例 »</a>
-</div>
-<h2 class="tutheader">C# 有用的资源</h2>
-<p>本教程列出了 C# 网站、书籍和文章。</p>
-<h3>C# 有用的网站</h3>
+<p>在 C# 中，变量分为以下几种类型：</p>
 <ul class="list">
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://msdn.microsoft.com/en-us/library/67ef8sbd.aspx');">C# Programming Guide</a> - 介绍了有关关键的 C# 语言特征以及如何通过 .NET 框架访问 C# 的详细信息。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('https://visualstudio.microsoft.com/zh-hans/downloads/');">Visual Studio</a> - 下载作为 C# 集成开发环境的 Visual Studio 的最新版本。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://www.mono-project.com/Main_Page');">Go Mono</a> - Mono 是一个允许开发人员简单地创建跨平台应用程序的软件平台。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://en.wikipedia.org/wiki/C_Sharp_(programming_language)');">C Sharp (programming language) </a> - 维基百科解释 C#（编程语言）。</li>
+<li>值类型（Value types）</li>
+<li>引用类型（Reference types）</li>
+<li>指针类型（Pointer types）</li>
 </ul>
-			<!-- 其他扩展 -->
+</div>
+
+<h2 class="tutheader">值类型（Value types）</h2>
+<p>值类型变量可以直接分配给一个值。它们是从类 <b>System.ValueType</b> 中派生的。</p>
+<p>值类型直接包含数据。比如 <b>int、char、float</b>，它们分别存储数字、字符、浮点数。当您声明一个 <b>int</b> 类型时，系统分配内存来存储值。</p>
+<p>下表列出了 C# 2010 中可用的值类型：</p>
+<table class="reference notranslate">
+<tr><th style="width:10%;">类型</th><th style="width:35%;">描述</th><th style="width:45%;">范围</th><th style="width:10%;">默认值</th></tr>
+<tr><td>bool</td><td>布尔值</td><td>True 或 False</td><td>False</td></tr>
+<tr><td>byte</td><td>8 位无符号整数</td><td>0 到 255</td><td>0</td></tr>
+<tr><td>char</td><td>16 位 Unicode 字符</td><td>U +0000 到 U +ffff</td><td>'\0'</td></tr>
+<tr><td>decimal</td><td>128 位精确的十进制值，28-29 有效位数</td><td>(-7.9 x 10<sup>28</sup> 到 7.9 x 10<sup>28</sup>) 
+/ 10<sup>0 到 28</sup>
+</td><td>0.0M</td></tr>
+<tr><td>double</td><td>64 位双精度浮点型</td><td>(+/-)5.0 x 10<sup>-324</sup> 到 (+/-)1.7 x 10<sup>308</sup></td><td>0.0D</td></tr>
+<tr><td>float</td><td>32 位单精度浮点型</td><td>-3.4 x 10<sup>38</sup> 到 + 3.4 x 10<sup>38</sup></td><td>0.0F</td></tr>
+<tr><td>int</td><td>32 位有符号整数类型</td><td>-2,147,483,648 到 2,147,483,647</td><td>0</td></tr>
+<tr><td>long</td><td>64 位有符号整数类型</td><td>-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807
+</td><td>0L</td></tr>
+<tr><td>sbyte</td><td>8 位有符号整数类型</td><td>-128 到 127</td><td>0</td></tr>
+<tr><td>short</td><td>16 位有符号整数类型</td><td>-32,768 到 32,767</td><td>0</td></tr>
+<tr><td>uint</td><td>32 位无符号整数类型</td><td>0 到 4,294,967,295</td><td>0</td></tr>
+<tr><td>ulong</td><td>64 位无符号整数类型</td><td>0 到 18,446,744,073,709,551,615</td><td>0</td></tr>
+<tr><td>ushort</td><td>16 位无符号整数类型</td><td>0 到 65,535</td><td>0</td></tr>
+</table>
+<p>如需得到一个类型或一个变量在特定平台上的准确尺寸，可以使用 <b>sizeof</b> 方法。表达式 <i>sizeof(type)</i> 产生以字节为单位存储对象或类型的存储尺寸。下面举例获取任何机器上 <i>int</i> 类型的存储尺寸：</p>
+<pre>
+using System;
+
+namespace DataTypeApplication
+{
+   class Program
+   {
+      static void Main(string[] args)
+      {
+         Console.WriteLine("Size of int: {0}", sizeof(int));
+         Console.ReadLine();
+      }
+   }
+}
+</pre>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<pre class="result">
+Size of int: 4
+</pre>
+<h2 class="tutheader">引用类型（Reference types）</h2>
+<p>引用类型不包含存储在变量中的实际数据，但它们包含对变量的引用。</p>
+<p>换句话说，它们指的是一个内存位置。使用多个变量时，引用类型可以指向一个内存位置。如果内存位置的数据是由一个变量改变的，其他变量会自动反映这种值的变化。<b>内置的</b> 引用类型有：<b>object</b>、<b>dynamic</b> 和 <b>string</b>。</p>
+<h3>对象（Object）类型</h3>
+<p><b>对象（Object）类型</b> 是 C# 通用类型系统（Common Type System - CTS）中所有数据类型的终极基类。Object 是 System.Object 类的别名。所以对象（Object）类型可以被分配任何其他类型（值类型、引用类型、预定义类型或用户自定义类型）的值。但是，在分配值之前，需要先进行类型转换。</p>
+<p>当一个值类型转换为对象类型时，则被称为 <b>装箱</b>；另一方面，当一个对象类型转换为值类型时，则被称为 <b>拆箱</b>。</p>
+<pre>
+object obj;
+obj = 100; // 这是装箱
+</pre>
+<h3>动态（Dynamic）类型</h3>
+<p>您可以存储任何类型的值在动态数据类型变量中。这些变量的类型检查是在运行时发生的。</p>
+<p>声明动态类型的语法：</p>
+<pre>
+dynamic &lt;variable_name&gt; = value;
+</pre>
+<p>例如：</p>
+<pre>
+dynamic d = 20;
+</pre>
+<p>动态类型与对象类型相似，但是对象类型变量的类型检查是在编译时发生的，而动态类型变量的类型检查是在运行时发生的。</p>
+<h3>字符串（String）类型</h3>
+<p><b>字符串（String）类型</b> 允许您给变量分配任何字符串值。字符串（String）类型是 System.String 类的别名。它是从对象（Object）类型派生的。字符串（String）类型的值可以通过两种形式进行分配：引号和 @引号。</p> 
+<p>例如：</p>
+<pre>
+String str = "runoob.com";
+</pre>
+<p>一个 @引号字符串：</p>
+<pre>
+@"runoob.com";
+</pre>
+<p>C# string 字符串的前面可以加 @（称作"逐字字符串"）将转义字符（\）当作普通字符对待，比如：</p>
+<pre>
+string str = @"C:\Windows";
+</pre>
+<p>等价于：</p>
+<pre>
+string str = "C:\\Windows";
+</pre>
+<p>
+@ 字符串中可以任意换行，换行符及缩进空格都计算在字符串长度之内。
+</p>
+<pre>
+string str = @"&lt;script type=""text/javascript""&gt;
+    &lt;!--
+    --&gt;
+&lt;/script&gt;";
+</pre>
+<p>用户自定义引用类型有：class、interface 或 delegate。我们将在以后的章节中讨论这些类型。</p>
+<h2 class="tutheader">指针类型（Pointer types）</h2>
+<p>指针类型变量存储另一种类型的内存地址。C# 中的指针与 C 或 C++ 中的指针有相同的功能。</p>
+<p>声明指针类型的语法：</p>
+<pre>
+type* identifier;
+</pre>
+<p>例如：</p>
+<pre>
+char* cptr;
+int* iptr;
+</pre>
+<p>我们将在章节"不安全的代码"中讨论指针类型。</p>			<!-- 其他扩展 -->
 						
 			</div>
 			
 		</div>
 		
 		<div class="previous-next-links">
-			<div class="previous-design-link"> </div>
-			<div class="next-design-link"><a href="csharp-intro.html" rel="next"> C# 简介</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-basic-syntax.html');" rel="prev"> C# 基本语法</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-type-conversion.html');" rel="next"> C# 类型转换</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
 		<!-- 笔记列表 -->
 		<style>
@@ -365,113 +430,109 @@
     <div class="altblock">
 				<i style="font-size:28px;margin-top: 8px;" class="fa fa-plus-square" aria-hidden="true"></i>
 		    </div>
-    <span class="mw-headline" id="qa_headline">4  篇笔记</span>
+    <span class="mw-headline" id="qa_headline">7  篇笔记</span>
 	<span class="mw-headline" id="user_add_note" style="float:right;line-height: 62px;padding-right: 14px;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>  写笔记</span>
     </h2>
 </div>
 
 <div id="postcomments" style="display:none;">
 	<ol class="commentlist">
-		<li class="comment even thread-even depth-1" id="comment-17323"><span class="comt-f">#4</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;暗黑系青菜</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;129***1362@qq.com</p></div><div id="runoobvote-id-17323" data-commid="17323" class="upvotejs"><a class="upvote"></a> <span class="count">32</span></div></div><div class="comt-main" id="div-comment-17323"><pre>Console.Write("Hello World!");
-与
-Console.WriteLine("Hello World!");</pre>
-<p data-title="C# Console.Write 与 Console.WriteLine 区别"><strong>区别：</strong>前者输出后不换行，后者输出后自动换行</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="17323.html">暗黑系青菜</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;暗黑系青菜</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;129***1362@qq.com</p></div></span>2年前 (2017-09-09)</div></div></li><!-- #comment-## -->
-<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-25633"><span class="comt-f">#3</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ZPK4229</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;zha***ngkunwork@163.com</p></div><div id="runoobvote-id-25633" data-commid="25633" class="upvotejs"><a class="upvote"></a> <span class="count">24</span></div></div><div class="comt-main" id="div-comment-25633"><p>这里简单介绍一下下面这段语句的作用：</p>
+		<li class="comment even thread-even depth-1" id="comment-1198"><span class="comt-f">#7</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Jennis</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;jen***tian@gmail.com</p></div><div id="runoobvote-id-1198" data-commid="1198" class="upvotejs"><a class="upvote"></a> <span class="count">41</span></div></div><div class="comt-main" id="div-comment-1198"><h2 data-title="C# 装箱和拆箱" data-commid="26697">关于装箱和拆箱
+</h2><p>
 
-<pre>Console.ReadKey();</pre>
-<p>编写 <strong>Console.Readkey();</strong> 这个函数是为了在控制台窗口停留一下，直到敲击键盘为止。</p>
+装箱：值类型转换为对象类型, 实例：</p><pre>
+int val = 8;
+object obj = val;//整型数据转换为了对象类型（装箱）
+</pre>
+<p>
+拆箱：之前由值类型转换而来的对象类型再转回值类型, 实例：</p>
+<pre>
+int val = 8;
+object obj = val;//先装箱
+int nval = （int）obj;//再拆箱
+</pre><p>
+只有装过箱的数据才能拆箱</p>
+<div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:window.open('https://www.runoob.com/note/1198');">Jennis</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Jennis</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;jen***tian@gmail.com</p></div></span>3年前 (2017-03-06)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-20205"><span class="comt-f">#6</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;smoker</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;934***908@qq.com</p></div><div id="runoobvote-id-20205" data-commid="20205" class="upvotejs"><a class="upvote"></a> <span class="count">12</span></div></div><div class="comt-main" id="div-comment-20205"><p><strong>obj  和int之间关系</strong></p>
 
-<p>不然运行时，"Hello World!" 这句话会在控制台窗口一闪而过，没法查看。</p>
-
-<pre>Console.Readkey();
-//与
-Console.Readline();
-//与
-Console.Read();</pre>
-<p><strong>区别：</strong>第一个在键盘敲击任意键退出；后两个差不多，都是输入任意东西后按回车才会退出。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">ZPK4229</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ZPK4229</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;zha***ngkunwork@163.com</p></div></span>2年前 (2018-03-28)</div></div></li><!-- #comment-## -->
-<li class="comment even thread-even depth-1" id="comment-28431"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Cristiano Ronaldo</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;843***547@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://blog.csdn.net/u010594850/article/details/18940023');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-28431" data-commid="28431" class="upvotejs"><a class="upvote"></a> <span class="count">23</span></div></div><div class="comt-main" id="div-comment-28431"><p data-title="C# Console.ReadLine() 与 Console.ReadKey() 用法" data-commid="25633"><span class="marked">Console.ReadLine()</span> 会等待直到用户按下回车，一次读入一行。</p>
-<p><span class="marked">Console.ReadKey()</span>  则是等待用户按下任意键，一次读入一个字符。</p>
-
-<pre>class Program
+<pre>using System;
+namespace RectangleApplication
 {
-   private List&lt;Student&gt; allStu = newList&lt;Student&gt;();
-   string yesORno;
-   bool flag = true;
-   
-   public void AddStudent()
-   {
-       while (flag)
-       {
-           Student s = new Student();
-           Console.WriteLine("请输入学生姓名:");
-           s.StuName = Console.ReadLine();
-           Console.WriteLine("请输入学生学号");
-           s.StuNum = Console.ReadLine();
-           allStu.Add(s);
+    class ExecuteRectangle
+    {
+        static void Main(string[] args)
+        {
+            int a=9;
+            object obj;
+            obj = a;
+            obj =10;
+            Console.WriteLine("2: {0}", a);   // 输出：2: 9
+            Console.WriteLine("1: {0}", obj); // 输出：1: 10
+            Console.ReadLine();
+        }
+    }
+} </pre>
+<p>设置值 int a=9; obj=a; 当obj改变不会对 int a 进行改变，object 只是复制了 int a 的值出来然后对其操作而已。不会影响到 int 原来的值。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">smoker</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;smoker</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;934***908@qq.com</p></div></span>2年前 (2017-11-12)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-24374"><span class="comt-f">#5</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;小二</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;404***626@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://www.cnblogs.com/ShaYeBlog/p/3210355.html');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-24374" data-commid="24374" class="upvotejs"><a class="upvote"></a> <span class="count">10</span></div></div><div class="comt-main" id="div-comment-24374"><p data-title="C# 中 String 跟 string 的区别"><strong>C# 中 String 跟 string 的区别</strong></p>
 
-           Console.WriteLine("是否继续输入:请输入y或者n");
-           yesORno =Console.ReadKey().Key.ToString();
-           
-           switch (yesORno)
-           {
-               case "Y":
-                   flag = true;
-                   break;
-               case "N":
-                   flag = false;
-                   break;
-           }
-       }
-   }
 
-   public void ShowStu()
-   {
-       for (int i = 0; i &lt; allStu.Count; i++)
-       {
-           Console.WriteLine(allStu[i].ToString());
-       }
-   }
+<p>string 是 C# 中的类，String 是 .net Framework 的类(在 C# IDE 中不会显示蓝色) C# string 映射为 .net Framework 的String 如果用 string, 编译器会把它编译成 String，所以如果直接用 String 就可以让编译器少做一点点工作。</p>
 
-   static void Main(string[] args)
-   {
-       Program p = new Program();
-       p.AddStudent();
-       p.ShowStu();
-       Console.ReadLine();
-   }
+<p>如果使用 C#，建议使用 string，比较符合规范 string 始终代表 System.String(1.x) 或 ::System.String(2.0) ，String 只有在前面有  using System;的时候并且当前命名空间中没有名为 String 的类型（class、struct、delegate、enum）的时候才代表 System.String string 是关键字，String 不是，也就是说 string 不能作为类、结构、枚举、字段、变量、方法、属性的名称，而 String 可以。</p>
+
+<p>String 是 CLR 的类型名称（也算是关键字），而 string 是 C# 中的关键字。string 在编译时候 C# 编译器会默认将其转换为 String，在这里会多增加几行转换的代码。很多时候都是建议使用 CLR 的类型而不要使用 C# 的类型（这是专家的建议）。比如说还有：使用 int 的时候最好使用 Int32 等。很多时候都是一个习惯问题，规范问题。还有一个不同就是在 VS 中表现的颜色不一样：String 是绿色，string 是蓝色。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:window.open('https://www.runoob.com/note/24374');">小二</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;小二</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;404***626@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://www.cnblogs.com/ShaYeBlog/p/3210355.html');">&nbsp;&nbsp;参考地址</a></p></div></span>2年前 (2018-02-26)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-24566"><span class="comt-f">#4</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;代码小白</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;dre***w@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/value-types');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-24566" data-commid="24566" class="upvotejs"><a class="upvote"></a> <span class="count">6</span></div></div><div class="comt-main" id="div-comment-24566"><p data-title="C# 值类型的特点" data-commid="24903"><strong>值类型的特点：</strong></p>
+<ul><li>
+1.不能从值类型派生新类型，但可以结构实现接口；
+</li><li>
+2.值类型不能包含 null 值；
+</li><li>
+3.每个值类型都具有一个初始化该类型的默认值的隐式默认构造函数。</li></ul><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:window.open('https://www.runoob.com/note/24566');">代码小白</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;代码小白</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;dre***w@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/value-types');">&nbsp;&nbsp;参考地址</a></p></div></span>2年前 (2018-03-05)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-24903"><span class="comt-f">#3</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;祈祷</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;117***7443@qq.com</p></div><div id="runoobvote-id-24903" data-commid="24903" class="upvotejs"><a class="upvote"></a> <span class="count">19</span></div></div><div class="comt-main" id="div-comment-24903"><p>每一个值类型都有一个独立的内存区域保存自己的值，调用它的时候调用的是它的值，而引用类型调用的是内存中的地址，比如定义引用类型  a1=10，这时候在内存中保存的是 10，当把 a1 赋给 a2 的时候，他们两个应用的是同一个内存空间，a2 的值会保存为 a1 的值，当把 a2 改为 20 时，应为 a1 和 a2 引用的是同一个所以 a1 也变成 20 了，这是引用类型，值类型是当把 a1 赋给 a2 时会为 a2 在开一块新的空间保存 a1 的值。当把 a2 改成 20 时就会在 a2 的空间保存 20，和 a1 并无什么关系。</p>
+<div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">祈祷</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;祈祷</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;117***7443@qq.com</p></div></span>2年前 (2018-03-12)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-26697"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Exception</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Exc***ion@qq.cn</p></div><div id="runoobvote-id-26697" data-commid="26697" class="upvotejs"><a class="upvote"></a> <span class="count">27</span></div></div><div class="comt-main" id="div-comment-26697"><p>就像仓库，仓库里有货架，货架上有编号：<strong>A1,A2,A3....................</strong>, 这些编号就可以看做是引用类型，现在来了一批货，有 <strong>“土豆，黄瓜，西红柿”</strong>，这些就是值类型，如果你想让 <span class="marked">A1=土豆</span>，那么就要把土豆搬到 <strong>A1</strong> 里面去，这就叫装箱，装箱需要耗费人力和工时（也就是耗费CPU和内存），同理拆箱就要把对应编号的货物搬出来，也是需要耗费人力和工时。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Exception</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Exception</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Exc***ion@qq.cn</p></div></span>2年前 (2018-04-26)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-27677"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;王风</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;185***439@qq.com</p></div><div id="runoobvote-id-27677" data-commid="27677" class="upvotejs"><a class="upvote"></a> <span class="count">27</span></div></div><div class="comt-main" id="div-comment-27677"><p data-title="C# 中关于值类型、引用类型以及“栈”跟“堆”的关系"><strong>关于值类型、引用类型以及“栈”跟“堆”的关系</strong></p>
+
+<p>值类型，声明一个值类型的时候，是在“栈”中开辟一个内存空间来存放对应的值，当值类型的值发生改变的时候，则直接修改该内存空间所保存的值。例：</p>
+
+<pre>int n1 = 5;
+int n2 = n1;
+Console.WriteLine(n1 + "  "+ n2);    // 5  5
+n2 = 7;
+Console.WriteLine(n1 + "  " + n2)    // 5  7</pre>
+<p>这里首先在“栈”中开辟一个内存空间用来保存 n1 的值 5，接着再在“栈”中开辟一个新的内存空间用来保存 n2 的值 5，所以显示出来的结果是 5   5。然后将 n2 在“栈”中对应的内存空间保存的值修改成 7，故显示出来的结果是 5  7。</p>
+
+<p>引用类型，声明一个引用类型的时候，首先是在“堆”中开辟一个内存空间来存放对应的值，然后在“栈”中开辟一个内存空间用于保存在“堆”中开辟的内存空间的地址。当系统调用引用类型的时候，首先去“栈”中获取到地址，然后根据地址在“堆”中找到对应的内存空间来获取到对应值。像<strong>数组</strong>这样的引用类型</p>
+
+
+
+<pre>string[] a1 = new string[]{ "a" , "b" , "c" };
+string[] a2 = a1;
+for(int i = 0; i &lt; a2.Length; i++)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;Console.Write(a2[i] + " ");    //a b c
 }
-
- 
-
-class Student
+a1[2] = "d";
+Console.WriteLine();            //换行
+for(int i = 0; i &lt; a2.Length; i++)
 {
-   private string stuName;
+&nbsp;&nbsp;&nbsp;&nbsp;Console.Write(a2[i] + " ");    //a b d
+}
+Console.WriteLine(); </pre>
+<p>这里首先是在“堆”中开辟一个内存空间(假设：0X55)用来保存数组a1的值，然后在“栈”中开辟一个内存空间（a1）用于保存地址 0X55。当将 a1 赋给 a2 时，是将地址赋给 a2，即在“栈”中开辟一个内存空间（a2）用于保存地址 0X55，所以输出 a2 的值是 a b c。当将 a1[2]修改成”d”的时候，修改的是“堆”中 0X55 内存空间保存的值，因为 a2 的地址和 a1 的地址一样，所以输出结果是 a b d。</p>
 
-   public string StuName
-   {
-       get { return stuName; }
-       set { stuName = value; }
-   }
+<p>而 string 是一个特殊的引用类型，先看下面代码：</p>
 
-   private string stuNum;
+<pre>string a = "123";
+string b = a; 
+Console.WriteLine(a+" "+b);  //123 123
+string b = "456";
+Console.WriteLine(a+" "+b);  //123 456</pre>
+<p>和数组类似的，这里首先在“堆”中开辟一个内存空间(假设：0X88)用来保存 a 的值 123，然后在“栈”中开辟一个内存空间（a）用于保存地址 0X88。</p>
 
-   public string StuNum
-   {
-       get { return stuNum; }
-       set { stuNum = value; }
-   }
+<p>和数组不同的是，当将 a 赋给 b 的时候，首先是在“堆”中开辟一个新的内存空间(假设：0X101)用于保存值 123，然后在“栈”中开辟一个内存空间（b）用于保存地址 0X101，所以输出的结果是 123 123。</p>
 
-   public override string ToString()
-   {
-       return "姓名" + stuName + "......." + "学号" + stuNum;
-   }
-}</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="28431.html">Cristiano Ronaldo</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Cristiano Ronaldo</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;843***547@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://blog.csdn.net/u010594850/article/details/18940023');">&nbsp;&nbsp;参考地址</a></p></div></span>2年前 (2018-06-15)</div></div></li><!-- #comment-## -->
-<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-43802"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Modrila</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;330***7468@qq.com</p></div><div id="runoobvote-id-43802" data-commid="43802" class="upvotejs"><a class="upvote"></a> <span class="count">33</span></div></div><div class="comt-main" id="div-comment-43802"><p><strong>输入与输出</strong></p>
-<pre>Console.Write();      输出不换行
-Console.WriteLine();  输出并换行
-Console.ReadLine();   读取键盘输入的所有字符，返回字符串。按下回车键退出 
-Console.Read();       读取键盘输入的第一个字符，返回其对应的ASCII值。按下回车键退出
-Console.ReadKey();    等待用户按下任意键并执行退出，(此函数的作用是为了在控制台窗口停留一下，直到用户敲击键盘为止。不然运行时，"Hello World!" 这句话会在控制台窗口一闪而过，没法查看。)</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Modrila</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Modrila</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;330***7468@qq.com</p></div></span>8个月前 (06-20)</div></div></li><!-- #comment-## -->
+<p>当修改 b 值时，并不是修改“堆”中 0X101 内存空间的值，而是在“堆”中重新开辟一个新的内存空间(假设：0X210)用于保存 b 修改后的值，然后将 b 在“栈”中对应的内存空间的所保存的地址修改成 0X210，所以输出的结果是 123 456。而“堆”中的 0X101 内存空间将在下次的垃圾回收中被回收利用。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:window.open('https://www.runoob.com/note/27677');">王风</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;王风</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;185***439@qq.com</p></div></span>2年前 (2018-05-24)</div></div></li><!-- #comment-## -->
 	</ol>
 	<div class="pagenav">
 			</div>
@@ -496,7 +557,7 @@ Console.ReadKey();    等待用户按下任意键并执行退出，(此函数的
 			<div id="mded"></div>
 			
 				<div class="comt-ctrl">
-					<div class="comt-tips"><input type='hidden' name='comment_post_ID' value='6575' id='comment_post_ID'>
+					<div class="comt-tips"><input type='hidden' name='comment_post_ID' value='6583' id='comment_post_ID'>
 <input type='hidden' name='comment_parent' id='comment_parent' value='0'>
 </div>
 					<button type="submit" name="submit" id="submit" tabindex="5"><i class="fa fa-pencil" aria-hidden="true"></i> 分享笔记</button>
@@ -564,7 +625,7 @@ $(function() {
 		// 系列化表单数据
 		var comment_parent = 0;
 		var is_user_logged_in = $("#is_user_logged_in").val();
-		var comment_post_ID =  6575;
+		var comment_post_ID =  6583;
 		var _wp_unfiltered_html_comment = $("#_wp_unfiltered_html_comment").val();
 		var comment = noteContent;
 		var author = $("#author").val();
@@ -652,9 +713,9 @@ $(function() {
 		}
 	};
 	if($('#comments').length){
-		$('.upvotejs').upvote({id: 6575, callback: callback});
+		$('.upvotejs').upvote({id: 6583, callback: callback});
 		
-		$.post(ajaxurl,{"action":"pinglun_zan","postid":6575},function(data){  
+		$.post(ajaxurl,{"action":"pinglun_zan","postid":6583},function(data){  
 			$(data).each(function(key,value) {
 				$("#runoobvote-id-" + value.commid + " .upvote").addClass(value.upvotejs_class);
 				$("#runoobvote-id-" + value.commid + " .downvote").addClass(value.downvote_class);
@@ -738,7 +799,7 @@ function isBlank(str) {
 	<div class="sidebar-box sidebar-cate">
 		
 		<div class="sidebar-tree">
-			<ul><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> HTML / CSS</a><ul class="double-li"><li><a title="HTML 教程" href="html-tutorial.html">HTML 教程</a></li><li><a title="HTML5 教程" href="html5-intro.html">HTML5 教程</a></li><li><a title="CSS 教程" href="css-tutorial.html">CSS 教程</a></li><li><a title="CSS3 教程" href="css3-tutorial.html">CSS3 教程</a></li><li><a title="Bootstrap3 教程" href="bootstrap-tutorial.html">Bootstrap3 教程</a></li><li><a title="Bootstrap4 教程" href="bootstrap4-tutorial.html">Bootstrap4 教程</a></li><li><a title="Font Awesome 教程" href="fontawesome-tutorial.html">Font Awesome 教程</a></li><li><a title="Foundation 教程" href="foundation-tutorial.html">Foundation 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> JavaScript</a><ul class="double-li"><li><a title="JavaScript 教程" href="js-tutorial.html">JavaScript 教程</a></li><li><a title="HTML DOM 教程" href="htmldom-tutorial.html">HTML DOM 教程</a></li><li><a title="jQuery 教程" href="jquery-tutorial.html">jQuery 教程</a></li><li><a title="AngularJS 教程" href="angularjs-tutorial.html">AngularJS 教程</a></li><li><a title="AngularJS2 教程" href="angularjs2-tutorial.html">AngularJS2 教程</a></li><li><a title="Vue.js 教程" href="vue-tutorial.html">Vue.js 教程</a></li><li><a title="React 教程" href="react-tutorial.html">React 教程</a></li><li><a title="TypeScript 教程" href="ts-tutorial.html">TypeScript 教程</a></li><li><a title="jQuery UI 教程" href="jqueryui-tutorial.html">jQuery UI 教程</a></li><li><a title="jQuery EasyUI 教程" href="jqueryeasyui-tutorial.html">jQuery EasyUI 教程</a></li><li><a title="Node.js 教程" href="nodejs-tutorial.html">Node.js 教程</a></li><li><a title="AJAX 教程" href="ajax-tutorial.html">AJAX 教程</a></li><li><a title="JSON 教程" href="json-tutorial.html">JSON 教程</a></li><li><a title="Echarts 教程" href="echarts-tutorial.html">Echarts 教程</a></li><li><a title="Highcharts 教程" href="highcharts-tutorial.html">Highcharts 教程</a></li><li><a title="Google 地图 教程" href="google-maps-basic.html">Google 地图 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 服务端</a><ul class="double-li"><li><a title="Python 教程" href="python3-tutorial.html">Python 教程</a></li><li><a title="Python2.x 教程" href="python-tutorial.html">Python2.x 教程</a></li><li><a title="Linux 教程" href="linux-tutorial.html">Linux 教程</a></li><li><a title="Docker 教程" href="docker-tutorial.html">Docker 教程</a></li><li><a title="Ruby 教程" href="ruby-tutorial.html">Ruby 教程</a></li><li><a title="Java 教程" href="java-tutorial.html">Java 教程</a></li><li><a title="C 教程" href="c-tutorial.html">C 教程</a></li><li><a title="C++ 教程" href="cpp-tutorial.html">C++ 教程</a></li><li><a title="Perl 教程" href="perl-tutorial.html">Perl 教程</a></li><li><a title="Servlet 教程" href="servlet-tutorial.html">Servlet 教程</a></li><li><a title="JSP 教程" href="jsp-tutorial.html">JSP 教程</a></li><li><a title="Lua 教程" href="lua-tutorial.html">Lua 教程</a></li><li><a title="Scala 教程" href="scala-tutorial.html">Scala 教程</a></li><li><a title="Go 教程" href="go-tutorial.html">Go 教程</a></li><li><a title="PHP 教程" href="php-tutorial.html">PHP 教程</a></li><li><a title="Django 教程" href="django-tutorial.html">Django 教程</a></li><li><a title="设计模式" href="design-pattern-tutorial.html">设计模式</a></li><li><a title="正则表达式" href="regexp-tutorial.html">正则表达式</a></li><li><a title="Maven 教程" href="maven-tutorial.html">Maven 教程</a></li><li><a title="NumPy 教程" href="numpy-tutorial.html">NumPy 教程</a></li><li><a title="ASP 教程" href="asp-tutorial.html">ASP 教程</a></li><li><a title="AppML 教程" href="appml-tutorial.html">AppML 教程</a></li><li><a title="VBScript 教程" href="vbscript-tutorial.html">VBScript 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 数据库</a><ul class="double-li"><li><a title="SQL 教程" href="sql-tutorial.html">SQL 教程</a></li><li><a title="Mysql 教程" href="mysql-tutorial.html">Mysql 教程</a></li><li><a title="PostgreSQL 教程" href="postgresql-tutorial.html">PostgreSQL 教程</a></li><li><a title="SQLite 教程" href="sqlite-tutorial.html">SQLite 教程</a></li><li><a title="MongoDB 教程" href="mongodb-tutorial.html">MongoDB 教程</a></li><li><a title="Redis 教程" href="redis-tutorial.html">Redis 教程</a></li><li><a title="Memcached 教程" href="memcached-tutorial.html">Memcached 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 移动端</a><ul class="double-li"><li><a title="Android 教程" href="android-tutorial-intro.html">Android 教程</a></li><li><a title="Swift 教程" href="swift-tutorial.html">Swift 教程</a></li><li><a title="jQuery Mobile 教程" href="jquerymobile-tutorial.html">jQuery Mobile 教程</a></li><li><a title="ionic 教程" href="ionic-tutorial.html">ionic 教程</a></li><li><a title="Kotlin 教程" href="kotlin-tutorial.html">Kotlin 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> XML 教程</a><ul class="double-li"><li><a title="XML 教程" href="xml-tutorial.html">XML 教程</a></li><li><a title="DTD 教程" href="dtd-tutorial.html">DTD 教程</a></li><li><a title="XML DOM 教程" href="dom-tutorial.html">XML DOM 教程</a></li><li><a title="XSLT 教程" href="xsl-tutorial.html">XSLT 教程</a></li><li><a title="XPath 教程" href="xpath-tutorial.html">XPath 教程</a></li><li><a title="XQuery 教程" href="xquery-tutorial.html">XQuery 教程</a></li><li><a title="XLink 教程" href="xlink-tutorial.html">XLink 教程</a></li><li><a title="XPointer 教程" href="xlink-tutorial.html">XPointer 教程</a></li><li><a title="XML Schema 教程" href="schema-tutorial.html">XML Schema 教程</a></li><li><a title="XSL-FO 教程" href="xslfo-tutorial.html">XSL-FO 教程</a></li><li><a title="SVG 教程" href="svg-tutorial.html">SVG 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> ASP.NET</a><ul class="double-li"><li><a title="ASP.NET 教程" href="aspnet-tutorial.html">ASP.NET 教程</a></li><li><a title="C# 教程" href="">C# 教程</a></li><li><a title="Web Pages 教程" href="webpages-intro.html">Web Pages 教程</a></li><li><a title="Razor 教程" href="razor-intro.html">Razor 教程</a></li><li><a title="MVC 教程" href="mvc-intro.html">MVC 教程</a></li><li><a title="Web Forms 教程" href="aspnet-intro.html">Web Forms 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> Web Service</a><ul class="double-li"><li><a title="Web Service 教程" href="webservices-tutorial.html">Web Service 教程</a></li><li><a title="WSDL 教程" href="wsdl-tutorial.html">WSDL 教程</a></li><li><a title="SOAP 教程" href="soap-tutorial.html">SOAP 教程</a></li><li><a title="RSS 教程" href="rss-tutorial.html">RSS 教程</a></li><li><a title="RDF 教程" href="rdf-tutorial.html">RDF 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 开发工具</a><ul class="double-li"><li><a title="Eclipse 教程" href="eclipse-tutorial.html">Eclipse 教程</a></li><li><a title="Git 教程" href="git-tutorial.html">Git 教程</a></li><li><a title="Svn 教程" href="svn-tutorial.html">Svn 教程</a></li><li><a title="Markdown 教程" href="md-tutorial.html">Markdown 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 网站建设</a><ul class="double-li"><li><a title="HTTP 教程" href="http-tutorial.html">HTTP 教程</a></li><li><a title="网站建设指南" href="web-buildingprimer.html">网站建设指南</a></li><li><a title="浏览器信息" href="browser-information.html">浏览器信息</a></li><li><a title="网站主机教程" href="hosting-tutorial.html">网站主机教程</a></li><li><a title="TCP/IP 教程" href="tcpip-tutorial.html">TCP/IP 教程</a></li><li><a title="W3C 教程" href="w3c-tutorial.html">W3C 教程</a></li><li><a title="网站品质" href="quality-tutorial.html">网站品质</a></li></ul></li></ul>			</div>
+			<ul><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> HTML / CSS</a><ul class="double-li"><li><a title="HTML 教程" href="html-tutorial.html">HTML 教程</a></li><li><a title="HTML5 教程" href="html5-intro.html">HTML5 教程</a></li><li><a title="CSS 教程" href="css-tutorial.html">CSS 教程</a></li><li><a title="CSS3 教程" href="css3-tutorial.html">CSS3 教程</a></li><li><a title="Bootstrap3 教程" href="bootstrap-tutorial.html">Bootstrap3 教程</a></li><li><a title="Bootstrap4 教程" href="bootstrap4-tutorial.html">Bootstrap4 教程</a></li><li><a title="Font Awesome 教程" href="fontawesome-tutorial.html">Font Awesome 教程</a></li><li><a title="Foundation 教程" href="foundation-tutorial.html">Foundation 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> JavaScript</a><ul class="double-li"><li><a title="JavaScript 教程" href="js-tutorial.html">JavaScript 教程</a></li><li><a title="HTML DOM 教程" href="htmldom-tutorial.html">HTML DOM 教程</a></li><li><a title="jQuery 教程" href="jquery-tutorial.html">jQuery 教程</a></li><li><a title="AngularJS 教程" href="angularjs-tutorial.html">AngularJS 教程</a></li><li><a title="AngularJS2 教程" href="angularjs2-tutorial.html">AngularJS2 教程</a></li><li><a title="Vue.js 教程" href="vue-tutorial.html">Vue.js 教程</a></li><li><a title="React 教程" href="react-tutorial.html">React 教程</a></li><li><a title="TypeScript 教程" href="ts-tutorial.html">TypeScript 教程</a></li><li><a title="jQuery UI 教程" href="jqueryui-tutorial.html">jQuery UI 教程</a></li><li><a title="jQuery EasyUI 教程" href="jqueryeasyui-tutorial.html">jQuery EasyUI 教程</a></li><li><a title="Node.js 教程" href="nodejs-tutorial.html">Node.js 教程</a></li><li><a title="AJAX 教程" href="ajax-tutorial.html">AJAX 教程</a></li><li><a title="JSON 教程" href="json-tutorial.html">JSON 教程</a></li><li><a title="Echarts 教程" href="echarts-tutorial.html">Echarts 教程</a></li><li><a title="Highcharts 教程" href="highcharts-tutorial.html">Highcharts 教程</a></li><li><a title="Google 地图 教程" href="google-maps-basic.html">Google 地图 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 服务端</a><ul class="double-li"><li><a title="Python 教程" href="python3-tutorial.html">Python 教程</a></li><li><a title="Python2.x 教程" href="python-tutorial.html">Python2.x 教程</a></li><li><a title="Linux 教程" href="linux-tutorial.html">Linux 教程</a></li><li><a title="Docker 教程" href="docker-tutorial.html">Docker 教程</a></li><li><a title="Ruby 教程" href="ruby-tutorial.html">Ruby 教程</a></li><li><a title="Java 教程" href="java-tutorial.html">Java 教程</a></li><li><a title="C 教程" href="c-tutorial.html">C 教程</a></li><li><a title="C++ 教程" href="cpp-tutorial.html">C++ 教程</a></li><li><a title="Perl 教程" href="perl-tutorial.html">Perl 教程</a></li><li><a title="Servlet 教程" href="servlet-tutorial.html">Servlet 教程</a></li><li><a title="JSP 教程" href="jsp-tutorial.html">JSP 教程</a></li><li><a title="Lua 教程" href="lua-tutorial.html">Lua 教程</a></li><li><a title="Scala 教程" href="scala-tutorial.html">Scala 教程</a></li><li><a title="Go 教程" href="go-tutorial.html">Go 教程</a></li><li><a title="PHP 教程" href="php-tutorial.html">PHP 教程</a></li><li><a title="Django 教程" href="django-tutorial.html">Django 教程</a></li><li><a title="设计模式" href="design-pattern-tutorial.html">设计模式</a></li><li><a title="正则表达式" href="regexp-tutorial.html">正则表达式</a></li><li><a title="Maven 教程" href="maven-tutorial.html">Maven 教程</a></li><li><a title="NumPy 教程" href="numpy-tutorial.html">NumPy 教程</a></li><li><a title="ASP 教程" href="asp-tutorial.html">ASP 教程</a></li><li><a title="AppML 教程" href="appml-tutorial.html">AppML 教程</a></li><li><a title="VBScript 教程" href="vbscript-tutorial.html">VBScript 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 数据库</a><ul class="double-li"><li><a title="SQL 教程" href="sql-tutorial.html">SQL 教程</a></li><li><a title="Mysql 教程" href="mysql-tutorial.html">Mysql 教程</a></li><li><a title="PostgreSQL 教程" href="postgresql-tutorial.html">PostgreSQL 教程</a></li><li><a title="SQLite 教程" href="sqlite-tutorial.html">SQLite 教程</a></li><li><a title="MongoDB 教程" href="mongodb-tutorial.html">MongoDB 教程</a></li><li><a title="Redis 教程" href="redis-tutorial.html">Redis 教程</a></li><li><a title="Memcached 教程" href="memcached-tutorial.html">Memcached 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 移动端</a><ul class="double-li"><li><a title="Android 教程" href="android-tutorial-intro.html">Android 教程</a></li><li><a title="Swift 教程" href="swift-tutorial.html">Swift 教程</a></li><li><a title="jQuery Mobile 教程" href="jquerymobile-tutorial.html">jQuery Mobile 教程</a></li><li><a title="ionic 教程" href="ionic-tutorial.html">ionic 教程</a></li><li><a title="Kotlin 教程" href="kotlin-tutorial.html">Kotlin 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> XML 教程</a><ul class="double-li"><li><a title="XML 教程" href="xml-tutorial.html">XML 教程</a></li><li><a title="DTD 教程" href="dtd-tutorial.html">DTD 教程</a></li><li><a title="XML DOM 教程" href="dom-tutorial.html">XML DOM 教程</a></li><li><a title="XSLT 教程" href="xsl-tutorial.html">XSLT 教程</a></li><li><a title="XPath 教程" href="xpath-tutorial.html">XPath 教程</a></li><li><a title="XQuery 教程" href="xquery-tutorial.html">XQuery 教程</a></li><li><a title="XLink 教程" href="xlink-tutorial.html">XLink 教程</a></li><li><a title="XPointer 教程" href="xlink-tutorial.html">XPointer 教程</a></li><li><a title="XML Schema 教程" href="schema-tutorial.html">XML Schema 教程</a></li><li><a title="XSL-FO 教程" href="xslfo-tutorial.html">XSL-FO 教程</a></li><li><a title="SVG 教程" href="svg-tutorial.html">SVG 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> ASP.NET</a><ul class="double-li"><li><a title="ASP.NET 教程" href="aspnet-tutorial.html">ASP.NET 教程</a></li><li><a title="C# 教程" href="csharp-tutorial.html">C# 教程</a></li><li><a title="Web Pages 教程" href="webpages-intro.html">Web Pages 教程</a></li><li><a title="Razor 教程" href="razor-intro.html">Razor 教程</a></li><li><a title="MVC 教程" href="mvc-intro.html">MVC 教程</a></li><li><a title="Web Forms 教程" href="aspnet-intro.html">Web Forms 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> Web Service</a><ul class="double-li"><li><a title="Web Service 教程" href="webservices-tutorial.html">Web Service 教程</a></li><li><a title="WSDL 教程" href="wsdl-tutorial.html">WSDL 教程</a></li><li><a title="SOAP 教程" href="soap-tutorial.html">SOAP 教程</a></li><li><a title="RSS 教程" href="rss-tutorial.html">RSS 教程</a></li><li><a title="RDF 教程" href="rdf-tutorial.html">RDF 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 开发工具</a><ul class="double-li"><li><a title="Eclipse 教程" href="eclipse-tutorial.html">Eclipse 教程</a></li><li><a title="Git 教程" href="git-tutorial.html">Git 教程</a></li><li><a title="Svn 教程" href="svn-tutorial.html">Svn 教程</a></li><li><a title="Markdown 教程" href="md-tutorial.html">Markdown 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 网站建设</a><ul class="double-li"><li><a title="HTTP 教程" href="http-tutorial.html">HTTP 教程</a></li><li><a title="网站建设指南" href="web-buildingprimer.html">网站建设指南</a></li><li><a title="浏览器信息" href="browser-information.html">浏览器信息</a></li><li><a title="网站主机教程" href="hosting-tutorial.html">网站主机教程</a></li><li><a title="TCP/IP 教程" href="tcpip-tutorial.html">TCP/IP 教程</a></li><li><a title="W3C 教程" href="w3c-tutorial.html">W3C 教程</a></li><li><a title="网站品质" href="quality-tutorial.html">网站品质</a></li></ul></li></ul>			</div>
 	
 	</div>
 	</div>
@@ -762,7 +823,7 @@ function isBlank(str) {
 </div>
 
 <script>
-var aid = 6575;
+var aid = 6583;
 function coll() {
 	$.post( '/wp-content/themes/runoob/option/user/userinfo.php', {aid:aid, action:"collarticle", opt:'add'},function( data ) {
 		if(data.error==0) {

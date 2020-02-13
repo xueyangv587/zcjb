@@ -4,12 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta property="qc:admins" content="465267610762567726375">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>C# 教程 | 菜鸟教程</title>
+	<title>C# 枚举（Enum） | 菜鸟教程</title>
 
   
-<link rel="canonical" href="http://www.runoob.com/csharp/csharp-tutorial.html">
-<meta name="keywords" content="C# 教程,C#">
-<meta name="description" content="C# 教程   C# 是一个简单的、现代的、通用的、面向对象的编程语言，它是由微软（Microsoft）开发的。 本教程将告诉您基础的 C# 编程，同时将向您讲解 C# 编程语言相关的各种先进理念。 现在开始学习 C#！ C# 在线工具   谁适合阅读本教程？ 本教程有助于初学者理解基础的 C# 编程。在学习完本教程后，您将到达一个中级的 C# 编程水平。  阅读本教程前，您需要了解的知识： C# 编程是基于 C 和 C++ 编程语言的..">
+<link rel="canonical" href="http://www.runoob.com/csharp/csharp-enum.html">
+<meta name="keywords" content="C# 枚举（Enum）">
+<meta name="description" content="C# 枚举（Enum）   枚举是一组命名整型常量。枚举类型是使用 enum 关键字声明的。 C# 枚举是值类型。换句话说，枚举包含自己的值，且不能继承或传递继承。   声明 enum 变量 声明枚举的一般语法：  enum  {      enumeration list  };  其中，  enum_name 指定枚举的类型名称。 enumeration list 是一个用逗号分隔的标识符列表。  枚举列表中的每个符号代表一个整数值..">
 		
 	
 	<link rel="stylesheet" href="static/css/style-1.154.css" type="text/css" media="all">	
@@ -68,7 +68,7 @@
 				<li><a href="java-tutorial.html">Java</a></li>
 				<li><a href="c-tutorial.html">C</a></li>
 				<li><a href="cpp-tutorial.html">C++</a></li>
-				<li><a href="">C#</a></li>
+				<li><a href="csharp-tutorial.html">C#</a></li>
 				<li><a href="sql-tutorial.html">SQL</a></li>
 				<li><a href="mysql-tutorial.html">MySQL</a></li>
 				<li><a href="php-tutorial.html">PHP</a></li>
@@ -103,7 +103,7 @@
 	</div>
 	<div class="sidebar-box gallery-list">
 		<div class="design" id="leftcolumn">
-						<a target="_top" title="C# 教程" href="">
+						<a target="_top" title="C# 教程" href="csharp-tutorial.html">
 			C# 教程			</a>
 						<a target="_top" title="C# 简介" href="csharp-intro.html">
 			C# 简介			</a>
@@ -139,7 +139,7 @@
 			C# 字符串（String）			</a>
 						<a target="_top" title="C# 结构体（Struct）" href="csharp-struct.html">
 			C# 结构体（Struct）			</a>
-						<a target="_top" title="C# 枚举（Enum）" href="csharp-enum.html">
+						<a target="_top" title="C# 枚举（Enum）" href="">
 			C# 枚举（Enum）			</a>
 						<a target="_top" title="C# 类（Class）" href="csharp-class.html">
 			C# 类（Class）			</a>
@@ -194,71 +194,74 @@
 		
 		</div>
 		<div class="previous-next-links">
-			<div class="previous-design-link"> </div>
-			<div class="next-design-link"><a href="csharp-intro.html" rel="next"> C# 简介</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-struct.html');" rel="prev"> C# 结构体（Struct）</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-class.html');" rel="next"> C# 类（Class）</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
 		<div class="article-body">
 		
 			<div class="article-intro" id="content">
 			
-			<h1>C# <span class="color_h1">教程</span></h1>
+			<h1>C# <span class="color_h1">枚举（Enum）</span></h1>
 
 <div class="tutintro">
-<p>C# 是一个简单的、现代的、通用的、面向对象的编程语言，它是由微软（Microsoft）开发的。</p>
-<p>本教程将告诉您基础的 C# 编程，同时将向您讲解 C# 编程语言相关的各种先进理念。</p>
-<p><b><a href="csharp-intro.html">现在开始学习 C#！</a></b></p>
-<p><a href="showcs-helloworld.html" target="_blank">C# 在线工具</a></p>
+<p>枚举是一组命名整型常量。枚举类型是使用 <b>enum</b> 关键字声明的。</p>
+<p>C# 枚举是值类型。换句话说，枚举包含自己的值，且不能继承或传递继承。</p>
 </div>
 
-<h2 class="tutheader">谁适合阅读本教程？</h2>
-<p>本教程有助于初学者理解基础的 C# 编程。在学习完本教程后，您将到达一个中级的 C# 编程水平。</p>
+<h2 class="tutheader">声明 <i>enum</i> 变量</h2>
+<p>声明枚举的一般语法：</p>
+<pre class="prettyprint">
+enum &lt;enum_name&gt;
+{ 
+    enumeration list 
+};
+</pre>
+<p>其中，</p>
+<ul class="list">
+<li><i>enum_name</i> 指定枚举的类型名称。</li>
+<li><i>enumeration list</i> 是一个用逗号分隔的标识符列表。</li>
+</ul>
+<p>枚举列表中的每个符号代表一个整数值，一个比它前面的符号大的整数值。默认情况下，第一个枚举符号的值是 0.例如：</p>
+<pre class="prettyprint">
+enum Days { Sun, Mon, tue, Wed, thu, Fri, Sat };
+</pre>
 
-<h2 class="tutheader">阅读本教程前，您需要了解的知识：</h2>
-<p>C# 编程是基于 C 和 C++ 编程语言的，因此如果您对 C 和 C++ 编程有基本的了解，将有助于您学习 C# 编程语言。</p>
-
-<h2 class="tutheader">编译/执行 C# 程序</h2>
-<p>菜鸟教程提供了在线的 C# 在线编译环境，您只需进行简单的点击动作，即可在高端的服务器上体验真实的编程经验。这是完全免费的在线工具。</p>
+<h2 class="tutheader">实例</h2>
+<p>下面的实例演示了枚举变量的用法：</p>
 <div class="example"> 
 <h2 class="example">实例</h2> 
 <div class="example_code">
 
 <span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
-<span style="color: #05a; font-weight: bold;">namespace</span> HelloWorldApplication<br>
+<br>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> EnumTest<br>
 <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 类名为 HelloWorld */</span><br>
-&nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">class</span> HelloWorld<br>
+&nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">enum</span> Day <span style="color: #008000;">&#123;</span> Sun, Mon, Tue, Wed, Thu, Fri, Sat <span style="color: #008000;">&#125;</span><span style="color: #008000;">;</span><br>
+<br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
 &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* main函数 */</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 我的第一个 C# 程序 */</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Hello World!&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">int</span> x <span style="color: #008000;">=</span> <span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&#41;</span>Day<span style="color: #008000;">.</span><span style="color: #05a;">Sun</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">int</span> y <span style="color: #008000;">=</span> <span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">&#41;</span>Day<span style="color: #008000;">.</span><span style="color: #05a;">Fri</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Sun = {0}&quot;</span>, x<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Fri = {0}&quot;</span>, y<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
 &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
 <span style="color: #008000;">&#125;</span><br>
 
-</div><br>
-<a target="_blank" href="showcs-helloworld.html" class="showbtn">运行实例 »</a>
 </div>
-<h2 class="tutheader">C# 有用的资源</h2>
-<p>本教程列出了 C# 网站、书籍和文章。</p>
-<h3>C# 有用的网站</h3>
-<ul class="list">
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://msdn.microsoft.com/en-us/library/67ef8sbd.aspx');">C# Programming Guide</a> - 介绍了有关关键的 C# 语言特征以及如何通过 .NET 框架访问 C# 的详细信息。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('https://visualstudio.microsoft.com/zh-hans/downloads/');">Visual Studio</a> - 下载作为 C# 集成开发环境的 Visual Studio 的最新版本。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://www.mono-project.com/Main_Page');">Go Mono</a> - Mono 是一个允许开发人员简单地创建跨平台应用程序的软件平台。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://en.wikipedia.org/wiki/C_Sharp_(programming_language)');">C Sharp (programming language) </a> - 维基百科解释 C#（编程语言）。</li>
-</ul>
-			<!-- 其他扩展 -->
+</div>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<pre>
+Sun = 0
+Fri = 5
+</pre>			<!-- 其他扩展 -->
 						
 			</div>
 			
 		</div>
 		
 		<div class="previous-next-links">
-			<div class="previous-design-link"> </div>
-			<div class="next-design-link"><a href="csharp-intro.html" rel="next"> C# 简介</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-struct.html');" rel="prev"> C# 结构体（Struct）</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-class.html');" rel="next"> C# 类（Class）</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
 		<!-- 笔记列表 -->
 		<style>
@@ -365,113 +368,253 @@
     <div class="altblock">
 				<i style="font-size:28px;margin-top: 8px;" class="fa fa-plus-square" aria-hidden="true"></i>
 		    </div>
-    <span class="mw-headline" id="qa_headline">4  篇笔记</span>
+    <span class="mw-headline" id="qa_headline">10  篇笔记</span>
 	<span class="mw-headline" id="user_add_note" style="float:right;line-height: 62px;padding-right: 14px;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>  写笔记</span>
     </h2>
 </div>
 
 <div id="postcomments" style="display:none;">
 	<ol class="commentlist">
-		<li class="comment even thread-even depth-1" id="comment-17323"><span class="comt-f">#4</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;暗黑系青菜</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;129***1362@qq.com</p></div><div id="runoobvote-id-17323" data-commid="17323" class="upvotejs"><a class="upvote"></a> <span class="count">32</span></div></div><div class="comt-main" id="div-comment-17323"><pre>Console.Write("Hello World!");
-与
-Console.WriteLine("Hello World!");</pre>
-<p data-title="C# Console.Write 与 Console.WriteLine 区别"><strong>区别：</strong>前者输出后不换行，后者输出后自动换行</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="17323.html">暗黑系青菜</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;暗黑系青菜</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;129***1362@qq.com</p></div></span>2年前 (2017-09-09)</div></div></li><!-- #comment-## -->
-<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-25633"><span class="comt-f">#3</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ZPK4229</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;zha***ngkunwork@163.com</p></div><div id="runoobvote-id-25633" data-commid="25633" class="upvotejs"><a class="upvote"></a> <span class="count">24</span></div></div><div class="comt-main" id="div-comment-25633"><p>这里简单介绍一下下面这段语句的作用：</p>
-
-<pre>Console.ReadKey();</pre>
-<p>编写 <strong>Console.Readkey();</strong> 这个函数是为了在控制台窗口停留一下，直到敲击键盘为止。</p>
-
-<p>不然运行时，"Hello World!" 这句话会在控制台窗口一闪而过，没法查看。</p>
-
-<pre>Console.Readkey();
-//与
-Console.Readline();
-//与
-Console.Read();</pre>
-<p><strong>区别：</strong>第一个在键盘敲击任意键退出；后两个差不多，都是输入任意东西后按回车才会退出。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">ZPK4229</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ZPK4229</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;zha***ngkunwork@163.com</p></div></span>2年前 (2018-03-28)</div></div></li><!-- #comment-## -->
-<li class="comment even thread-even depth-1" id="comment-28431"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Cristiano Ronaldo</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;843***547@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://blog.csdn.net/u010594850/article/details/18940023');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-28431" data-commid="28431" class="upvotejs"><a class="upvote"></a> <span class="count">23</span></div></div><div class="comt-main" id="div-comment-28431"><p data-title="C# Console.ReadLine() 与 Console.ReadKey() 用法" data-commid="25633"><span class="marked">Console.ReadLine()</span> 会等待直到用户按下回车，一次读入一行。</p>
-<p><span class="marked">Console.ReadKey()</span>  则是等待用户按下任意键，一次读入一个字符。</p>
-
-<pre>class Program
+		<li class="comment even thread-even depth-1" id="comment-15095"><span class="comt-f">#10</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Tommy Peng</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;tom***214@126.com</p></div><div id="runoobvote-id-15095" data-commid="15095" class="upvotejs"><a class="upvote"></a> <span class="count">5</span></div></div><div class="comt-main" id="div-comment-15095"><p>枚举列表中的每个符号代表一个整数值，一个比它前面的符号大的整数值。默认情况下，第一个枚举符号的值是 0。
+</p><p>
+但是，你也可以自定义每个符号的值：
+</p><pre>
+using System;
+namespace EnumApplication
 {
-   private List&lt;Student&gt; allStu = newList&lt;Student&gt;();
-   string yesORno;
-   bool flag = true;
-   
-   public void AddStudent()
-   {
-       while (flag)
-       {
-           Student s = new Student();
-           Console.WriteLine("请输入学生姓名:");
-           s.StuName = Console.ReadLine();
-           Console.WriteLine("请输入学生学号");
-           s.StuNum = Console.ReadLine();
-           allStu.Add(s);
+&nbsp;&nbsp;&nbsp;&nbsp;class EnumProgram
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enum Days {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mon=71, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tue=61, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wed=51, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thu=41, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri=51, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sat=61, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sun=71
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};
 
-           Console.WriteLine("是否继续输入:请输入y或者n");
-           yesORno =Console.ReadKey().Key.ToString();
-           
-           switch (yesORno)
-           {
-               case "Y":
-                   flag = true;
-                   break;
-               case "N":
-                   flag = false;
-                   break;
-           }
-       }
-   }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;static void Main(string[] args)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int WeekdayStart = (int)Days.Mon;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int WeekdayEnd = (int)Days.Fri;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Monday: {0}", WeekdayStart);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Friday: {0}", WeekdayEnd);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.ReadKey();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+</pre><p>
+输出结果：
+</p><pre>
+Monday: 71
+Friday: 51</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Tommy Peng</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Tommy Peng</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;tom***214@126.com</p></div></span>3年前 (2017-07-19)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-19050"><span class="comt-f">#9</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;长风</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;126***6554@qq.com</p></div><div id="runoobvote-id-19050" data-commid="19050" class="upvotejs"><a class="upvote"></a> <span class="count">9</span></div></div><div class="comt-main" id="div-comment-19050"><p>枚举列表中的每个符号代表一个整数值，一个比它前面的符号大的整数值。默认情况下，第一个枚举符号的值是 0。第 n 个符号值与第 n-1 个有关。</p>
 
-   public void ShowStu()
-   {
-       for (int i = 0; i &lt; allStu.Count; i++)
-       {
-           Console.WriteLine(allStu[i].ToString());
-       }
-   }
+<pre>using System;
 
-   static void Main(string[] args)
-   {
-       Program p = new Program();
-       p.AddStudent();
-       p.ShowStu();
-       Console.ReadLine();
-   }
+class Program
+{
+    enum Day  {a=8,b,c=1,e,f,g};
+    static void Main(string[] args)
+    {
+        int a = (int)Day.a;
+        int b = (int)Day.e;
+        Console.WriteLine(a);
+        Console.WriteLine(b);
+        Console.ReadKey();
+    }
+}</pre>
+<p>结果：</p>
+
+<pre>8
+2</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">长风</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;长风</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;126***6554@qq.com</p></div></span>2年前 (2017-10-18)</div></div></li><!-- #comment-## -->
+<li class="comment byuser comment-author-_mbreak even thread-even depth-1" id="comment-19146"><span class="comt-f">#8</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;_mBreak</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;709***515@qq.com</p></div><div id="runoobvote-id-19146" data-commid="19146" class="upvotejs"><a class="upvote"></a> <span class="count">13</span></div></div><div class="comt-main" id="div-comment-19146"><p>枚举体在给数组中具体标号位置给予含义是使用，可以使程序更容易读懂和修改。</p>
+
+
+<pre>enum len  { Length, width, height};
+
+static void Main(string[] args)
+{
+    int[] parameter = new int[3] {1,5,8};
+    Console.WriteLine("Length: {0}", parameter[(int)len.Length]);
+    Console.WriteLine("width: {0}", parameter[(int)len.width]);
+    Console.WriteLine("height: {0}", parameter[(int)len.height]);
+}</pre>
+
+<p>此时可以一眼看出打印值为参数的长宽高。</p>
+
+<p>相对于使用</p>
+
+<pre>#define length 0
+#define width  1
+#define height 2</pre>
+<p>
+该方式在插入一个参时更方便:</p>
+
+
+<pre>#define area   0
+#define length 1
+#define width  2
+#define height 3
+
+enum len  {area, Length, width, height};</pre>
+<p>很明显使用Enum方式更容易更改。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">_mBreak</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;_mBreak</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;709***515@qq.com</p></div></span>2年前 (2017-10-20)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-22734"><span class="comt-f">#7</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;//</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;109***4700@qq.com</p></div><div id="runoobvote-id-22734" data-commid="22734" class="upvotejs"><a class="upvote"></a> <span class="count">3</span></div></div><div class="comt-main" id="div-comment-22734"><p><strong>位标志枚举（flags enumeration）</strong></p>
+
+<p>现实中不总是用离散值枚举，以一周中的7天为例，假设要求应用程序用户指定一周中各天的任意组合，便可以使用"位标志枚举"。使用位标志枚举时，可以用或运算创建新的组合值。以星期为例，声明方法如下：</p>
+
+
+<pre>[Flags]
+public enum Days
+{
+&nbsp;&nbsp;&nbsp;&nbsp;None = 0,
+&nbsp;&nbsp;&nbsp;&nbsp;Sunday = 0x01,          //0000 0001
+&nbsp;&nbsp;&nbsp;&nbsp;Monday = 0x02,          //0000 0010
+&nbsp;&nbsp;&nbsp;&nbsp;Tuesday = 0x04,         //0000 0100
+&nbsp;&nbsp;&nbsp;&nbsp;Wednesday = 0x08,       //0000 1000
+&nbsp;&nbsp;&nbsp;&nbsp;Thursday = 0x10,        //0001 0000
+&nbsp;&nbsp;&nbsp;&nbsp;Friday = 0x20,          //0010 0000
+&nbsp;&nbsp;&nbsp;&nbsp;Saturday = 0x40,        //0100 0000
+&nbsp;&nbsp;&nbsp;&nbsp;Weekend = Sunday | Saturday,     //0100 0001
+&nbsp;&nbsp;&nbsp;&nbsp;Workdays = Monday | Tuesday | Wednesday | Tuesday | Friday, //0011 1110
+}</pre>
+
+
+<p>为了让位标志枚举的值能够组合，所有值都必须是2的幂。因为组合多个值时，必须能确定结果为哪个离散值。</p>
+<p>在简单枚举中，可以让名称None或最常用默认名称对应于0，但标志枚举要求0对应于名称None,这个值意味着所有标志都未设置。</p>
+<p>执行：</p>
+
+<pre>Days days = Days.Weekend;
+Console.WriteLine("{0} : {1}",days,(int)days);</pre>
+
+<p>结果输出：</p>
+
+<pre>Weekend : 65</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">//</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;//</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;109***4700@qq.com</p></div></span>2年前 (2018-01-07)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-38424"><span class="comt-f">#6</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;JiangCY</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;158***0110@qq.com</p></div><div id="runoobvote-id-38424" data-commid="38424" class="upvotejs"><a class="upvote"></a> <span class="count">3</span></div></div><div class="comt-main" id="div-comment-38424"><pre>Enum Gender
+{
+    Male = 1,
+  , Female = 0
 }
 
- 
+Gender gender = Gender.Male;
 
-class Student
+// Enum =&gt; int
+int genderId = (int)gender; // 1
+
+// int =&gt; Enum
+Gender gender1 = (Gender)0; // Female，超出枚举数值范围返回数值本身
+
+// Enum =&gt; string
+string genderStr = gender.ToString(); // Male
+
+// string =&gt; Enum
+Gender gender2 = (Gender)Enum.Parse(typeof(Gender), "Female"); // Gender.Female，超出字符串范围报错</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">JiangCY</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;JiangCY</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;158***0110@qq.com</p></div></span>1年前 (2018-12-28)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-42849"><span class="comt-f">#5</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Killen</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;153***7735@qq.com</p></div><div id="runoobvote-id-42849" data-commid="42849" class="upvotejs"><a class="upvote"></a> <span class="count">5</span></div></div><div class="comt-main" id="div-comment-42849"><p>枚举列表中的每个符号代表一个整数值，一个比它前面的符号大的整数值。默认情况下，第一个枚举符号的值是 0。但你也可以設定每個符號的值，如果字符 n 你沒有設定值，他的值就是字符 (n-1)+1，舉個例子：比如枚舉字符 g，他的值就是字符 f 的值 +1，但由於 f 的值不知道，他就會去找第（n-1）的值，也就是 e 的值，以此類推，找到了 c 的值 1，e=c+1=2，f=e+1=3，g=f+1=4;</p>
+
+<pre>using System;
+
+class Program
 {
-   private string stuName;
+    enum Day  {a=8,b,c=1,e,f,g};
+    static void Main(string[] args)
+    {
+            int a = (int)Day.a;//8
+            int x = (int)Day.b;//9
+            int c = (int)Day.c;//1
+            int b = (int)Day.e;//2
+            int g = (int)Day.g;//4
+    }
+}</pre>
+<p>默认情况下，第一个枚举符号的值是 0。</p>
 
-   public string StuName
-   {
-       get { return stuName; }
-       set { stuName = value; }
-   }
+<pre>using System;
 
-   private string stuNum;
+class Program
+{
+    enum Day  { a, b, c, e = 1, f, g };
+    static void Main(string[] args)
+    {
+            int a = (int)Day.a;//0
+            int x = (int)Day.b;//1
+            int c = (int)Day.c;//2
+            int b = (int)Day.e;//1
+            int g = (int)Day.g;//3
+    }
+}</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Killen</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Killen</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;153***7735@qq.com</p></div></span>9个月前 (05-17)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-47476"><span class="comt-f">#4</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;kevinchankwong11</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;che***chankwong@yahoo.com</p></div><div id="runoobvote-id-47476" data-commid="47476" class="upvotejs"><a class="upvote"></a> <span class="count">0</span></div></div><div class="comt-main" id="div-comment-47476"><p>枚举中的每一个数字都是整数型，如果不给任何一个元素赋值的话，那么是默认从 0 开始以 1 为单位的增长，如果全部赋值，那么也不用说上面分享笔记的同学已经说过了这种情况，我想说一说在列举元素内部元素赋值的情况（非首尾的元素），以列举元素第N位，我们赋值为 a，那么运行结果是 Mon=1、Fri=22，所以由此可知，在赋值的元素之前，仍然服从默认赋值规律，从 0 开始以 1 为 increment 的增长知道第 N-1 位，但是从赋值的 N 位开始，以其值 a 为起点的 increment 为 1 的增长，即：a+1,a+2，a+3....</p>
+<pre>using System;
+public class EnumTest
+{
+    enum Day {  Sun, Mon, Tue=19, Wed, Thu, Fri, Sat };  /*列举其中的元素*/
+    static void Main()
+    {
+        int x = (int)Day.Mon;
+        int y = (int)Day.Fri;
+        Console.WriteLine("Mon = {0}", x);   /*一般数组中默认的数值第一个就是0，其后是一次增大的，但是也是可以对数组中的每个元素进行赋值*/
+        Console.WriteLine("Fri = {0}", y);
+        Console.ReadKey();
+    }
+}</pre>
 
-   public string StuNum
-   {
-       get { return stuNum; }
-       set { stuNum = value; }
-   }
+<div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">kevinchankwong11</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;kevinchankwong11</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;che***chankwong@yahoo.com</p></div></span>4个月前 (10-14)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-48909"><span class="comt-f">#3</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;maanshancss</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;w1-***qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://www.runoob.com/w3cnote/csharp-enum.html');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-48909" data-commid="48909" class="upvotejs"><a class="upvote"></a> <span class="count">0</span></div></div><div class="comt-main" id="div-comment-48909"><p>同上面那位我点赞的同学一样说下位枚举的一个实例;</p>
 
-   public override string ToString()
-   {
-       return "姓名" + stuName + "......." + "学号" + stuNum;
-   }
-}</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="28431.html">Cristiano Ronaldo</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Cristiano Ronaldo</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;843***547@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://blog.csdn.net/u010594850/article/details/18940023');">&nbsp;&nbsp;参考地址</a></p></div></span>2年前 (2018-06-15)</div></div></li><!-- #comment-## -->
-<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-43802"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Modrila</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;330***7468@qq.com</p></div><div id="runoobvote-id-43802" data-commid="43802" class="upvotejs"><a class="upvote"></a> <span class="count">33</span></div></div><div class="comt-main" id="div-comment-43802"><p><strong>输入与输出</strong></p>
-<pre>Console.Write();      输出不换行
-Console.WriteLine();  输出并换行
-Console.ReadLine();   读取键盘输入的所有字符，返回字符串。按下回车键退出 
-Console.Read();       读取键盘输入的第一个字符，返回其对应的ASCII值。按下回车键退出
-Console.ReadKey();    等待用户按下任意键并执行退出，(此函数的作用是为了在控制台窗口停留一下，直到用户敲击键盘为止。不然运行时，"Hello World!" 这句话会在控制台窗口一闪而过，没法查看。)</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Modrila</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Modrila</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;330***7468@qq.com</p></div></span>8个月前 (06-20)</div></div></li><!-- #comment-## -->
+<pre>//1、给用户创建、读取，修改和删除的权限
+var parmission = Permission.Create | parmission.Read | parmission.Update | parmission.Delete;
+
+//2、去掉用户的修改和删除权限
+parmission = parmission &amp;~parmission.Update;
+parmission = parmission &amp;~parmission.Delete;
+
+//3、给用户加上修改的权限
+parmission = parmission | parmission.Update;
+
+//4、判断用户是否有创建的权限
+var isCreate = (parmission &amp; parmission.Create)!=0;
+//或者
+var isCreate = (parmission &amp; parmission.Create)==parmission.Create;
+　　这时parmission枚举的值将变成0+1+4=5，它的ToSting()将变成&ldquo;parmission.Create，
+　　parmission.Read&rdquo;,parmission.Update; 这里我们可以解释为什么第五个值Delete是8而不能成为5。
+　　也就是说它的值不应该是前几项值的复合值。一个比较简单的方法
+　　就是用2的n次方来依次位每一项赋值，例如：1，2，4，8，16，32，64.......。</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">maanshancss</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;maanshancss</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;w1-***qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://www.runoob.com/w3cnote/csharp-enum.html');">&nbsp;&nbsp;参考地址</a></p></div></span>2个月前 (11-29)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-48910"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;maanshancss</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;w1-***qq.com</p></div><div id="runoobvote-id-48910" data-commid="48910" class="upvotejs"><a class="upvote"></a> <span class="count">0</span></div></div><div class="comt-main" id="div-comment-48910"><p><b>推荐:</b></p><p>枚举类名建议带上 Enum 后缀，枚举成员名称需要全大写，单词间用下划线隔开。</p><p>说明： 枚举其实就是特殊的常量类，且构造方法被默认强制是私有。</p><p>正例： 枚举名字： DealStatusEnum， 成员名称： SUCCESS / UNKOWN_REASON</p><p></p><p> </p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">maanshancss</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;maanshancss</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;w1-***qq.com</p></div></span>2个月前 (11-29)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-50078"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;胡桃</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;266***8012@qq.com</p></div><div id="runoobvote-id-50078" data-commid="50078" class="upvotejs"><a class="upvote"></a> <span class="count">0</span></div></div><div class="comt-main" id="div-comment-50078"><ul><li>
+枚举是一种类型</li><li>
+适用于某些取值范围有限的数据，例如：我只想要春夏秋冬这四个字符的取值范围，如果用string的话就无法固定取值范围</li><li>
+枚举语法：[访问权限修饰符] enum 枚举名 { 枚举值 }</li><li>
+枚举访问权限修饰符和类是一样的，默认访问权限和类一样都是internal</li><li>
+枚举名遵循大驼峰命名法</li><li>
+枚举的每一个值都是一个整型，默认都是从 0 开始</li></ul>
+<p>以上特点上面笔记都差不多都说，然后还有两点：</p>
+<ul><li>
+1、枚举中的元素的值可以设置为相同，但不推荐。</li><li>
+2、枚举元素默认的值的类型是 int 型，可以修改为其他整型 byte、sbyte、short、ushort、int、uint、long 和 ulong。
+</li></ul>
+<pre>public enum Season_1
+{
+    spring_1 = 3,  //3
+    sunmmer_1,     //4
+    autumn_1 = 3,  //3
+    winter_1       //4
+}
+public enum Season_2 : long  //将枚举默认类型int改为long
+{
+    spring_2,  //0
+    sunmmer_2, //1
+    autumn_2,  //2
+    winter_2   //3
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+      Season_1 s2 = Season_1.autumn_1;
+      Console.WriteLine(s2);  //显示spring_1，而不是autumn_1的原因是spring_1和autumn_1都是3，从前往后                                  //第一个3是spring_1，所以就输出spring_1
+      Season_1 s3 = Season_1.spring_1;
+        Console.WriteLine(s2 == s3);  //结果是true，表明spring_1和autumn_1是一样的
+    }
+ }</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">胡桃</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;胡桃</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;266***8012@qq.com</p></div></span>4周前 (01-14)</div></div></li><!-- #comment-## -->
 	</ol>
 	<div class="pagenav">
 			</div>
@@ -496,7 +639,7 @@ Console.ReadKey();    等待用户按下任意键并执行退出，(此函数的
 			<div id="mded"></div>
 			
 				<div class="comt-ctrl">
-					<div class="comt-tips"><input type='hidden' name='comment_post_ID' value='6575' id='comment_post_ID'>
+					<div class="comt-tips"><input type='hidden' name='comment_post_ID' value='6637' id='comment_post_ID'>
 <input type='hidden' name='comment_parent' id='comment_parent' value='0'>
 </div>
 					<button type="submit" name="submit" id="submit" tabindex="5"><i class="fa fa-pencil" aria-hidden="true"></i> 分享笔记</button>
@@ -564,7 +707,7 @@ $(function() {
 		// 系列化表单数据
 		var comment_parent = 0;
 		var is_user_logged_in = $("#is_user_logged_in").val();
-		var comment_post_ID =  6575;
+		var comment_post_ID =  6637;
 		var _wp_unfiltered_html_comment = $("#_wp_unfiltered_html_comment").val();
 		var comment = noteContent;
 		var author = $("#author").val();
@@ -652,9 +795,9 @@ $(function() {
 		}
 	};
 	if($('#comments').length){
-		$('.upvotejs').upvote({id: 6575, callback: callback});
+		$('.upvotejs').upvote({id: 6637, callback: callback});
 		
-		$.post(ajaxurl,{"action":"pinglun_zan","postid":6575},function(data){  
+		$.post(ajaxurl,{"action":"pinglun_zan","postid":6637},function(data){  
 			$(data).each(function(key,value) {
 				$("#runoobvote-id-" + value.commid + " .upvote").addClass(value.upvotejs_class);
 				$("#runoobvote-id-" + value.commid + " .downvote").addClass(value.downvote_class);
@@ -738,7 +881,7 @@ function isBlank(str) {
 	<div class="sidebar-box sidebar-cate">
 		
 		<div class="sidebar-tree">
-			<ul><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> HTML / CSS</a><ul class="double-li"><li><a title="HTML 教程" href="html-tutorial.html">HTML 教程</a></li><li><a title="HTML5 教程" href="html5-intro.html">HTML5 教程</a></li><li><a title="CSS 教程" href="css-tutorial.html">CSS 教程</a></li><li><a title="CSS3 教程" href="css3-tutorial.html">CSS3 教程</a></li><li><a title="Bootstrap3 教程" href="bootstrap-tutorial.html">Bootstrap3 教程</a></li><li><a title="Bootstrap4 教程" href="bootstrap4-tutorial.html">Bootstrap4 教程</a></li><li><a title="Font Awesome 教程" href="fontawesome-tutorial.html">Font Awesome 教程</a></li><li><a title="Foundation 教程" href="foundation-tutorial.html">Foundation 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> JavaScript</a><ul class="double-li"><li><a title="JavaScript 教程" href="js-tutorial.html">JavaScript 教程</a></li><li><a title="HTML DOM 教程" href="htmldom-tutorial.html">HTML DOM 教程</a></li><li><a title="jQuery 教程" href="jquery-tutorial.html">jQuery 教程</a></li><li><a title="AngularJS 教程" href="angularjs-tutorial.html">AngularJS 教程</a></li><li><a title="AngularJS2 教程" href="angularjs2-tutorial.html">AngularJS2 教程</a></li><li><a title="Vue.js 教程" href="vue-tutorial.html">Vue.js 教程</a></li><li><a title="React 教程" href="react-tutorial.html">React 教程</a></li><li><a title="TypeScript 教程" href="ts-tutorial.html">TypeScript 教程</a></li><li><a title="jQuery UI 教程" href="jqueryui-tutorial.html">jQuery UI 教程</a></li><li><a title="jQuery EasyUI 教程" href="jqueryeasyui-tutorial.html">jQuery EasyUI 教程</a></li><li><a title="Node.js 教程" href="nodejs-tutorial.html">Node.js 教程</a></li><li><a title="AJAX 教程" href="ajax-tutorial.html">AJAX 教程</a></li><li><a title="JSON 教程" href="json-tutorial.html">JSON 教程</a></li><li><a title="Echarts 教程" href="echarts-tutorial.html">Echarts 教程</a></li><li><a title="Highcharts 教程" href="highcharts-tutorial.html">Highcharts 教程</a></li><li><a title="Google 地图 教程" href="google-maps-basic.html">Google 地图 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 服务端</a><ul class="double-li"><li><a title="Python 教程" href="python3-tutorial.html">Python 教程</a></li><li><a title="Python2.x 教程" href="python-tutorial.html">Python2.x 教程</a></li><li><a title="Linux 教程" href="linux-tutorial.html">Linux 教程</a></li><li><a title="Docker 教程" href="docker-tutorial.html">Docker 教程</a></li><li><a title="Ruby 教程" href="ruby-tutorial.html">Ruby 教程</a></li><li><a title="Java 教程" href="java-tutorial.html">Java 教程</a></li><li><a title="C 教程" href="c-tutorial.html">C 教程</a></li><li><a title="C++ 教程" href="cpp-tutorial.html">C++ 教程</a></li><li><a title="Perl 教程" href="perl-tutorial.html">Perl 教程</a></li><li><a title="Servlet 教程" href="servlet-tutorial.html">Servlet 教程</a></li><li><a title="JSP 教程" href="jsp-tutorial.html">JSP 教程</a></li><li><a title="Lua 教程" href="lua-tutorial.html">Lua 教程</a></li><li><a title="Scala 教程" href="scala-tutorial.html">Scala 教程</a></li><li><a title="Go 教程" href="go-tutorial.html">Go 教程</a></li><li><a title="PHP 教程" href="php-tutorial.html">PHP 教程</a></li><li><a title="Django 教程" href="django-tutorial.html">Django 教程</a></li><li><a title="设计模式" href="design-pattern-tutorial.html">设计模式</a></li><li><a title="正则表达式" href="regexp-tutorial.html">正则表达式</a></li><li><a title="Maven 教程" href="maven-tutorial.html">Maven 教程</a></li><li><a title="NumPy 教程" href="numpy-tutorial.html">NumPy 教程</a></li><li><a title="ASP 教程" href="asp-tutorial.html">ASP 教程</a></li><li><a title="AppML 教程" href="appml-tutorial.html">AppML 教程</a></li><li><a title="VBScript 教程" href="vbscript-tutorial.html">VBScript 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 数据库</a><ul class="double-li"><li><a title="SQL 教程" href="sql-tutorial.html">SQL 教程</a></li><li><a title="Mysql 教程" href="mysql-tutorial.html">Mysql 教程</a></li><li><a title="PostgreSQL 教程" href="postgresql-tutorial.html">PostgreSQL 教程</a></li><li><a title="SQLite 教程" href="sqlite-tutorial.html">SQLite 教程</a></li><li><a title="MongoDB 教程" href="mongodb-tutorial.html">MongoDB 教程</a></li><li><a title="Redis 教程" href="redis-tutorial.html">Redis 教程</a></li><li><a title="Memcached 教程" href="memcached-tutorial.html">Memcached 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 移动端</a><ul class="double-li"><li><a title="Android 教程" href="android-tutorial-intro.html">Android 教程</a></li><li><a title="Swift 教程" href="swift-tutorial.html">Swift 教程</a></li><li><a title="jQuery Mobile 教程" href="jquerymobile-tutorial.html">jQuery Mobile 教程</a></li><li><a title="ionic 教程" href="ionic-tutorial.html">ionic 教程</a></li><li><a title="Kotlin 教程" href="kotlin-tutorial.html">Kotlin 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> XML 教程</a><ul class="double-li"><li><a title="XML 教程" href="xml-tutorial.html">XML 教程</a></li><li><a title="DTD 教程" href="dtd-tutorial.html">DTD 教程</a></li><li><a title="XML DOM 教程" href="dom-tutorial.html">XML DOM 教程</a></li><li><a title="XSLT 教程" href="xsl-tutorial.html">XSLT 教程</a></li><li><a title="XPath 教程" href="xpath-tutorial.html">XPath 教程</a></li><li><a title="XQuery 教程" href="xquery-tutorial.html">XQuery 教程</a></li><li><a title="XLink 教程" href="xlink-tutorial.html">XLink 教程</a></li><li><a title="XPointer 教程" href="xlink-tutorial.html">XPointer 教程</a></li><li><a title="XML Schema 教程" href="schema-tutorial.html">XML Schema 教程</a></li><li><a title="XSL-FO 教程" href="xslfo-tutorial.html">XSL-FO 教程</a></li><li><a title="SVG 教程" href="svg-tutorial.html">SVG 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> ASP.NET</a><ul class="double-li"><li><a title="ASP.NET 教程" href="aspnet-tutorial.html">ASP.NET 教程</a></li><li><a title="C# 教程" href="">C# 教程</a></li><li><a title="Web Pages 教程" href="webpages-intro.html">Web Pages 教程</a></li><li><a title="Razor 教程" href="razor-intro.html">Razor 教程</a></li><li><a title="MVC 教程" href="mvc-intro.html">MVC 教程</a></li><li><a title="Web Forms 教程" href="aspnet-intro.html">Web Forms 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> Web Service</a><ul class="double-li"><li><a title="Web Service 教程" href="webservices-tutorial.html">Web Service 教程</a></li><li><a title="WSDL 教程" href="wsdl-tutorial.html">WSDL 教程</a></li><li><a title="SOAP 教程" href="soap-tutorial.html">SOAP 教程</a></li><li><a title="RSS 教程" href="rss-tutorial.html">RSS 教程</a></li><li><a title="RDF 教程" href="rdf-tutorial.html">RDF 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 开发工具</a><ul class="double-li"><li><a title="Eclipse 教程" href="eclipse-tutorial.html">Eclipse 教程</a></li><li><a title="Git 教程" href="git-tutorial.html">Git 教程</a></li><li><a title="Svn 教程" href="svn-tutorial.html">Svn 教程</a></li><li><a title="Markdown 教程" href="md-tutorial.html">Markdown 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 网站建设</a><ul class="double-li"><li><a title="HTTP 教程" href="http-tutorial.html">HTTP 教程</a></li><li><a title="网站建设指南" href="web-buildingprimer.html">网站建设指南</a></li><li><a title="浏览器信息" href="browser-information.html">浏览器信息</a></li><li><a title="网站主机教程" href="hosting-tutorial.html">网站主机教程</a></li><li><a title="TCP/IP 教程" href="tcpip-tutorial.html">TCP/IP 教程</a></li><li><a title="W3C 教程" href="w3c-tutorial.html">W3C 教程</a></li><li><a title="网站品质" href="quality-tutorial.html">网站品质</a></li></ul></li></ul>			</div>
+			<ul><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> HTML / CSS</a><ul class="double-li"><li><a title="HTML 教程" href="html-tutorial.html">HTML 教程</a></li><li><a title="HTML5 教程" href="html5-intro.html">HTML5 教程</a></li><li><a title="CSS 教程" href="css-tutorial.html">CSS 教程</a></li><li><a title="CSS3 教程" href="css3-tutorial.html">CSS3 教程</a></li><li><a title="Bootstrap3 教程" href="bootstrap-tutorial.html">Bootstrap3 教程</a></li><li><a title="Bootstrap4 教程" href="bootstrap4-tutorial.html">Bootstrap4 教程</a></li><li><a title="Font Awesome 教程" href="fontawesome-tutorial.html">Font Awesome 教程</a></li><li><a title="Foundation 教程" href="foundation-tutorial.html">Foundation 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> JavaScript</a><ul class="double-li"><li><a title="JavaScript 教程" href="js-tutorial.html">JavaScript 教程</a></li><li><a title="HTML DOM 教程" href="htmldom-tutorial.html">HTML DOM 教程</a></li><li><a title="jQuery 教程" href="jquery-tutorial.html">jQuery 教程</a></li><li><a title="AngularJS 教程" href="angularjs-tutorial.html">AngularJS 教程</a></li><li><a title="AngularJS2 教程" href="angularjs2-tutorial.html">AngularJS2 教程</a></li><li><a title="Vue.js 教程" href="vue-tutorial.html">Vue.js 教程</a></li><li><a title="React 教程" href="react-tutorial.html">React 教程</a></li><li><a title="TypeScript 教程" href="ts-tutorial.html">TypeScript 教程</a></li><li><a title="jQuery UI 教程" href="jqueryui-tutorial.html">jQuery UI 教程</a></li><li><a title="jQuery EasyUI 教程" href="jqueryeasyui-tutorial.html">jQuery EasyUI 教程</a></li><li><a title="Node.js 教程" href="nodejs-tutorial.html">Node.js 教程</a></li><li><a title="AJAX 教程" href="ajax-tutorial.html">AJAX 教程</a></li><li><a title="JSON 教程" href="json-tutorial.html">JSON 教程</a></li><li><a title="Echarts 教程" href="echarts-tutorial.html">Echarts 教程</a></li><li><a title="Highcharts 教程" href="highcharts-tutorial.html">Highcharts 教程</a></li><li><a title="Google 地图 教程" href="google-maps-basic.html">Google 地图 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 服务端</a><ul class="double-li"><li><a title="Python 教程" href="python3-tutorial.html">Python 教程</a></li><li><a title="Python2.x 教程" href="python-tutorial.html">Python2.x 教程</a></li><li><a title="Linux 教程" href="linux-tutorial.html">Linux 教程</a></li><li><a title="Docker 教程" href="docker-tutorial.html">Docker 教程</a></li><li><a title="Ruby 教程" href="ruby-tutorial.html">Ruby 教程</a></li><li><a title="Java 教程" href="java-tutorial.html">Java 教程</a></li><li><a title="C 教程" href="c-tutorial.html">C 教程</a></li><li><a title="C++ 教程" href="cpp-tutorial.html">C++ 教程</a></li><li><a title="Perl 教程" href="perl-tutorial.html">Perl 教程</a></li><li><a title="Servlet 教程" href="servlet-tutorial.html">Servlet 教程</a></li><li><a title="JSP 教程" href="jsp-tutorial.html">JSP 教程</a></li><li><a title="Lua 教程" href="lua-tutorial.html">Lua 教程</a></li><li><a title="Scala 教程" href="scala-tutorial.html">Scala 教程</a></li><li><a title="Go 教程" href="go-tutorial.html">Go 教程</a></li><li><a title="PHP 教程" href="php-tutorial.html">PHP 教程</a></li><li><a title="Django 教程" href="django-tutorial.html">Django 教程</a></li><li><a title="设计模式" href="design-pattern-tutorial.html">设计模式</a></li><li><a title="正则表达式" href="regexp-tutorial.html">正则表达式</a></li><li><a title="Maven 教程" href="maven-tutorial.html">Maven 教程</a></li><li><a title="NumPy 教程" href="numpy-tutorial.html">NumPy 教程</a></li><li><a title="ASP 教程" href="asp-tutorial.html">ASP 教程</a></li><li><a title="AppML 教程" href="appml-tutorial.html">AppML 教程</a></li><li><a title="VBScript 教程" href="vbscript-tutorial.html">VBScript 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 数据库</a><ul class="double-li"><li><a title="SQL 教程" href="sql-tutorial.html">SQL 教程</a></li><li><a title="Mysql 教程" href="mysql-tutorial.html">Mysql 教程</a></li><li><a title="PostgreSQL 教程" href="postgresql-tutorial.html">PostgreSQL 教程</a></li><li><a title="SQLite 教程" href="sqlite-tutorial.html">SQLite 教程</a></li><li><a title="MongoDB 教程" href="mongodb-tutorial.html">MongoDB 教程</a></li><li><a title="Redis 教程" href="redis-tutorial.html">Redis 教程</a></li><li><a title="Memcached 教程" href="memcached-tutorial.html">Memcached 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 移动端</a><ul class="double-li"><li><a title="Android 教程" href="android-tutorial-intro.html">Android 教程</a></li><li><a title="Swift 教程" href="swift-tutorial.html">Swift 教程</a></li><li><a title="jQuery Mobile 教程" href="jquerymobile-tutorial.html">jQuery Mobile 教程</a></li><li><a title="ionic 教程" href="ionic-tutorial.html">ionic 教程</a></li><li><a title="Kotlin 教程" href="kotlin-tutorial.html">Kotlin 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> XML 教程</a><ul class="double-li"><li><a title="XML 教程" href="xml-tutorial.html">XML 教程</a></li><li><a title="DTD 教程" href="dtd-tutorial.html">DTD 教程</a></li><li><a title="XML DOM 教程" href="dom-tutorial.html">XML DOM 教程</a></li><li><a title="XSLT 教程" href="xsl-tutorial.html">XSLT 教程</a></li><li><a title="XPath 教程" href="xpath-tutorial.html">XPath 教程</a></li><li><a title="XQuery 教程" href="xquery-tutorial.html">XQuery 教程</a></li><li><a title="XLink 教程" href="xlink-tutorial.html">XLink 教程</a></li><li><a title="XPointer 教程" href="xlink-tutorial.html">XPointer 教程</a></li><li><a title="XML Schema 教程" href="schema-tutorial.html">XML Schema 教程</a></li><li><a title="XSL-FO 教程" href="xslfo-tutorial.html">XSL-FO 教程</a></li><li><a title="SVG 教程" href="svg-tutorial.html">SVG 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> ASP.NET</a><ul class="double-li"><li><a title="ASP.NET 教程" href="aspnet-tutorial.html">ASP.NET 教程</a></li><li><a title="C# 教程" href="csharp-tutorial.html">C# 教程</a></li><li><a title="Web Pages 教程" href="webpages-intro.html">Web Pages 教程</a></li><li><a title="Razor 教程" href="razor-intro.html">Razor 教程</a></li><li><a title="MVC 教程" href="mvc-intro.html">MVC 教程</a></li><li><a title="Web Forms 教程" href="aspnet-intro.html">Web Forms 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> Web Service</a><ul class="double-li"><li><a title="Web Service 教程" href="webservices-tutorial.html">Web Service 教程</a></li><li><a title="WSDL 教程" href="wsdl-tutorial.html">WSDL 教程</a></li><li><a title="SOAP 教程" href="soap-tutorial.html">SOAP 教程</a></li><li><a title="RSS 教程" href="rss-tutorial.html">RSS 教程</a></li><li><a title="RDF 教程" href="rdf-tutorial.html">RDF 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 开发工具</a><ul class="double-li"><li><a title="Eclipse 教程" href="eclipse-tutorial.html">Eclipse 教程</a></li><li><a title="Git 教程" href="git-tutorial.html">Git 教程</a></li><li><a title="Svn 教程" href="svn-tutorial.html">Svn 教程</a></li><li><a title="Markdown 教程" href="md-tutorial.html">Markdown 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 网站建设</a><ul class="double-li"><li><a title="HTTP 教程" href="http-tutorial.html">HTTP 教程</a></li><li><a title="网站建设指南" href="web-buildingprimer.html">网站建设指南</a></li><li><a title="浏览器信息" href="browser-information.html">浏览器信息</a></li><li><a title="网站主机教程" href="hosting-tutorial.html">网站主机教程</a></li><li><a title="TCP/IP 教程" href="tcpip-tutorial.html">TCP/IP 教程</a></li><li><a title="W3C 教程" href="w3c-tutorial.html">W3C 教程</a></li><li><a title="网站品质" href="quality-tutorial.html">网站品质</a></li></ul></li></ul>			</div>
 	
 	</div>
 	</div>
@@ -762,7 +905,7 @@ function isBlank(str) {
 </div>
 
 <script>
-var aid = 6575;
+var aid = 6637;
 function coll() {
 	$.post( '/wp-content/themes/runoob/option/user/userinfo.php', {aid:aid, action:"collarticle", opt:'add'},function( data ) {
 		if(data.error==0) {

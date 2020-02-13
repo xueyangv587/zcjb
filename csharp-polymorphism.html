@@ -1,0 +1,1577 @@
+<!Doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta property="qc:admins" content="465267610762567726375">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>C# 多态性 | 菜鸟教程</title>
+
+  
+<link rel="canonical" href="http://www.runoob.com/csharp/csharp-polymorphism.html">
+<meta name="keywords" content="C# 多态性">
+<meta name="description" content="C# 多态性   多态是同一个行为具有多个不同表现形式或形态的能力。 多态性意味着有多重形式。在面向对象编程范式中，多态性往往表现为“一个接口，多个功能”。 多态性可以是静态的或动态的。在静态多态性中，函数的响应是在编译时发生的。在动态多态性中，函数的响应是在运行时发生的。 在 C# 中，每个类型都是多态的，因为包括用户定义类型在内的所有类型都继承自 Object。  多态就是同一个接口，使用不同的实例而执行不同操作，如图所示：    ..">
+		
+	
+	<link rel="stylesheet" href="static/css/style-1.154.css" type="text/css" media="all">	
+	<link rel="stylesheet" href="static/css/font-awesome.min.css" media="all">	
+  <!--[if gte IE 9]><!-->
+  <script src="static/js/jquery.min.js"></script>
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
+     <script src="static/js/jquery.min1.js"></script>
+     <script src="static/js/html5.min.js"></script>
+  <![endif]-->
+  
+  <meta name="apple-mobile-web-app-title" content="菜鸟教程">
+</head>
+<body>
+
+<!--  头部 -->
+<div class="container logo-search">
+
+  <div class="col search row-search-mobile">
+    <form action="index.php">
+      <input class="placeholder" placeholder="搜索……" name="s" autocomplete="off">
+    </form>
+  </div>
+
+  <div class="row">
+    <div class="col logo">
+      <h1><a href="index1.html">菜鸟教程 -- 学的不仅是技术，更是梦想！</a></h1>
+    </div>
+        <div class="col right-list"> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull" style=""> <i class="fa fa-navicon"></i> </button>
+    </div>
+        <div class="col search search-desktop last">
+      <form action="//www.runoob.com/" target="_blank">
+        <input class="placeholder" id="s" name="s" placeholder="搜索……" autocomplete="off">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- 导航栏 -->
+<!-- 导航栏 -->
+<div class="container navigation">
+	<div class="row">
+		<div class="col nav">
+			<ul class="pc-nav">
+				<li><a href="index1.html">首页</a></li>
+				<li><a href="html-tutorial.html">HTML</a></li>
+				<li><a href="css-tutorial.html">CSS</a></li>
+				<li><a href="js-tutorial.html">JavaScript</a></li>
+				<li><a href="jquery-tutorial.html">jQuery</a></li>
+				<li><a href="bootstrap-tutorial.html">Bootstrap</a></li>
+				<li><a href="python3-tutorial.html">Python3</a></li>
+				<li><a href="python-tutorial.html">Python2</a></li>
+				<li><a href="java-tutorial.html">Java</a></li>
+				<li><a href="c-tutorial.html">C</a></li>
+				<li><a href="cpp-tutorial.html">C++</a></li>
+				<li><a href="csharp-tutorial.html">C#</a></li>
+				<li><a href="sql-tutorial.html">SQL</a></li>
+				<li><a href="mysql-tutorial.html">MySQL</a></li>
+				<li><a href="php-tutorial.html">PHP</a></li>
+				
+				<li><a href="browser-history.html">本地书签</a></li>
+				<!--
+					<li><a style="font-weight:bold;" href="https://www.runoob.com/linux/linux-cloud-server.html" target="_blank" onclick="_hmt.push(['_trackEvent', 'aliyun', 'click', 'aliyun'])"  title="kkb">云服务器</a></li>
+			
+				<li><a href="/w3cnote/knowledge-start.html" style="font-weight: bold;" onclick="_hmt.push(['_trackEvent', '星球', 'click', 'start'])" title="我的圈子">我的圈子</a></li>				
+				<li><a href="javascript:;" class="runoob-pop">登录</a></li>
+				-->
+      		</ul>
+			<ul class="mobile-nav">
+				<li><a href="index1.html">首页</a></li>
+				<li><a href="html-tutorial.html">HTML</a></li>
+				<li><a href="css-tutorial.html">CSS</a></li>
+				<li><a href="js-tutorial.html">JS</a></li>
+				<li><a href="browser-history.html">本地书签</a></li>
+				<a href="javascript:void(0)" class="search-reveal">Search</a> 
+			</ul>
+			
+		</div>
+	</div>
+</div><!--  内容  -->
+<div class="container main">
+	<!-- 中间 -->
+	<div class="row">
+	
+<div class="col left-column">
+	<div class="tab">C# 教程	<a data-cate="61" href="javascript:void(0);" title="夜间模式" id="moon"><i class="fa fa-moon-o" aria-hidden="true" style="font-size: 1.4em;float: right;margin: 4px 6px 0;"></i></a>
+	<a data-cate="61" style="display:none;" href="javascript:void(0);" title="日间模式" id="sun"><i class="fa fa-sun-o" aria-hidden="true" style="font-size: 1.4em;float: right;margin: 4px 6px 0;"></i></a>
+	</div>
+	<div class="sidebar-box gallery-list">
+		<div class="design" id="leftcolumn">
+						<a target="_top" title="C# 教程" href="csharp-tutorial.html">
+			C# 教程			</a>
+						<a target="_top" title="C# 简介" href="csharp-intro.html">
+			C# 简介			</a>
+						<a target="_top" title="C# 环境" href="csharp-environment-setup.html">
+			C# 环境			</a>
+						<a target="_top" title="C# 程序结构" href="csharp-program-structure.html">
+			C# 程序结构			</a>
+						<a target="_top" title="C# 基本语法" href="csharp-basic-syntax.html">
+			C# 基本语法			</a>
+						<a target="_top" title="C# 数据类型" href="csharp-data-types.html">
+			C# 数据类型			</a>
+						<a target="_top" title="C# 类型转换" href="csharp-type-conversion.html">
+			C# 类型转换			</a>
+						<a target="_top" title="C# 变量" href="csharp-variables.html">
+			C# 变量			</a>
+						<a target="_top" title="C# 常量" href="csharp-constants.html">
+			C# 常量			</a>
+						<a target="_top" title="C# 运算符" href="csharp-operators.html">
+			C# 运算符			</a>
+						<a target="_top" title="C# 判断" href="csharp-decision.html">
+			C# 判断			</a>
+						<a target="_top" title="C# 循环" href="csharp-loops.html">
+			C# 循环			</a>
+						<a target="_top" title="C# 封装" href="csharp-encapsulation.html">
+			C# 封装			</a>
+						<a target="_top" title="C# 方法" href="csharp-methods.html">
+			C# 方法			</a>
+						<a target="_top" title="C# 可空类型" href="csharp-nullable.html">
+			C# 可空类型			</a>
+						<a target="_top" title="C# 数组（Array）" href="csharp-array.html">
+			C# 数组（Array）			</a>
+						<a target="_top" title="C# 字符串（String）" href="csharp-string.html">
+			C# 字符串（String）			</a>
+						<a target="_top" title="C# 结构体（Struct）" href="csharp-struct.html">
+			C# 结构体（Struct）			</a>
+						<a target="_top" title="C# 枚举（Enum）" href="csharp-enum.html">
+			C# 枚举（Enum）			</a>
+						<a target="_top" title="C# 类（Class）" href="csharp-class.html">
+			C# 类（Class）			</a>
+						<a target="_top" title="C# 继承" href="csharp-inheritance.html">
+			C# 继承			</a>
+						<a target="_top" title="C# 多态性" href="">
+			C# 多态性			</a>
+						<a target="_top" title="C# 运算符重载" href="csharp-operator-overloading.html">
+			C# 运算符重载			</a>
+						<a target="_top" title="C# 接口（Interface）" href="csharp-interface.html">
+			C# 接口（Interface）			</a>
+						<a target="_top" title="C# 命名空间（Namespace）" href="csharp-namespace.html">
+			C# 命名空间（Namespace）			</a>
+						<a target="_top" title="C# 预处理器指令" href="csharp-preprocessor-directives.html">
+			C# 预处理器指令			</a>
+						<a target="_top" title="C# 正则表达式" href="csharp-regular-expressions.html">
+			C# 正则表达式			</a>
+						<a target="_top" title="C# 异常处理" href="csharp-exception-handling.html">
+			C# 异常处理			</a>
+						<a target="_top" title="C# 文件的输入与输出" href="csharp-file-io.html">
+			C# 文件的输入与输出			</a>
+			<br><h2 class="left"><span class="left_h2">C#</span> 高级教程</h2>			<a target="_top" title="C# 特性（Attribute）" href="csharp-attribute.html">
+			C# 特性（Attribute）			</a>
+						<a target="_top" title="C# 反射（Reflection）" href="csharp-reflection.html">
+			C# 反射（Reflection）			</a>
+						<a target="_top" title="C# 属性（Property）" href="csharp-property.html">
+			C# 属性（Property）			</a>
+						<a target="_top" title="C# 索引器（Indexer）" href="csharp-indexer.html">
+			C# 索引器（Indexer）			</a>
+						<a target="_top" title="C# 委托（Delegate）" href="csharp-delegate.html">
+			C# 委托（Delegate）			</a>
+						<a target="_top" title="C# 事件（Event）" href="csharp-event.html">
+			C# 事件（Event）			</a>
+						<a target="_top" title="C# 集合（Collection）" href="csharp-collection.html">
+			C# 集合（Collection）			</a>
+						<a target="_top" title="C# 泛型（Generic）" href="csharp-generic.html">
+			C# 泛型（Generic）			</a>
+						<a target="_top" title="C# 匿名方法" href="csharp-anonymous-methods.html">
+			C# 匿名方法			</a>
+						<a target="_top" title="C# 不安全代码" href="csharp-unsafe-codes.html">
+			C# 不安全代码			</a>
+						<a target="_top" title="C# 多线程" href="csharp-multithreading.html">
+			C# 多线程			</a>
+				
+		</div>
+	</div>	
+</div>	<div class="col middle-column">
+		
+	
+	<div class="article">
+			<div class="article-heading-ad" style="display: none;">
+		
+		</div>
+		<div class="previous-next-links">
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-inheritance.html');" rel="prev"> C# 继承</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-operator-overloading.html');" rel="next"> C# 运算符重载</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+		</div>
+		<div class="article-body">
+		
+			<div class="article-intro" id="content">
+			
+			<h1>C# <span class="color_h1">多态性</span></h1>
+
+
+<p>多态是同一个行为具有多个不同表现形式或形态的能力。</p>
+<p><b>多态性</b>意味着有多重形式。在面向对象编程范式中，多态性往往表现为"一个接口，多个功能"。</p>
+<p>多态性可以是静态的或动态的。在<b>静态多态性</b>中，函数的响应是在编译时发生的。在<b>动态多态性</b>中，函数的响应是在运行时发生的。</p>
+<p>在 C# 中，每个类型都是多态的，因为包括用户定义类型在内的所有类型都继承自 Object。</p>
+
+<p>多态就是同一个接口，使用不同的实例而执行不同操作，如图所示：</p>
+<p><img src="static/picture/dt-java.png"></p>
+
+<blockquote>
+<p>现实中，比如我们按下 F1 键这个动作：
+</p>
+<ul><li>
+如果当前在 Flash 界面下弹出的就是 AS 3 的帮助文档；</li><li>如果当前在 Word 下弹出的就是 Word 帮助；</li><li>在 Windows 下弹出的就是 Windows 帮助和支持。</li></ul><p>同一个事件发生在不同的对象上会产生不同的结果。</p>
+</blockquote>
+<h2 class="tutheader">静态多态性</h2>
+<p>在编译时，函数和对象的连接机制被称为早期绑定，也被称为静态绑定。C# 提供了两种技术来实现静态多态性。分别为：</p>
+<ul class="list">
+<li>函数重载</li>
+<li>运算符重载</li>
+</ul>
+<p>运算符重载将在下一章节讨论，接下来我们将讨论函数重载。</p>
+<hr>
+<h2 id="overload">函数重载</h2>
+<p>您可以在同一个范围内对相同的函数名有多个定义。函数的定义必须彼此不同，可以是参数列表中的参数类型不同，也可以是参数个数不同。不能重载只有返回类型不同的函数声明。</p>
+
+<p>下面的实例演示了几个相同的函数 <b>Add()</b>，用于对不同个数参数进行相加处理：</p>
+<div class="example"><h2 class="example">实例</h2> <div class="example_code">
+<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
+<span style="color: #05a; font-weight: bold;">namespace</span> PolymorphismApplication<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> TestData &nbsp;<br>
+&nbsp; &nbsp; <span style="color: #008000;">&#123;</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">int</span> <span style="color: #05a; font-weight: bold;">Add</span><span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> a, <span style="color: #6666cc; font-weight: bold;">int</span> b, <span style="color: #6666cc; font-weight: bold;">int</span> c<span style="color: #008000;">&#41;</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">return</span> a <span style="color: #008000;">+</span> b <span style="color: #008000;">+</span> c<span style="color: #008000;">;</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">int</span> <span style="color: #05a; font-weight: bold;">Add</span><span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> a, <span style="color: #6666cc; font-weight: bold;">int</span> b<span style="color: #008000;">&#41;</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">return</span> a <span style="color: #008000;">+</span> b<span style="color: #008000;">;</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span> &nbsp;<br>
+&nbsp; &nbsp; <span style="color: #008000;">&#125;</span> &nbsp;<br>
+&nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">class</span> Program &nbsp;<br>
+&nbsp; &nbsp; <span style="color: #008000;">&#123;</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TestData dataClass <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> TestData<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">int</span> add1 <span style="color: #008000;">=</span> dataClass<span style="color: #008000;">.</span><span style="color: #05a; font-weight: bold;">Add</span><span style="color: #008000;">&#40;</span><span style="color: Maroon;">1</span>, <span style="color: Maroon;">2</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">int</span> add2 <span style="color: #008000;">=</span> dataClass<span style="color: #008000;">.</span><span style="color: #05a; font-weight: bold;">Add</span><span style="color: #008000;">&#40;</span><span style="color: Maroon;">1</span>, <span style="color: Maroon;">2</span>, <span style="color: Maroon;">3</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;add1 :&quot;</span> <span style="color: #008000;">+</span> add1<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;add2 :&quot;</span> <span style="color: #008000;">+</span> add2<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span> &nbsp;<br>
+&nbsp; &nbsp; <span style="color: #008000;">&#125;</span> &nbsp;<br>
+<span style="color: #008000;">&#125;</span><br>
+</div></div>
+
+<p>下面的实例演示了几个相同的函数 <b>print()</b>，用于打印不同的数据类型：</p>
+
+<div class="example"><h2 class="example">实例</h2><div class="example_code">
+<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
+<span style="color: #05a; font-weight: bold;">namespace</span> PolymorphismApplication<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">class</span> Printdata<br>
+&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">void</span> print<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> i<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;输出整型: {0}&quot;</span>, i <span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">void</span> print<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">double</span> f<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;输出浮点型: {0}&quot;</span> , f<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">void</span> print<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span> s<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;输出字符串: {0}&quot;</span>, s<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Printdata p <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Printdata<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #696969; font-style: italic;">// 调用 print 来打印整数</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p<span style="color: #008000;">.</span><span style="color: #05a;">print</span><span style="color: #008000;">&#40;</span><span style="color: Maroon;">1</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #696969; font-style: italic;">// 调用 print 来打印浮点数</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p<span style="color: #008000;">.</span><span style="color: #05a;">print</span><span style="color: #008000;">&#40;</span><span style="color: Maroon;">1.23</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #696969; font-style: italic;">// 调用 print 来打印字符串</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p<span style="color: #008000;">.</span><span style="color: #05a;">print</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Hello Runoob&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
+<span style="color: #008000;">&#125;</span><br>
+<br>
+</div></div>
+
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<pre>
+输出整型: 1
+输出浮点型: 1.23
+输出字符串: Hello Runoob
+</pre>
+<hr>
+<h2 id="override">动态多态性</h2>
+<p>C# 允许您使用关键字 <b>abstract</b> 创建抽象类，用于提供接口的部分类的实现。当一个派生类继承自该抽象类时，实现即完成。<b>抽象类</b>包含抽象方法，抽象方法可被派生类实现。派生类具有更专业的功能。</p>
+<p>请注意，下面是有关抽象类的一些规则：</p>
+<ul class="list">
+<li>您不能创建一个抽象类的实例。</li>
+<li>您不能在一个抽象类外部声明一个抽象方法。</li>
+<li>通过在类定义前面放置关键字 <b>sealed</b>，可以将类声明为<b>密封类</b>。当一个类被声明为 <b>sealed</b> 时，它不能被继承。抽象类不能被声明为 sealed。</li>
+</ul>
+<p>下面的程序演示了一个抽象类：</p>
+<div class="example"><h2 class="example">实例</h2><div class="example_code">
+<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
+<span style="color: #05a; font-weight: bold;">namespace</span> PolymorphismApplication<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">abstract</span> <span style="color: #6666cc; font-weight: bold;">class</span> Shape<br>
+&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">abstract</span> <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">int</span> area<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">class</span> Rectangle<span style="color: #008000;">:</span> &nbsp;Shape<br>
+&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">private</span> <span style="color: #6666cc; font-weight: bold;">int</span> length<span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">private</span> <span style="color: #6666cc; font-weight: bold;">int</span> width<span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> Rectangle<span style="color: #008000;">&#40;</span> <span style="color: #6666cc; font-weight: bold;">int</span> a<span style="color: #008000;">=</span><span style="color: Maroon;">0</span>, <span style="color: #6666cc; font-weight: bold;">int</span> b<span style="color: #008000;">=</span><span style="color: Maroon;">0</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;length <span style="color: #008000;">=</span> a<span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;width <span style="color: #008000;">=</span> b<span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">override</span> <span style="color: #6666cc; font-weight: bold;">int</span> area <span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span> <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Rectangle 类的面积：&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">return</span> <span style="color: #008000;">&#40;</span>width <span style="color: #008000;">*</span> length<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> <br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
+<br>
+&nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">class</span> RectangleTester<br>
+&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Rectangle r <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Rectangle<span style="color: #008000;">&#40;</span><span style="color: Maroon;">10</span>, <span style="color: Maroon;">7</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">double</span> a <span style="color: #008000;">=</span> r<span style="color: #008000;">.</span><span style="color: #05a;">area</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;面积： {0}&quot;</span>,a<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
+<span style="color: #008000;">&#125;</span><br>
+</div></div>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<pre>
+Rectangle 类的面积：
+面积： 70
+</pre>
+<p>当有一个定义在类中的函数需要在继承类中实现时，可以使用<b>虚方法</b>。</p><p>虚方法是使用关键字 <b>virtual</b> 声明的。
+
+</p><p>虚方法可以在不同的继承类中有不同的实现。</p><p>对虚方法的调用是在运行时发生的。</p>
+<p>动态多态性是通过 <b>抽象类</b> 和 <b>虚方法</b> 实现的。</p>
+
+
+
+<p>
+以下实例创建了 Shape 基类，并创建派生类 Circle、 Rectangle、Triangle， Shape 类提供一个名为 Draw 的虚拟方法，在每个派生类中重写该方法以绘制该类的指定形状。</p>
+
+<div class="example"><h2 class="example">实例</h2> <div class="example_code">
+<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
+<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System.Collections.Generic</span><span style="color: #008000;">;</span><br>
+<br>
+<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> Shape<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">int</span> X <span style="color: #008000;">&#123;</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">private</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">int</span> Y <span style="color: #008000;">&#123;</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">private</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">int</span> Height <span style="color: #008000;">&#123;</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">int</span> Width <span style="color: #008000;">&#123;</span> <span style="color: #05a; font-weight: bold;">get</span><span style="color: #008000;">;</span> <span style="color: #05a; font-weight: bold;">set</span><span style="color: #008000;">;</span> <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<br>
+&nbsp; &nbsp; <span style="color: #696969; font-style: italic;">// 虚方法</span><br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">virtual</span> <span style="color: #6666cc; font-weight: bold;">void</span> Draw<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;执行基类的画图任务&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+<span style="color: #008000;">&#125;</span><br>
+<br>
+<span style="color: #6666cc; font-weight: bold;">class</span> Circle <span style="color: #008000;">:</span> Shape<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">override</span> <span style="color: #6666cc; font-weight: bold;">void</span> Draw<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;画一个圆形&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">base</span><span style="color: #008000;">.</span><span style="color: #05a;">Draw</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+<span style="color: #008000;">&#125;</span><br>
+<span style="color: #6666cc; font-weight: bold;">class</span> Rectangle <span style="color: #008000;">:</span> Shape<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">override</span> <span style="color: #6666cc; font-weight: bold;">void</span> Draw<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;画一个长方形&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">base</span><span style="color: #008000;">.</span><span style="color: #05a;">Draw</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+<span style="color: #008000;">&#125;</span><br>
+<span style="color: #6666cc; font-weight: bold;">class</span> Triangle <span style="color: #008000;">:</span> Shape<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">override</span> <span style="color: #6666cc; font-weight: bold;">void</span> Draw<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;画一个三角形&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">base</span><span style="color: #008000;">.</span><span style="color: #05a;">Draw</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+<span style="color: #008000;">&#125;</span><br>
+<br>
+<span style="color: #6666cc; font-weight: bold;">class</span> Program<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">// 创建一个 List&lt;Shape&gt; 对象，并向该对象添加 Circle、Triangle 和 Rectangle</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">var</span> shapes <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> List<span style="color: #008000;">&lt;</span>Shape<span style="color: #008000;">&gt;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">new</span> Rectangle<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span>,<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">new</span> Triangle<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span>,<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">new</span> Circle<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><span style="color: #008000;">;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">// 使用 foreach 循环对该列表的派生类进行循环访问，并对其中的每个 Shape 对象调用 Draw 方法 </span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">foreach</span> <span style="color: #008000;">&#40;</span><span style="color: #05a; font-weight: bold;">var</span> shape <span style="color: #05a; font-weight: bold;">in</span> shapes<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shape<span style="color: #008000;">.</span><span style="color: #05a;">Draw</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;按下任意键退出。&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+<br>
+<span style="color: #008000;">&#125;</span><br>
+</div></div>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<pre>
+画一个长方形
+执行基类的画图任务
+画一个三角形
+执行基类的画图任务
+画一个圆形
+执行基类的画图任务
+按下任意键退出。
+</pre>
+
+<p>下面的程序演示通过虚方法 area() 来计算不同形状图像的面积：</p>
+<div class="example"><h2 class="example">实例</h2><div class="example_code">
+<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
+<span style="color: #05a; font-weight: bold;">namespace</span> PolymorphismApplication<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">class</span> Shape <br>
+&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">protected</span> <span style="color: #6666cc; font-weight: bold;">int</span> width, height<span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> Shape<span style="color: #008000;">&#40;</span> <span style="color: #6666cc; font-weight: bold;">int</span> a<span style="color: #008000;">=</span><span style="color: Maroon;">0</span>, <span style="color: #6666cc; font-weight: bold;">int</span> b<span style="color: #008000;">=</span><span style="color: Maroon;">0</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;width <span style="color: #008000;">=</span> a<span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;height <span style="color: #008000;">=</span> b<span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">virtual</span> <span style="color: #6666cc; font-weight: bold;">int</span> area<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;父类的面积：&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">return</span> <span style="color: Maroon;">0</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">class</span> Rectangle<span style="color: #008000;">:</span> Shape<br>
+&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> Rectangle<span style="color: #008000;">&#40;</span> <span style="color: #6666cc; font-weight: bold;">int</span> a<span style="color: #008000;">=</span><span style="color: Maroon;">0</span>, <span style="color: #6666cc; font-weight: bold;">int</span> b<span style="color: #008000;">=</span><span style="color: Maroon;">0</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">:</span> <span style="color: #05a; font-weight: bold;">base</span><span style="color: #008000;">&#40;</span>a, b<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">override</span> <span style="color: #6666cc; font-weight: bold;">int</span> area <span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Rectangle 类的面积：&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">return</span> <span style="color: #008000;">&#40;</span>width <span style="color: #008000;">*</span> height<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> <br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">class</span> Triangle<span style="color: #008000;">:</span> Shape<br>
+&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> Triangle<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">int</span> a <span style="color: #008000;">=</span> <span style="color: Maroon;">0</span>, <span style="color: #6666cc; font-weight: bold;">int</span> b <span style="color: #008000;">=</span> <span style="color: Maroon;">0</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">:</span> <span style="color: #05a; font-weight: bold;">base</span><span style="color: #008000;">&#40;</span>a, b<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; <br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">override</span> <span style="color: #6666cc; font-weight: bold;">int</span> area<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Triangle 类的面积：&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">return</span> <span style="color: #008000;">&#40;</span>width <span style="color: #008000;">*</span> height <span style="color: #008000;">/</span> <span style="color: Maroon;">2</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> <br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">class</span> Caller<br>
+&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">void</span> CallArea<span style="color: #008000;">&#40;</span>Shape sh<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">int</span> a<span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a <span style="color: #008000;">=</span> sh<span style="color: #008000;">.</span><span style="color: #05a;">area</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;面积： {0}&quot;</span>, a<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #008000;">&#125;</span> &nbsp;<br>
+&nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">class</span> Tester<br>
+&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; <br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Caller c <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Caller<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Rectangle r <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Rectangle<span style="color: #008000;">&#40;</span><span style="color: Maroon;">10</span>, <span style="color: Maroon;">7</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Triangle t <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Triangle<span style="color: #008000;">&#40;</span><span style="color: Maroon;">10</span>, <span style="color: Maroon;">5</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;c<span style="color: #008000;">.</span><span style="color: #05a;">CallArea</span><span style="color: #008000;">&#40;</span>r<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;c<span style="color: #008000;">.</span><span style="color: #05a;">CallArea</span><span style="color: #008000;">&#40;</span>t<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
+<span style="color: #008000;">&#125;</span><br>
+</div></div>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<pre>
+Rectangle 类的面积：
+面积：70
+Triangle 类的面积：
+面积：25
+</pre>			<!-- 其他扩展 -->
+						
+			</div>
+			
+		</div>
+		
+		<div class="previous-next-links">
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-inheritance.html');" rel="prev"> C# 继承</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-operator-overloading.html');" rel="next"> C# 运算符重载</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+		</div>
+		<!-- 笔记列表 -->
+		<style>
+.wrapper {
+  /*text-transform: uppercase; */
+  background: #ececec;
+  color: #555;
+  cursor: help;
+  font-family: "Gill Sans", Impact, sans-serif;
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+  width: 200px;
+  -webkit-transform: translateZ(0); /* webkit flicker fix */
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+}
+
+.wrapper .tooltip {
+  white-space: nowrap;
+  font-size: 14px;
+  text-align: left;
+  background: #96b97d;
+  bottom: 100%;
+  color: #fff;
+  display: block;
+  left: -25px;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 14px;
+  pointer-events: none;
+  position: absolute;
+  
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+       -o-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+.tooltip a {
+	color:#fff;
+}
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.wrapper .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}  
+
+/* CSS Triangles - see Trevor's post */
+.wrapper .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #96b97d 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 20%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+.wrapper .tooltip1 {
+	margin-left: 50px;
+	padding-top: 0px;
+}
+/*
+.wrapper:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+*/
+/* IE can just show/hide with no transition */
+.lte8 .wrapper .tooltip {
+  display: none;
+}
+
+.lte8 .wrapper:hover .tooltip {
+  display: block;
+}
+
+</style>
+
+<div class="title" id="comments">
+	<h2 class="">
+    <div class="altblock">
+				<i style="font-size:28px;margin-top: 8px;" class="fa fa-plus-square" aria-hidden="true"></i>
+		    </div>
+    <span class="mw-headline" id="qa_headline">7  篇笔记</span>
+	<span class="mw-headline" id="user_add_note" style="float:right;line-height: 62px;padding-right: 14px;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>  写笔记</span>
+    </h2>
+</div>
+
+<div id="postcomments" style="display:none;">
+	<ol class="commentlist">
+		<li class="comment even thread-even depth-1" id="comment-10267"><span class="comt-f">#7</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;yuri</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;246***6318@qq.com</p></div><div id="runoobvote-id-10267" data-commid="10267" class="upvotejs"><a class="upvote"></a> <span class="count">5</span></div></div><div class="comt-main" id="div-comment-10267"><h2>C# 多态性</h2>
+<p>
+<strong>多态：</strong>一个接口多个功能。</p><p>
+<strong>静态多态性：</strong>编译时发生函数响应（调用）；</p>
+<p><strong>动态多态性：</strong>运行时发生函数响应。</p><p>
+
+<strong>静态绑定（早期绑定）：</strong>编译时函数和对象的连接机制。
+
+两种技术实现静态多态性：函数重载/运算符重载。</p>
+<p>
+<strong>函数重载：</strong>在同一范围内对相同函数名有多个定义，可以是参数类型或参数个数的不同，但不许只有返回值类型不同。
+</p><p>
+<strong>运算符重载：</strong></p><p>
+关键字 abstract 声明抽象类：用于接口部分类的实现（派生类继承抽象类时，实现完成）。抽象类包含抽象方法，抽象方法可被派生类实现。</p><p>
+抽象类规则：</p><ul><li>
+1.不能创建抽象类的实例 </li><li>2.不能在抽象类外定义抽象方法 </li><li>3.不能把抽象类声明为sealed（类前带关键字sealed代表该类是密封类，不能被继承）</li></ul>
+<p>
+关键字virtual声明虚方法:用于方法在继承类中的实现（在不同的继承类中有不同的实现）。</p><p>
+抽象类和虚方法共同实现动态多态性。</p>
+<p>
+注：继承类中的重写虚函数需要声明关键字 override，在方法参数传入中写（类名 形参名）例如 public void CallArea(Shape sh)，意思是传入一个 shape 类型的类。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">yuri</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;yuri</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;246***6318@qq.com</p></div></span>3年前 (2017-03-21)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-10740"><span class="comt-f">#6</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;p</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;roz***ech@gmail.com</p></div><div id="runoobvote-id-10740" data-commid="10740" class="upvotejs"><a class="upvote"></a> <span class="count">10</span></div></div><div class="comt-main" id="div-comment-10740"><h2>virtual 和 abstract
+</h2>
+<p>virtual和abstract都是用来修饰父类的，通过覆盖父类的定义，让子类重新定义。
+
+<ul><li>
+1.virtual修饰的方法必须有实现（哪怕是仅仅添加一对大括号),而abstract修饰的方法一定不能实现。</li><li>
+2.virtual可以被子类重写，而abstract必须被子类重写。</li><li>
+3.如果类成员被abstract修饰，则该类前必须添加abstract，因为只有抽象类才可以有抽象方法。</li><li>
+4.无法创建abstract类的实例，只能被继承无法实例化。</li></ul>
+
+
+<h2>
+
+重载和重写
+</h2>
+<p>重载(overload)是提供了一种机制, 相同函数名通过不同的返回值类型以及参数来表来区分的机制。</p>
+
+<blockquote>
+  <p>见：<strong><a href="#overload" rel="nofollow">函数重载</a></strong></p>
+</blockquote>
+
+<p>重写(override)是用于重写基类的虚方法,这样在派生类中提供一个新的方法。</p>
+
+<blockquote>
+  <p> 见：<strong><a href="#override" rel="nofollow">动态多态性</a></strong></p>
+</blockquote><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">p</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;p</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;roz***ech@gmail.com</p></div></span>3年前 (2017-04-06)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-29313"><span class="comt-f">#5</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;zeng123m</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;705***981@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://www.runoob.com/w3cnote/what-is-a-virtual-method.html');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-29313" data-commid="29313" class="upvotejs"><a class="upvote"></a> <span class="count">5</span></div></div><div class="comt-main" id="div-comment-29313"><p data-title="抽象方法和虚方法的区别" data-commid="10740"><strong>抽象方法和虚方法的区别</strong></p>
+<ul><li>
+1.虚方法必须有实现部分，抽象方法没有提供实现部分，抽象方法是一种强制派生类覆盖的方法，否则派生类将不能被实例化。
+</li><li>
+2.抽象方法只能在抽象类中声明，虚方法不是。如果类包含抽象方法，那么该类也是抽象的，也必须声明类是抽象的。
+</li><li>
+3.抽象方法必须在派生类中重写，这一点和接口类似，虚方法不需要再派生类中重写。
+</li></ul>
+<p>简单说，抽象方法是需要子类去实现的。虚方法是已经实现了的，可以被子类覆盖，也可以不覆盖，取决于需求。</p>
+
+<p>抽象方法和虚方法都可以供派生类重写。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:window.open('https://www.runoob.com/note/29313');">zeng123m</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;zeng123m</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;705***981@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://www.runoob.com/w3cnote/what-is-a-virtual-method.html');">&nbsp;&nbsp;参考地址</a></p></div></span>2年前 (2018-07-09)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-29768"><span class="comt-f">#4</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Lost丶先生</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;102***8263@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://www.runoob.com/w3cnote/csharp-polymorphism2.html');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-29768" data-commid="29768" class="upvotejs"><a class="upvote"></a> <span class="count">13</span></div></div><div class="comt-main" id="div-comment-29768"><p>1、<strong>重载(overload)</strong>: 在同一个作用域(一般指一个类)的两个或多个方法函数名相同，参数列表不同的方法叫做重载，它们有三个特点(俗称两必须一可以):</p>
+<ul><li>
+方法名必须相同</li><li>
+参数列表必须不相同</li><li>
+返回值类型可以不相同</li></ul>
+<p>例如：</p>
+<pre>public void Sleep()
+{
+    Console.WriteLine("Animal睡觉");
+}
+public int Sleep(int time)
+{
+    Console.WriteLine("Animal{0}点睡觉", time);
+    return time;
+}</pre>
+<p>
+2、<strong>重写(override)</strong>:子类中为满足自己的需要来重复定义某个方法的不同实现，需要用 override 关键字，被重写的方法必须是虚方法，用的是 virtual 关键字。它的特点是(三个相同):</p>
+
+<ul>
+<li>相同的方法名</li>
+<li>相同的参数列表</li>
+<li>相同的返回值</li>
+</ul>
+<p>如：父类中的定义：</p>
+<pre>public virtual void EatFood()
+{
+    Console.WriteLine("Animal吃东西");
+}</pre>
+
+<p>子类中的定义：</p>
+
+<pre>public override void EatFood()
+{
+    Console.WriteLine("Cat吃东西");
+    //base.EatFood();
+}</pre>
+
+
+
+<blockquote><p><strong>小提示：</strong>经常有童鞋问重载和重写的区别,而且网络上把这两个的区别作为 C# 做常考的面试题之一。实际上这两个概念完全没有关系，仅仅都带有一个“重”字。他们没有在一起比较的意义，仅仅分辨它们不同的定义就好了。</p></blockquote>
+<p>3、<strong>虚方法</strong>：即为基类中定义的允许在派生类中重写的方法，使用virtual关键字定义。如：</p>
+<pre>public virtual void EatFood()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Animal吃东西");
+}</pre>
+
+
+<p><strong>注意</strong>：虚方法也可以被直接调用。如：</p>
+<pre>Animal a = new Animal();
+a.EatFood();</pre>
+<p>
+执行输出结果为：</p>
+<pre>Animal吃东西</pre>
+<p> 4、<strong>抽象方法</strong>：在基类中定义的并且必须在派生类中重写的方法，使用 <span class="marked">abstract</span> 关键字定义。如：</p>
+<pre>public abstract class Biology
+{
+    public abstract void Live();
+}
+public class Animal : Biology
+{
+    public override void Live()
+    {
+        Console.WriteLine("Animal重写的抽象方法");
+        //throw new NotImplementedException();
+    } 
+}</pre>
+
+<p><strong>注意：</strong>抽象方法只能在抽象类中定义，如果不在抽象类中定义，则会报出如下错误：</p>
+<p><img src="static/picture/20171050-7907c8d2136643738cdc84b.png"></p>
+
+
+<blockquote><p><strong>虚方法和抽象方法的区别是</strong>：因为抽象类无法实例化，所以抽象方法没有办法被调用，也就是说抽象方法永远不可能被实现。</p></blockquote>
+ <p>5、<strong>隐藏方法</strong>：在派生类中定义的和基类中的某个方法同名的方法，使用 new 关键字定义。如在基类 Animal 中有一方法 Sleep():</p>
+<pre>public void Sleep()
+{
+    Console.WriteLine("Animal Sleep");
+}</pre>
+
+
+<p>则在派生类 Cat 中定义隐藏方法的代码为：</p>
+<pre>new public void Sleep()
+{
+    Console.WriteLine("Cat Sleep");
+}</pre>
+
+
+<p>或者为：</p>
+<pre>public new void Sleep()
+{
+    Console.WriteLine("Cat Sleep");
+} </pre>   
+<p><strong>注意：</strong></p><ul><li>（1）隐藏方法不但可以隐藏基类中的虚方法，而且也可以隐藏基类中的非虚方法。
+</li><li>（2）隐藏方法中父类的实例调用父类的方法，子类的实例调用子类的方法。
+</li><li>（3）和上一条对比：重写方法中子类的变量调用子类重写的方法，父类的变量要看这个父类引用的是子类的实例还是本身的实例，如果引用的是父类的实例那么调用基类的方法，如果引用的是派生类的实例则调用派生类的方法。</li></ul>
+
+
+<blockquote><p><strong>更多内容可参考： <a href="javascript:window.open('https://www.runoob.com/w3cnote/csharp-polymorphism2.html');" target="_blank" rel="noopener nofollow">C# 中的多态性</a></strong></p></blockquote>
+
+<div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Lost丶先生</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Lost丶先生</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;102***8263@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://www.runoob.com/w3cnote/csharp-polymorphism2.html');">&nbsp;&nbsp;参考地址</a></p></div></span>2年前 (2018-07-18)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-30595"><span class="comt-f">#3</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Marco</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;329***308@qq.com</p></div><div id="runoobvote-id-30595" data-commid="30595" class="upvotejs"><a class="upvote"></a> <span class="count">7</span></div></div><div class="comt-main" id="div-comment-30595"><p><strong>虚方法的调用：</strong>调用上，使用子类构造的对象调用虚方法，就会调用子类的方法，使用父类构造的对象，就会调用父类的方法。</p>
+
+<p><strong>
+隐藏方法的调用：</strong>调用上， 使用子类类型的声明调用隐藏方法，就会调用到子类的方法。若想调用被隐藏的方法，需要用父类类型的声明来调用。</p>
+<p>调用不同的举例:</p>
+
+<pre>class Enemy
+{
+&nbsp;&nbsp;&nbsp;&nbsp;public void Move() {
+&nbsp;&nbsp;&nbsp;&nbsp;    Console.WriteLine("调用了 enemy的move方法");
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;public virtual void Attack() {
+&nbsp;&nbsp;&nbsp;&nbsp;    Console.WriteLine("enemy attac");
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;class Boss : Enemy
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;public override void Attack() {
+&nbsp;&nbsp;&nbsp;&nbsp;    Console.WriteLine("Boss Attac");
+&nbsp;&nbsp;&nbsp;&nbsp;}
+
+&nbsp;&nbsp;&nbsp;&nbsp;public new void Move() {
+&nbsp;&nbsp;&nbsp;&nbsp;    Console.WriteLine("Boss move");
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+
+static void Main(string[] args)
+{
+    //---- 隐藏方法的调用----begin
+    Boss oneEnemy = new Boss();
+    oneEnemy.Move(); // 调用的是隐藏方法， 用子类的声明来调用的，调用的就是子类的Move。
+
+    Enemy twoEnemy = new Boss();
+    twoEnemy.Move(); // 调用的隐藏方法， 用父类的声明来调用的，调用的就是父类的Move方法。
+    //-----------------------end
+
+    //-----虚方法的调用----- begin
+    用什么类型 来构造，在调用方法的时候就会调用什么类型的方法。
+
+    Enemy threeEnemy = new Enemy();
+    threeEnemy.Attac(); // 调用虚方法，用父类来实例化的，所以调用的是父类的Attac方法。
+
+    Enemy fourEnemy = new Boss();
+    fourEnemy.Attac();  // 调用虚方法，用子类来实例化的，所以调用的就是子类(Boss)的Attac方法。
+
+    //-----虚方法的调用------end
+
+    Console.ReadKey();
+}</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Marco</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Marco</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;329***308@qq.com</p></div></span>2年前 (2018-07-28)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-34641"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;lanya13</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;har***323@126.com</p></div><div id="runoobvote-id-34641" data-commid="34641" class="upvotejs"><a class="upvote"></a> <span class="count">1</span></div></div><div class="comt-main" id="div-comment-34641"><p>原文中抽象类的例子其实没有体现多态性，可以再加一个继承类（三角形面积），以体现多态。</p>
+
+<pre>using System;
+namespace PolymorphismApplication
+{
+    abstract class Shape
+    {
+        public abstract int area();
+    }
+    
+    class Rectangle : Shape
+    {
+        private int length;
+        private int width;
+        public Rectangle(int a = 0, int b = 0)
+        {
+            length = a;
+            width = b;
+        }
+        public override int area()
+        {
+            //Console.WriteLine("Rectangle 类的面积：");
+            return (width * length);
+        }
+    }
+
+    class triangle : Shape
+    {
+        private int baseLine;
+        private int height;
+        public triangle(int a = 0, int b = 0)
+        {
+            baseLine = a;
+            height = b;
+        }
+        public override int area()
+        {
+            //Console.WriteLine("三角形类的面积：");
+            return (2 *baseLine* height/4);
+        }
+    }
+
+    class RectangleTester
+    {
+        static void Main(string[] args)
+        {
+            Rectangle r = new Rectangle(10, 7);
+            double a = r.area();
+            triangle t = new triangle(10, 7);
+            double b = t.area();
+            Console.WriteLine("长方形面积： {0}, 三角形面积：{1}", a, b);
+            Console.ReadKey();
+        }
+    }
+}</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">lanya13</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;lanya13</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;har***323@126.com</p></div></span>1年前 (2018-08-31)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-42919"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;维乐紫刃</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;vrb***lor@126.com</p></div><div id="runoobvote-id-42919" data-commid="42919" class="upvotejs"><a class="upvote"></a> <span class="count">5</span></div></div><div class="comt-main" id="div-comment-42919"><p>自己写了个继承，分别写了隐藏方法跟重写方法，生成三个实例来演示一下。</p>
+
+<pre>namespace MySpace
+{
+    class dad
+    {
+        protected string name;
+        public dad(string n)
+        {
+            name = n;
+        }
+        public void say()
+        {
+            Console.WriteLine("I am {0}.", name);
+        }
+        public virtual void growup()
+        {
+            Console.WriteLine("{0} has grown old.", name);
+        }
+    }
+    class son:dad
+    {
+        public son(string n) : base(n)
+        {
+            //name = n;
+        }
+        public new void say()
+        {
+            Console.WriteLine("I am {0} and a son.",name);
+        }
+        public override void growup()
+        {
+            //base.growup();
+            Console.WriteLine("{0} is growing up.",name);
+        }
+    }
+    class entrance
+    {
+        public static void Main()
+        {
+            dad grandpa = new dad("grandpa");
+            grandpa.say();
+            grandpa.growup();
+            dad father = new son("father");
+            father.say();
+            father.growup();
+            son tom = new son("Tom");
+            tom.say();
+            tom.growup();
+            Console.ReadKey();
+        }
+    }
+}</pre>
+
+<p>运行结果为：</p>
+<pre>I am grandpa.
+grandpa has grown old.
+I am father.
+father is growing up.
+I am Tom and a son.
+Tom is growing up.</pre>
+
+<p>上边的结果：</p>
+<ul><li>
+1）用父类生成的父类对象，grandpa，访问隐藏方法是父类的方法，访问重写方法是父类的方法
+</li><li>
+2）用子类生成的父类对象，father，访问隐藏方法是父类的方法，访问重写方法是子类的方法
+</li><li>
+3）用子类生成的子类对象，son，访问隐藏方法是子类的方法，访问重写方法是子类的方法
+</li></ul>
+<div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">维乐紫刃</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;维乐紫刃</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;vrb***lor@126.com</p></div></span>9个月前 (05-20)</div></div></li><!-- #comment-## -->
+	</ol>
+	<div class="pagenav">
+			</div>
+</div>
+<div id="respond" class="no_webshot"> 
+		<div class="comment-signarea" style="display:none; padding: 20px 20px;"> 
+	<h3 class="text-muted" id="share_code" style="color: #799961;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 点我分享笔记</h3>
+	<!--
+	<p style="font-size:14px;">笔记需要是本篇文章的内容扩展！</p><br>
+	<p style="font-size:12px;"><a href="//www.runoob.com/tougao" target="_blank">文章投稿，可点击这里</a></p>
+	<p style="font-size:14px;"><a href="/w3cnote/runoob-user-test-intro.html#invite" target="_blank">注册邀请码获取方式</a></p>
+		<h3 class="text-muted"><i class="fa fa-info-circle" aria-hidden="true"></i> 分享笔记前必须<a href="javascript:;" class="runoob-pop">登录</a>！</h3>
+		<p><a href="/w3cnote/runoob-user-test-intro.html#invite" target="_blank">注册邀请码获取方式</a></p>-->
+	</div>
+		
+	<form action="/wp-content/themes/runoob/option/addnote.php" method="post" id="commentform" style="display:none;">
+		<div class="comt">
+			<div class="comt-title">
+				<i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i>				<p><a id="cancel-comment-reply-link" href="javascript:;">取消</a></p>
+			</div>
+			<div class="comt-box">
+			<div id="mded"></div>
+			
+				<div class="comt-ctrl">
+					<div class="comt-tips"><input type='hidden' name='comment_post_ID' value='6643' id='comment_post_ID'>
+<input type='hidden' name='comment_parent' id='comment_parent' value='0'>
+</div>
+					<button type="submit" name="submit" id="submit" tabindex="5"><i class="fa fa-pencil" aria-hidden="true"></i> 分享笔记</button>
+				</div>
+			</div>
+		
+				
+					<div class="comt-comterinfo"> 
+						<ul id="comment-author-info">
+							<li class="form-inline"><label class="hide" for="author">昵称</label><input class="ipt" type="text" name="author" id="author" value="" tabindex="2" placeholder="昵称"><span class="text-muted">昵称 (必填)</span></li>
+							<li class="form-inline"><label class="hide" for="email">邮箱</label><input class="ipt" type="text" name="email" id="email" value="" tabindex="3" placeholder="邮箱"><span class="text-muted">邮箱 (必填)</span></li>
+							<li class="form-inline"><label class="hide" for="url">引用地址</label><input class="ipt" type="text" name="url" id="url" value="" tabindex="4" placeholder="引用地址"><span class="text-muted">引用地址</span></li>
+						</ul>
+					</div>
+				
+			
+		</div>
+
+	</form>
+	</div>
+<script type="text/javascript">
+$(function() {
+	//初始化编辑器
+	
+	var editor = new Simditor({
+	  textarea: $('#mded'),
+	  placeholder: '写笔记...',
+	  upload:false,
+	 // upload: {url:'/api/comment_upload_file.php',params: null,fileKey: 'upload_file',connectionCount: 1,leaveConfirm: '文件正在上传，您确定离开?'},
+	  defaultImage: 'http://www.runoob.com/images/logo.png',
+	  codeLanguages: '',
+	  autosave: 'editor-content',
+	  toolbar: [  'bold','code','ul','ol','image' ]
+	});
+	editor.on('selectionchanged', function() {
+		$(".code-popover").hide();
+	});
+
+	// 提交数据
+	$("#share_code").click(function() {
+		$(".comment-signarea").hide();
+		$("#commentform").show();
+		
+	});
+	$("#user_add_note").click(function() {
+		$(".comment-signarea").hide();
+		$("#commentform").show();
+		$('html, body').animate({
+       	    scrollTop: $("#respond").offset().top
+    	}, 200);
+	});
+
+	// 提交笔记
+	var commentform=$('#commentform');
+	commentform.prepend('<div id="comment-status" style="display:none;" ></div>');
+	var statusdiv=$('#comment-status');
+	
+	commentform.submit(function(e){
+		e.preventDefault();
+		var noteContent = editor.getValue();
+		// console.log(noteContent);
+		noteContent = noteContent.replace(/<pre><code>/g,"<pre>");
+		noteContent = noteContent.replace(/<\/code><\/pre>/g,"</pre>");
+		
+		// 系列化表单数据
+		var comment_parent = 0;
+		var is_user_logged_in = $("#is_user_logged_in").val();
+		var comment_post_ID =  6643;
+		var _wp_unfiltered_html_comment = $("#_wp_unfiltered_html_comment").val();
+		var comment = noteContent;
+		var author = $("#author").val();
+		var url = $("#url").val();
+		var email = $("#email").val();
+		if(isBlank(author) && is_user_logged_in==0) {
+			statusdiv.html('<p  class="ajax-error">请输入昵称！</p>').show();
+		} else if(isBlank(email)  && is_user_logged_in==0) {
+			statusdiv.html('<p  class="ajax-error">请输入邮箱！</p>').show();
+		} else {
+			// var formdata=commentform.serialize() + "&comment=" + noteContent ;
+			// 添加状态信息
+			statusdiv.html('<p>Processing...</p>').show();
+			// 获取表单提交地址
+			var formurl=commentform.attr('action');
+			
+			// 异步提交
+			$.ajax({
+					type: 'post',
+					url: formurl,
+					dataType:'json',
+					data: {"comment_parent":comment_parent,"comment_post_ID":comment_post_ID, "_wp_unfiltered_html_comment":_wp_unfiltered_html_comment,"comment":comment,"url":url, "email":email,"author":author},
+					error: function(XMLHttpRequest, textStatus, errorThrown){
+					statusdiv.html('<p class="ajax-error" >数据不完整或表单提交太快了！</p>').show();
+				},
+				success: function(data, textStatus){
+					if(data.errorno=="0") {
+						$("#submit").prop('disabled', true);
+						statusdiv.html('<p class="ajax-success" >笔记已提交审核，感谢分享笔记！</p>').show();
+						alert('笔记已提交审核，感谢分享笔记！');
+					}else{
+						statusdiv.html('<p class="ajax-error" >'+data.msg+'</p>').show();
+					}
+					commentform.find('textarea[name=comment]').val('');
+				}
+			});
+			setTimeout(function(){
+		        $("#submit").prop('disabled', false);
+		    }, 10*1000);
+		}
+		return false;
+
+	});
+	$(".comt-author").click(function() {
+		href = $(this).children("a").attr("href");
+		if(href.indexOf("/note/")!=-1) {
+			var win = window.open(href, '_blank');
+  			win.focus();
+		}
+	});
+	$(".comt-author").hover(function(){
+		$(this).children(".tooltip").css({ "opacity": 1, "pointer-events": "auto"});
+	},function(){
+		$(this).children(".tooltip").css({ "opacity": 0, "pointer-events": "auto"});
+	});
+	$(".wrapper i").hover(function(){
+		$(this).siblings(".tooltip").css({ "opacity": 1, "pointer-events": "auto"});
+	},function(){
+		$(this).siblings(".tooltip").css({ "opacity": 0, "pointer-events": "auto"});
+	});
+	//Upvote.create('runoobvote-id', {callback: vote_callback});
+	var ajaxurl = 'https://www.runoob.com/wp-admin/admin-ajax.php';
+	var callback = function(data) {
+		//console.log($('#runoobvote-id').upvote('upvoted'));
+		//console.log($('#runoobvote-id').upvote('downvoted'));
+		//console.log(data);
+		_vote_action = data.action;
+		console.log(_vote_action);
+		id_arr = data.id.split('-');
+		um_id= id_arr[2];
+		//console.log(um_id);
+		
+		var re = /^[1-9]+/;
+		if (re.test(um_id)) { 
+			var ajax_data = {
+				_vote_action: _vote_action,
+				action: "pinglun_zan",
+				um_id: um_id,
+				um_action: "ding"
+			};
+			//console.log(ajax_data);
+			$.post(ajaxurl,ajax_data,function(status){
+				//console.log("Data: " + data + "nStatus: " + status);
+			});
+		}
+	};
+	if($('#comments').length){
+		$('.upvotejs').upvote({id: 6643, callback: callback});
+		
+		$.post(ajaxurl,{"action":"pinglun_zan","postid":6643},function(data){  
+			$(data).each(function(key,value) {
+				$("#runoobvote-id-" + value.commid + " .upvote").addClass(value.upvotejs_class);
+				$("#runoobvote-id-" + value.commid + " .downvote").addClass(value.downvote_class);
+				$("#runoobvote-id-" + value.commid + " .count").addClass(value.upvote_count)
+			})
+		},'json');
+	}
+	
+	
+});
+function isBlank(str) {
+    return (!str || /^\s*$/.test(str));
+}
+
+
+</script>
+
+<link rel="stylesheet" href="static/css/upvotejs.css">
+<script src="static/js/upvotejs.vanilla.js"></script>
+<script src="static/js/upvotejs.jquery.js"></script>
+<link rel="stylesheet" href="static/css/qa.css">
+<link rel="stylesheet" type="text/css" href="static/css/simditor.css">
+<script type="text/javascript" src="static/js/module.js"></script>
+<script type="text/javascript" src="static/js/hotkeys.js"></script>
+<script type="text/javascript" src="static/js/uploader.js"></script>
+<script type="text/javascript" src="static/js/simditor.min.js"></script>
+<script type="text/javascript" src="static/js/simditor-autosave.js"></script>
+		<div class="sidebar-box ">
+				<div id="ad-336280">
+
+		<style>	
+.responsive_ad1 { display:none; }
+@media(min-width: 800px) { .responsive_ad1 {  display:block;margin:0 auto;} }
+
+</style>
+<script async="" src="static/js/adsbygoogle.js"></script>
+<!-- 移动版 自动调整 -->
+<ins class="adsbygoogle responsive_ad1" style="min-width:400px;max-width:728px;width:100%;height:90px;" data-ad-client="ca-pub-5751451760833794" data-ad-slot="1691338467" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+				</div>
+		
+	</div>
+</div>
+	
+
+<!-- 右边栏 -->
+<div class="fivecol last right-column">
+<!--
+	<div class="tab tab-light-blue" style="text-align: center;">关注微信</div>
+	<div class="sidebar-box">
+		<a href="http://m.runoob.com/" target="_blank"> <img src="http://www.runoob.com/wp-content/themes/w3cschool.cc/assets/img/qrcode.jpg" alt="移动版"> </a>
+		<div class="qqinfo">
+		 <a target="_blank" href="http://jq.qq.com/?_wv=1027&k=dOwwKN" id="qqhref">
+		<img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="菜鸟家族" title="菜鸟家族"></a>
+		<span>(群号：<span id="qqid">365967760</span>)</span>
+		</div>
+		
+	</div>
+	-->
+<style>
+.sidebar-tree .double-li {
+	width:300px;
+}
+.sidebar-tree .double-li li {
+    width: 44%;
+    line-height: 1.5em;
+    border-bottom: 1px solid #ccc;
+    float: left;
+    display: inline;
+}
+</style>
+
+	
+		<div class="sidebar-box re-box re-box-large">
+		<div class="sidebar-box recommend-here" style="margin: 0 auto;">
+			<a href="javascript:void(0);" style="font-size: 16px; color:#64854c;font-weight:bold;"> <i class="fa fa-list" aria-hidden="true"></i> 分类导航</a>
+		</div>
+	<div class="sidebar-box sidebar-cate">
+		
+		<div class="sidebar-tree">
+			<ul><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> HTML / CSS</a><ul class="double-li"><li><a title="HTML 教程" href="html-tutorial.html">HTML 教程</a></li><li><a title="HTML5 教程" href="html5-intro.html">HTML5 教程</a></li><li><a title="CSS 教程" href="css-tutorial.html">CSS 教程</a></li><li><a title="CSS3 教程" href="css3-tutorial.html">CSS3 教程</a></li><li><a title="Bootstrap3 教程" href="bootstrap-tutorial.html">Bootstrap3 教程</a></li><li><a title="Bootstrap4 教程" href="bootstrap4-tutorial.html">Bootstrap4 教程</a></li><li><a title="Font Awesome 教程" href="fontawesome-tutorial.html">Font Awesome 教程</a></li><li><a title="Foundation 教程" href="foundation-tutorial.html">Foundation 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> JavaScript</a><ul class="double-li"><li><a title="JavaScript 教程" href="js-tutorial.html">JavaScript 教程</a></li><li><a title="HTML DOM 教程" href="htmldom-tutorial.html">HTML DOM 教程</a></li><li><a title="jQuery 教程" href="jquery-tutorial.html">jQuery 教程</a></li><li><a title="AngularJS 教程" href="angularjs-tutorial.html">AngularJS 教程</a></li><li><a title="AngularJS2 教程" href="angularjs2-tutorial.html">AngularJS2 教程</a></li><li><a title="Vue.js 教程" href="vue-tutorial.html">Vue.js 教程</a></li><li><a title="React 教程" href="react-tutorial.html">React 教程</a></li><li><a title="TypeScript 教程" href="ts-tutorial.html">TypeScript 教程</a></li><li><a title="jQuery UI 教程" href="jqueryui-tutorial.html">jQuery UI 教程</a></li><li><a title="jQuery EasyUI 教程" href="jqueryeasyui-tutorial.html">jQuery EasyUI 教程</a></li><li><a title="Node.js 教程" href="nodejs-tutorial.html">Node.js 教程</a></li><li><a title="AJAX 教程" href="ajax-tutorial.html">AJAX 教程</a></li><li><a title="JSON 教程" href="json-tutorial.html">JSON 教程</a></li><li><a title="Echarts 教程" href="echarts-tutorial.html">Echarts 教程</a></li><li><a title="Highcharts 教程" href="highcharts-tutorial.html">Highcharts 教程</a></li><li><a title="Google 地图 教程" href="google-maps-basic.html">Google 地图 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 服务端</a><ul class="double-li"><li><a title="Python 教程" href="python3-tutorial.html">Python 教程</a></li><li><a title="Python2.x 教程" href="python-tutorial.html">Python2.x 教程</a></li><li><a title="Linux 教程" href="linux-tutorial.html">Linux 教程</a></li><li><a title="Docker 教程" href="docker-tutorial.html">Docker 教程</a></li><li><a title="Ruby 教程" href="ruby-tutorial.html">Ruby 教程</a></li><li><a title="Java 教程" href="java-tutorial.html">Java 教程</a></li><li><a title="C 教程" href="c-tutorial.html">C 教程</a></li><li><a title="C++ 教程" href="cpp-tutorial.html">C++ 教程</a></li><li><a title="Perl 教程" href="perl-tutorial.html">Perl 教程</a></li><li><a title="Servlet 教程" href="servlet-tutorial.html">Servlet 教程</a></li><li><a title="JSP 教程" href="jsp-tutorial.html">JSP 教程</a></li><li><a title="Lua 教程" href="lua-tutorial.html">Lua 教程</a></li><li><a title="Scala 教程" href="scala-tutorial.html">Scala 教程</a></li><li><a title="Go 教程" href="go-tutorial.html">Go 教程</a></li><li><a title="PHP 教程" href="php-tutorial.html">PHP 教程</a></li><li><a title="Django 教程" href="django-tutorial.html">Django 教程</a></li><li><a title="设计模式" href="design-pattern-tutorial.html">设计模式</a></li><li><a title="正则表达式" href="regexp-tutorial.html">正则表达式</a></li><li><a title="Maven 教程" href="maven-tutorial.html">Maven 教程</a></li><li><a title="NumPy 教程" href="numpy-tutorial.html">NumPy 教程</a></li><li><a title="ASP 教程" href="asp-tutorial.html">ASP 教程</a></li><li><a title="AppML 教程" href="appml-tutorial.html">AppML 教程</a></li><li><a title="VBScript 教程" href="vbscript-tutorial.html">VBScript 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 数据库</a><ul class="double-li"><li><a title="SQL 教程" href="sql-tutorial.html">SQL 教程</a></li><li><a title="Mysql 教程" href="mysql-tutorial.html">Mysql 教程</a></li><li><a title="PostgreSQL 教程" href="postgresql-tutorial.html">PostgreSQL 教程</a></li><li><a title="SQLite 教程" href="sqlite-tutorial.html">SQLite 教程</a></li><li><a title="MongoDB 教程" href="mongodb-tutorial.html">MongoDB 教程</a></li><li><a title="Redis 教程" href="redis-tutorial.html">Redis 教程</a></li><li><a title="Memcached 教程" href="memcached-tutorial.html">Memcached 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 移动端</a><ul class="double-li"><li><a title="Android 教程" href="android-tutorial-intro.html">Android 教程</a></li><li><a title="Swift 教程" href="swift-tutorial.html">Swift 教程</a></li><li><a title="jQuery Mobile 教程" href="jquerymobile-tutorial.html">jQuery Mobile 教程</a></li><li><a title="ionic 教程" href="ionic-tutorial.html">ionic 教程</a></li><li><a title="Kotlin 教程" href="kotlin-tutorial.html">Kotlin 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> XML 教程</a><ul class="double-li"><li><a title="XML 教程" href="xml-tutorial.html">XML 教程</a></li><li><a title="DTD 教程" href="dtd-tutorial.html">DTD 教程</a></li><li><a title="XML DOM 教程" href="dom-tutorial.html">XML DOM 教程</a></li><li><a title="XSLT 教程" href="xsl-tutorial.html">XSLT 教程</a></li><li><a title="XPath 教程" href="xpath-tutorial.html">XPath 教程</a></li><li><a title="XQuery 教程" href="xquery-tutorial.html">XQuery 教程</a></li><li><a title="XLink 教程" href="xlink-tutorial.html">XLink 教程</a></li><li><a title="XPointer 教程" href="xlink-tutorial.html">XPointer 教程</a></li><li><a title="XML Schema 教程" href="schema-tutorial.html">XML Schema 教程</a></li><li><a title="XSL-FO 教程" href="xslfo-tutorial.html">XSL-FO 教程</a></li><li><a title="SVG 教程" href="svg-tutorial.html">SVG 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> ASP.NET</a><ul class="double-li"><li><a title="ASP.NET 教程" href="aspnet-tutorial.html">ASP.NET 教程</a></li><li><a title="C# 教程" href="csharp-tutorial.html">C# 教程</a></li><li><a title="Web Pages 教程" href="webpages-intro.html">Web Pages 教程</a></li><li><a title="Razor 教程" href="razor-intro.html">Razor 教程</a></li><li><a title="MVC 教程" href="mvc-intro.html">MVC 教程</a></li><li><a title="Web Forms 教程" href="aspnet-intro.html">Web Forms 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> Web Service</a><ul class="double-li"><li><a title="Web Service 教程" href="webservices-tutorial.html">Web Service 教程</a></li><li><a title="WSDL 教程" href="wsdl-tutorial.html">WSDL 教程</a></li><li><a title="SOAP 教程" href="soap-tutorial.html">SOAP 教程</a></li><li><a title="RSS 教程" href="rss-tutorial.html">RSS 教程</a></li><li><a title="RDF 教程" href="rdf-tutorial.html">RDF 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 开发工具</a><ul class="double-li"><li><a title="Eclipse 教程" href="eclipse-tutorial.html">Eclipse 教程</a></li><li><a title="Git 教程" href="git-tutorial.html">Git 教程</a></li><li><a title="Svn 教程" href="svn-tutorial.html">Svn 教程</a></li><li><a title="Markdown 教程" href="md-tutorial.html">Markdown 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 网站建设</a><ul class="double-li"><li><a title="HTTP 教程" href="http-tutorial.html">HTTP 教程</a></li><li><a title="网站建设指南" href="web-buildingprimer.html">网站建设指南</a></li><li><a title="浏览器信息" href="browser-information.html">浏览器信息</a></li><li><a title="网站主机教程" href="hosting-tutorial.html">网站主机教程</a></li><li><a title="TCP/IP 教程" href="tcpip-tutorial.html">TCP/IP 教程</a></li><li><a title="W3C 教程" href="w3c-tutorial.html">W3C 教程</a></li><li><a title="网站品质" href="quality-tutorial.html">网站品质</a></li></ul></li></ul>			</div>
+	
+	</div>
+	</div>
+	<br>
+	
+	<div class="sidebar-box re-box re-box-large">
+		<div class="sidebar-box recommend-here">
+			<a href="javascript:void(0);">Advertisement</a>
+		</div>
+		<div class="re-600160" id="sidebar-right-re">
+				<script async="" src="static/js/adsbygoogle.js"></script>
+		<!-- 侧栏1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-5751451760833794" data-ad-slot="4106274865"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+				</div>
+	</div>
+</div></div>
+
+</div>
+
+<script>
+var aid = 6643;
+function coll() {
+	$.post( '/wp-content/themes/runoob/option/user/userinfo.php', {aid:aid, action:"collarticle", opt:'add'},function( data ) {
+		if(data.error==0) {
+			$("#content").find("h1:first").find("a").attr("href","javascript:void(0);");
+			$("#content").find("h1:first").find("img").attr("src","http://www.runoob.com/wp-content/themes/runoob/assets/img/coll2.png").css({width:32+"px",height:32+"px"});
+		}
+		alert(data.msg);
+	},'json');
+}
+</script>
+
+
+<!-- 反馈对话框开始 -->
+<script src="static/js/feedback.js"></script>
+<link rel="stylesheet" href="static/css/feedback.css">
+<script type="text/javascript">
+$.feedback({
+    ajaxURL: '/feedback/runoob_feedback.php',
+	html2canvasURL: '/wp-content/themes/runoob/assets/feedback/stable/2.0/html2canvas.js',
+	onClose: function () {
+         window.location.reload();
+    }
+});
+</script>
+<!-- 反馈对话框结束 -->
+<button class="feedback-btn feedback-btn-gray">反馈/建议</button>
+<!-- 底部 -->
+
+
+<div id="footer" class="mar-t50">
+   <div class="runoob-block">
+    <div class="runoob cf">
+     <dl>
+      <dt>
+       在线实例
+      </dt>
+      <dd>
+       &middot;<a target="_blank" href="html-examples.html">HTML 实例</a>
+      </dd>
+      <dd>
+       &middot;<a target="_blank" href="css-examples.html">CSS 实例</a>
+      </dd>
+      <dd>
+       &middot;<a target="_blank" href="js-examples.html">JavaScript 实例</a>
+      </dd>
+      <dd>
+       &middot;<a target="_blank" href="ajax-examples.html">Ajax 实例</a>
+      </dd>
+       <dd>
+       &middot;<a target="_blank" href="jquery-examples.html">jQuery 实例</a>
+      </dd>
+      <dd>
+       &middot;<a target="_blank" href="xml-examples.html">XML 实例</a>
+      </dd>
+      <dd>
+       &middot;<a target="_blank" href="java-examples.html">Java 实例</a>
+      </dd>
+     
+     </dl>
+     <dl>
+      <dt>
+      字符集&工具
+      </dt>
+      <dd>
+       &middot; <a target="_blank" href="html-charsets.html">HTML 字符集设置</a>
+      </dd>
+      <dd>
+       &middot; <a target="_blank" href="html-ascii.html">HTML ASCII 字符集</a>
+      </dd>
+     <dd>
+       &middot; <a target="_blank" href="ref-entities.html">HTML ISO-8859-1</a>
+      </dd> 
+      <dd>
+       &middot; <a target="_blank" href="html-symbols.html">HTML 实体符号</a>
+      </dd>
+      <dd>
+       &middot; <a target="_blank" href="html-colorpicker.html">HTML 拾色器</a>
+      </dd>
+      <dd>
+       &middot; <a target="_blank" href="53.html">JSON 格式化工具</a>
+      </dd>
+     </dl>
+     <dl>
+      <dt>
+       最新更新
+      </dt>
+                   <dd>
+       &middot;
+      <a href="python-dynamic-var.html" title="Python 动态变量名定义与调用">Python 动态变量...</a>
+      </dd>
+              <dd>
+       &middot;
+      <a href="json-vs-xml.html" title="JSON vs XML">JSON vs XML</a>
+      </dd>
+              <dd>
+       &middot;
+      <a href="sql-exists.html" title="SQL EXISTS 运算符">SQL EXISTS 运算符</a>
+      </dd>
+              <dd>
+       &middot;
+      <a href="tag-main.html" title="HTML main 标签">HTML main 标签</a>
+      </dd>
+              <dd>
+       &middot;
+      <a href="echarts-sunburst.html" title="ECharts 旭日图">ECharts 旭日图</a>
+      </dd>
+              <dd>
+       &middot;
+      <a href="echarts-events.html" title="ECharts 事件处理">ECharts 事件处理</a>
+      </dd>
+              <dd>
+       &middot;
+      <a href="echarts-visualmap.html" title="ECharts 数据的视觉映射">ECharts 数据的...</a>
+      </dd>
+             </dl>
+     <dl>
+      <dt>
+       站点信息
+      </dt>
+      <dd>
+       &middot;
+       <a target="_blank" href="javascript:window.open('https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=ssbDyoOAgfLU3crf09venNHd3w');" rel="external nofollow">意见反馈</a>
+      </dd>
+        
+      <dd>
+       &middot;
+      <a class="wxpopup" onclick="popFunction()">合作联系
+       <span class="popuptext" id="myPopup">微信(注明来意)：<strong>centos5</strong></span>
+      </a>
+      </dd> 
+      <dd>
+       &middot;
+      <a target="_blank" href="disclaimer.html">免责声明</a>
+       </dd>
+       <!--
+       <dd style="display: block;">
+       &middot;
+      <a href="javascript:void(0)" onclick="dashangToggle()" style="font-weight:bold;color:#f00;" title="打赏，支持一下">打赏一下</a>
+       </dd>
+     -->
+      <dd>
+       &middot;
+       <a target="_blank" href="aboutus.html">关于我们</a>
+       </dd>
+      <dd>
+       &middot;
+      <a target="_blank" href="archives.html">文章归档</a>
+      </dd>
+    
+     </dl>
+    
+     <div class="search-share">
+      <div class="app-download">
+        <div>
+         <strong>关注微信</strong>
+        </div>
+      </div>
+      <div class="share">
+            <img width="128" height="128" src="static/picture/qrcode.png">
+       </div>
+     </div>
+     
+    </div>
+   </div>
+   <div class="w-1000 copyright">
+     Copyright &copy; 2013-2020    <strong><a href="index1.html" target="_blank">菜鸟教程</a></strong>&nbsp;
+    <strong><a href="index1.html" target="_blank">runoob.com</a></strong> All Rights Reserved. 备案号：闽ICP备15012807号-1
+   </div>
+  </div>
+  <div class="fixed-btn">
+    <a class="go-top" href="javascript:void(0)" title="返回顶部"> <i class="fa fa-angle-up"></i></a>
+    <a class="qrcode" href="javascript:void(0)" title="关注我们"><i class="fa fa-qrcode"></i></a>
+    <a class="writer" style="display:none" href="javascript:void(0)" title="标记/收藏"><i class="fa fa-star" aria-hidden="true"></i></a>
+    <!-- qrcode modal -->
+    <div id="bottom-qrcode" class="modal panel-modal hide fade in">
+      <h4>微信关注</h4>
+      <div class="panel-body"><img alt="微信关注" width="128" height="128" src="static/picture/qrcode.png"></div> 
+    </div>
+  </div>
+
+  <div class="hide_box"></div>
+    <div class="shang_box">
+      <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="static/picture/close.jpg" alt="取消"></a>
+       
+      <div class="shang_tit">
+        <p>感谢您的支持，我会继续努力的!</p>
+      </div>
+      <div class="shang_payimg">
+        <img src="static/picture/weipayimg.png" alt="扫码支持" title="扫一扫">
+      </div>
+        <div class="pay_explain">扫码打赏，你说多少就多少</div>
+      <div class="shang_payselect">
+        <div class="pay_item  checked" data-id="weipay">
+          <span class="radiobox"></span>
+          <span class="pay_logo"><img src="static/picture/wechat.jpg" alt="微信"></span>
+        </div>
+        <div class="pay_item" data-id="alipay">
+          <span class="radiobox"></span>
+          <span class="pay_logo"><img src="static/picture/alipay.jpg" alt="支付宝"></span>
+        </div>
+        
+      </div>
+      <div class="shang_info">
+        <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+        <p><a href="5348.html" target="_blank"><span style=" font-size: 14px;color: #000;font-weight: bold;">点我查看本站打赏源码！</span></a></p>
+      </div>
+    </div>
+  <div id="testClick"></div>
+ <div style="display:none;">
+ 
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3eec0b7da6548cf07db3bc477ea905ee";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+<script>
+window.jsui={
+    www: 'https://www.runoob.com',
+    uri: 'https://www.runoob.com/wp-content/themes/runoob'
+};
+</script>
+<style>
+ol,ul{list-style:none}.cd-switcher a{text-decoration:none;outline:0}.cd-switcher a:hover{text-decoration:underline}a:focus{outline:0;-moz-outline:0}.main_nav{width:300px;height:60px;margin:60px auto 10px auto}.main_nav li{float:left;width:60px;margin-right:10px;font-size:16px;padding:.6em 1em;border-radius:3em;background:#2f889a;text-align:center}.main_nav li a{color:#fff}.errtip{background-color:#fceaea;color:#db5353;padding:8px 15px;font-size:14px;border:1px solid #fc9797;border-radius:5px}.cd-user-modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(52,54,66,0.9);z-index:3;overflow-y:auto;cursor:pointer;visibility:hidden;opacity:0;-webkit-transition:opacity .3s 0,visibility 0 .3s;-moz-transition:opacity .3s 0,visibility 0 .3s;transition:opacity .3s 0,visibility 0 .3s}.cd-user-modal.is-visible{visibility:visible;opacity:1;-webkit-transition:opacity .3s 0,visibility 0 0;-moz-transition:opacity .3s 0,visibility 0 0;transition:opacity .3s 0,visibility 0 0}.cd-user-modal.is-visible .cd-user-modal-container{-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0)}.cd-user-modal-container{position:relative;width:90%;max-width:500px;background:#FFF;margin:3em auto 4em;cursor:auto;border-radius:.25em;-webkit-transform:translateY(-30px);-moz-transform:translateY(-30px);-ms-transform:translateY(-30px);-o-transform:translateY(-30px);transform:translateY(-30px);-webkit-transition-property:-webkit-transform;-moz-transition-property:-moz-transform;transition-property:transform;-webkit-transition-duration:.3s;-moz-transition-duration:.3s;transition-duration:.3s}.cd-user-modal-container .cd-switcher:after{content:"";display:table;clear:both}.cd-user-modal-container .cd-switcher li{width:50%;float:left;text-align:center}.cd-user-modal-container .cd-switcher li:first-child a{border-radius:.25em 0 0 0}.cd-user-modal-container .cd-switcher li:last-child a{border-radius:0 .25em 0 0}.cd-user-modal-container .cd-switcher a{font-size:1.2em;font-weight:bold;display:block;width:100%;height:50px;line-height:50px;background:#e8f1e2;color:#96b880}.cd-user-modal-container .cd-switcher a.selected{background:#FFF;color:#505260}@media only screen and (min-width:600px){.cd-user-modal-container{margin:4em auto}.cd-user-modal-container .cd-switcher a{height:70px;line-height:70px}}.cd-form{padding:1.4em}.cd-form .fieldset{position:relative;margin:1.4em 0}.cd-form .fieldset:first-child{margin-top:0}.cd-form .fieldset:last-child{margin-bottom:0}.cd-form label{font-size:16px;font-size:.875rem}.cd-form label.image-replace{display:inline-block;position:absolute;left:15px;top:50%;bottom:auto;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);transform:translateY(-50%);height:20px;width:20px;overflow:hidden;text-indent:100%;white-space:nowrap;color:transparent;text-shadow:none;background-repeat:no-repeat;background-position:50% 0}.cd-form label.cd-username{background-image:url("static/image/cd-icon-username.svg")}.cd-form label.cd-email{background-image:url("static/image/cd-icon-email.svg")}.cd-form label.cd-password{background-image:url("static/image/cd-icon-password.svg")}.cd-form input{margin:0;padding:0;border-radius:.25em}.cd-form input.full-width{width:80%}.cd-form input.full-width2{width:94%}.cd-form input.has-padding{padding:12px 20px 12px 50px}.cd-form input.has-border{border:1px solid #d2d8d8;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none}.cd-form input.has-border:focus{border-color:#98b880;box-shadow:0 0 5px rgba(52,54,66,0.1);outline:0}.cd-form input.has-error{border:1px solid #d76666}.cd-form input[type=password]{padding-right:65px}.cd-form input[type=submit]{padding:16px 0;cursor:pointer;background:#96b97d;color:#FFF;font-weight:bold;border:0;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none;font-size:1.2em;font-weight:bold}.no-touch .cd-form input[type=submit]:hover,.no-touch .cd-form input[type=submit]:focus{background:#3599ae;outline:0}@media only screen and (min-width:600px){.cd-form{padding:2em}.cd-form .fieldset{margin:2em 0}.cd-form .fieldset:first-child{margin-top:0}.cd-form .fieldset:last-child{margin-bottom:0}.cd-form input.has-padding{padding:16px 20px 16px 50px}.cd-form input[type=submit]{padding:16px 0}}.cd-close-form{display:block;position:absolute;width:40px;height:40px;right:0;top:-40px;background:url("static/image/cd-icon-close.svg") no-repeat center center;text-indent:100%;white-space:nowrap;overflow:hidden}@media only screen and (min-width:1170px){}#cd-login,#cd-signup,#cd-reset-password{display:none}#cd-login.is-selected,#cd-signup.is-selected,#cd-reset-password.is-selected{display:block}
+</style>
+<div class="cd-user-modal"> 
+	<div class="cd-user-modal-container">
+		<ul class="cd-switcher">
+			<li><a href="javascript:;">用户登录</a></li>
+			<li><a href="javascript:;">注册新用户</a></li>
+		</ul>
+
+		<div id="cd-login"> <!-- 登录表单 -->
+			<div class="cd-form">
+				<p class="fieldset">
+					<label class="image-replace cd-username" for="signin-username">用户名</label>
+					<input class="full-width has-padding has-border" id="signin-username" name="username" type="text" placeholder="输入用户名">
+				</p>
+
+				<p class="fieldset">
+					<label class="image-replace cd-password" for="signin-password">密码</label>
+					<input class="full-width has-padding has-border" id="signin-password" name="password" type="password" placeholder="输入密码">
+				</p>
+				
+				<p class="fieldset">
+					<input type="checkbox" id="remember-me" checked="">
+					<label for="remember-me">记住登录状态</label>
+          <a href="reset-password.html" style="float: right;padding-right: 20px;" target="_blank">忘记密码？</a>
+				</p>
+ 				<input type="hidden" name="action" value="signin">
+				<p class="fieldset">
+					<input class="full-width2" type="submit" value="登 录">
+				</p>
+        <div class="err-msg"></div>
+			</div>
+		</div>
+
+		<div id="cd-signup"> <!-- 注册表单 -->
+			<div class="cd-form">
+				<p class="fieldset">
+					<label class="image-replace cd-password" for="verifycode">邀请码</label>
+					<input class="full-width has-padding has-border" id="signup-verifycode" name="verifycode" type="text" placeholder="输入邀请码">
+				</p>
+				<p class="fieldset">
+					<label class="image-replace cd-username" for="signup-username">用户名</label>
+					<input class="full-width has-padding has-border" id="signup-username" name="name" type="text" placeholder="输入用户名">
+				</p>
+
+				<p class="fieldset">
+					<label class="image-replace cd-email" for="signup-email">邮箱</label>
+					<input class="full-width has-padding has-border" name="email" id="signup-email" type="email" placeholder="输入mail">
+				</p>
+
+				<p class="fieldset">
+					<label class="image-replace cd-password" for="signup-password">密码</label>
+					<input class="full-width has-padding has-border" id="signup-password" name="password" type="password" placeholder="输入密码">
+				</p>
+				<p class="fieldset">
+					<label class="image-replace cd-password" for="signup-password2">重复输入密码</label>
+					<input class="full-width has-padding has-border" id="signup-password2" name="password2" type="password" placeholder="重复输入密码">
+				</p>
+				
+				<!-- 
+				<p class="fieldset">
+					<input type="checkbox" id="accept-terms">
+					<label for="accept-terms">我已阅读并同意 <a href="javascript:;">用户协议</a></label>
+				</p>
+				 -->
+				 
+				 <input type="hidden" name="action" value="signup">
+				<p class="fieldset">
+					<input class="full-width2" type="submit" value="注册新用户">
+				</p>
+				<p class="fieldset">
+				  <a href="runoob-user-test-intro.html#invite" target="_blank">如何获取邀请码？</a>
+				  </p>
+				<div class="err-msg"></div>
+			</div>
+
+		</div>
+
+		<a href="javascript:;" class="cd-close-form">关闭</a>
+	</div>
+</div> 
+<script src="static/js/main.min-1.191.js"></script>
+<script src="static/js/run_prettify.js"></script>
+</body>
+</html>

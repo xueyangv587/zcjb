@@ -4,12 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta property="qc:admins" content="465267610762567726375">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>C# 教程 | 菜鸟教程</title>
+	<title>C# 环境 | 菜鸟教程</title>
 
   
-<link rel="canonical" href="http://www.runoob.com/csharp/csharp-tutorial.html">
-<meta name="keywords" content="C# 教程,C#">
-<meta name="description" content="C# 教程   C# 是一个简单的、现代的、通用的、面向对象的编程语言，它是由微软（Microsoft）开发的。 本教程将告诉您基础的 C# 编程，同时将向您讲解 C# 编程语言相关的各种先进理念。 现在开始学习 C#！ C# 在线工具   谁适合阅读本教程？ 本教程有助于初学者理解基础的 C# 编程。在学习完本教程后，您将到达一个中级的 C# 编程水平。  阅读本教程前，您需要了解的知识： C# 编程是基于 C 和 C++ 编程语言的..">
+<link rel="canonical" href="http://www.runoob.com/csharp/csharp-environment-setup.html">
+<meta name="keywords" content="C# 环境">
+<meta name="description" content="C# 环境   在这一章中，我们将讨论创建 C# 编程所需的工具。我们已经提到 C# 是 .Net 框架的一部分，且用于编写 .Net 应用程序。因此，在讨论运行 C# 程序的可用工具之前，让我们先了解一下 C# 与 .Net 框架之间的关系。   .Net 框架（.Net Framework） .Net 框架是一个创新的平台，能帮您编写出下面类型的应用程序：  Windows 应用程序 Web 应用程序 Web 服务  .Net 框架..">
 		
 	
 	<link rel="stylesheet" href="static/css/style-1.154.css" type="text/css" media="all">	
@@ -68,7 +68,7 @@
 				<li><a href="java-tutorial.html">Java</a></li>
 				<li><a href="c-tutorial.html">C</a></li>
 				<li><a href="cpp-tutorial.html">C++</a></li>
-				<li><a href="">C#</a></li>
+				<li><a href="csharp-tutorial.html">C#</a></li>
 				<li><a href="sql-tutorial.html">SQL</a></li>
 				<li><a href="mysql-tutorial.html">MySQL</a></li>
 				<li><a href="php-tutorial.html">PHP</a></li>
@@ -103,11 +103,11 @@
 	</div>
 	<div class="sidebar-box gallery-list">
 		<div class="design" id="leftcolumn">
-						<a target="_top" title="C# 教程" href="">
+						<a target="_top" title="C# 教程" href="csharp-tutorial.html">
 			C# 教程			</a>
 						<a target="_top" title="C# 简介" href="csharp-intro.html">
 			C# 简介			</a>
-						<a target="_top" title="C# 环境" href="csharp-environment-setup.html">
+						<a target="_top" title="C# 环境" href="">
 			C# 环境			</a>
 						<a target="_top" title="C# 程序结构" href="csharp-program-structure.html">
 			C# 程序结构			</a>
@@ -194,71 +194,66 @@
 		
 		</div>
 		<div class="previous-next-links">
-			<div class="previous-design-link"> </div>
-			<div class="next-design-link"><a href="csharp-intro.html" rel="next"> C# 简介</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="csharp-intro.html" rel="prev"> C# 简介</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-program-structure.html');" rel="next"> C# 程序结构</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
 		<div class="article-body">
 		
 			<div class="article-intro" id="content">
 			
-			<h1>C# <span class="color_h1">教程</span></h1>
+			<h1>C# <span class="color_h1">环境</span></h1>
 
 <div class="tutintro">
-<p>C# 是一个简单的、现代的、通用的、面向对象的编程语言，它是由微软（Microsoft）开发的。</p>
-<p>本教程将告诉您基础的 C# 编程，同时将向您讲解 C# 编程语言相关的各种先进理念。</p>
-<p><b><a href="csharp-intro.html">现在开始学习 C#！</a></b></p>
-<p><a href="showcs-helloworld.html" target="_blank">C# 在线工具</a></p>
+<p>在这一章中，我们将讨论创建 C# 编程所需的工具。我们已经提到 C# 是 .Net 框架的一部分，且用于编写 .Net 应用程序。因此，在讨论运行 C# 程序的可用工具之前，让我们先了解一下 C# 与 .Net 框架之间的关系。</p>
 </div>
 
-<h2 class="tutheader">谁适合阅读本教程？</h2>
-<p>本教程有助于初学者理解基础的 C# 编程。在学习完本教程后，您将到达一个中级的 C# 编程水平。</p>
-
-<h2 class="tutheader">阅读本教程前，您需要了解的知识：</h2>
-<p>C# 编程是基于 C 和 C++ 编程语言的，因此如果您对 C 和 C++ 编程有基本的了解，将有助于您学习 C# 编程语言。</p>
-
-<h2 class="tutheader">编译/执行 C# 程序</h2>
-<p>菜鸟教程提供了在线的 C# 在线编译环境，您只需进行简单的点击动作，即可在高端的服务器上体验真实的编程经验。这是完全免费的在线工具。</p>
-<div class="example"> 
-<h2 class="example">实例</h2> 
-<div class="example_code">
-
-<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
-<span style="color: #05a; font-weight: bold;">namespace</span> HelloWorldApplication<br>
-<span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 类名为 HelloWorld */</span><br>
-&nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">class</span> HelloWorld<br>
-&nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* main函数 */</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 我的第一个 C# 程序 */</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Hello World!&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
-&nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
-<span style="color: #008000;">&#125;</span><br>
-
-</div><br>
-<a target="_blank" href="showcs-helloworld.html" class="showbtn">运行实例 »</a>
-</div>
-<h2 class="tutheader">C# 有用的资源</h2>
-<p>本教程列出了 C# 网站、书籍和文章。</p>
-<h3>C# 有用的网站</h3>
+<h2 class="tutheader">.Net 框架（.Net Framework）</h2>
+<p>.Net 框架是一个创新的平台，能帮您编写出下面类型的应用程序：</p>
 <ul class="list">
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://msdn.microsoft.com/en-us/library/67ef8sbd.aspx');">C# Programming Guide</a> - 介绍了有关关键的 C# 语言特征以及如何通过 .NET 框架访问 C# 的详细信息。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('https://visualstudio.microsoft.com/zh-hans/downloads/');">Visual Studio</a> - 下载作为 C# 集成开发环境的 Visual Studio 的最新版本。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://www.mono-project.com/Main_Page');">Go Mono</a> - Mono 是一个允许开发人员简单地创建跨平台应用程序的软件平台。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://en.wikipedia.org/wiki/C_Sharp_(programming_language)');">C Sharp (programming language) </a> - 维基百科解释 C#（编程语言）。</li>
+<li>Windows 应用程序</li>
+<li>Web 应用程序</li>
+<li>Web 服务</li>
 </ul>
-			<!-- 其他扩展 -->
+<p>.Net 框架应用程序是多平台的应用程序。框架的设计方式使它适用于下列各种语言：C#、C++、Visual Basic、Jscript、COBOL 等等。所有这些语言可以访问框架，彼此之间也可以互相交互。</p>
+<p>.Net 框架由一个巨大的代码库组成，用于 C# 等客户端语言。下面列出一些 .Net 框架的组件：</p>
+<ul class="list">
+<li>公共语言运行库（Common Language Runtime - CLR）</li>
+<li>.Net 框架类库（.Net Framework Class Library）</li>
+<li>公共语言规范（Common Language Specification）</li>
+<li>通用类型系统（Common Type System）</li>
+<li>元数据（Metadata）和组件（Assemblies）</li>
+<li>Windows 窗体（Windows Forms）</li>
+<li>ASP.Net 和 ASP.Net AJAX</li>
+<li>ADO.Net</li>
+<li>Windows 工作流基础（Windows Workflow Foundation - WF）</li>
+<li>Windows 显示基础（Windows Presentation Foundation）</li>
+<li>Windows 通信基础（Windows Communication Foundation - WCF）</li>
+<li>LINQ</li>
+</ul>
+<p>如需了解每个组件的详细信息，请参阅微软（Microsoft）的文档。</p>
+
+<h2 class="tutheader">C# 的集成开发环境（Integrated Development Environment - IDE）</h2>
+<p>微软（Microsoft）提供了下列用于 C# 编程的开发工具：</p>
+<ul class="list">
+<li>Visual Studio 2010 (VS)</li>
+<li>Visual C# 2010 Express (VCE)</li>
+<li>Visual Web Developer</li>
+</ul>
+<p>后面两个是免费使用的，可从微软官方网址下载。使用这些工具，您可以编写各种 C# 程序，从简单的命令行应用程序到更复杂的应用程序。您也可以使用基本的文本编辑器（比如 Notepad）编写 C# 源代码文件，并使用命令行编译器（.NET 框架的一部分）编译代码为组件。</p>
+<p>Visual C# Express 和 Visual Web Developer Express 版本是 Visual Studio 的定制版本，且具有相同的外观和感观。它们保留 Visual Studio 的大部分功能。在本教程中，我们使用的是 Visual C# 2010 Express。</p>
+<p>您可以从 <a target="_blank" rel="nofollow" href="javascript:window.open('https://www.visualstudio.com/zh-hans/downloads/');">Microsoft Visual Studio</a> 上进行下载。它会自动安装在您的机器上。请注意，您需要一个可用的网络连接来完成速成版的安装。</p>
+
+<h2 class="tutheader">在 Linux 或 Mac OS 上编写 C# 程序</h2>
+<p>虽然 .NET 框架是运行在 Windows 操作系统上，但是也有一些运行于其它操作系统上的版本可供选择。<b>Mono</b> 是 .NET 框架的一个开源版本，它包含了一个 C# 编译器，且可运行于多种操作系统上，比如各种版本的 Linux 和 Mac OS。如需了解更多详情，请访问 <a target="_blank" rel="nofollow" href="javascript:window.open('http://www.mono-project.com/download/stable/');">Go Mono</a>。</p>
+<p>Mono 的目的不仅仅是跨平台地运行微软 .NET 应用程序，而且也为 Linux 开发者提供了更好的开发工具。Mono 可运行在多种操作系统上，包括 Android、BSD、iOS、Linux、OS X、Windows、Solaris 和 UNIX。</p>			<!-- 其他扩展 -->
 						
 			</div>
 			
 		</div>
 		
 		<div class="previous-next-links">
-			<div class="previous-design-link"> </div>
-			<div class="next-design-link"><a href="csharp-intro.html" rel="next"> C# 简介</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="csharp-intro.html" rel="prev"> C# 简介</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-program-structure.html');" rel="next"> C# 程序结构</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
 		<!-- 笔记列表 -->
 		<style>
@@ -365,113 +360,30 @@
     <div class="altblock">
 				<i style="font-size:28px;margin-top: 8px;" class="fa fa-plus-square" aria-hidden="true"></i>
 		    </div>
-    <span class="mw-headline" id="qa_headline">4  篇笔记</span>
+    <span class="mw-headline" id="qa_headline">3  篇笔记</span>
 	<span class="mw-headline" id="user_add_note" style="float:right;line-height: 62px;padding-right: 14px;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>  写笔记</span>
     </h2>
 </div>
 
 <div id="postcomments" style="display:none;">
 	<ol class="commentlist">
-		<li class="comment even thread-even depth-1" id="comment-17323"><span class="comt-f">#4</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;暗黑系青菜</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;129***1362@qq.com</p></div><div id="runoobvote-id-17323" data-commid="17323" class="upvotejs"><a class="upvote"></a> <span class="count">32</span></div></div><div class="comt-main" id="div-comment-17323"><pre>Console.Write("Hello World!");
-与
-Console.WriteLine("Hello World!");</pre>
-<p data-title="C# Console.Write 与 Console.WriteLine 区别"><strong>区别：</strong>前者输出后不换行，后者输出后自动换行</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="17323.html">暗黑系青菜</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;暗黑系青菜</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;129***1362@qq.com</p></div></span>2年前 (2017-09-09)</div></div></li><!-- #comment-## -->
-<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-25633"><span class="comt-f">#3</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ZPK4229</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;zha***ngkunwork@163.com</p></div><div id="runoobvote-id-25633" data-commid="25633" class="upvotejs"><a class="upvote"></a> <span class="count">24</span></div></div><div class="comt-main" id="div-comment-25633"><p>这里简单介绍一下下面这段语句的作用：</p>
+		<li class="comment byuser comment-author-tianqixin even thread-even depth-1" id="comment-36275"><span class="comt-f">#3</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Mouron</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Mou***@qq.com</p></div><div id="runoobvote-id-36275" data-commid="36275" class="upvotejs"><a class="upvote"></a> <span class="count">7</span></div></div><div class="comt-main" id="div-comment-36275"><p><strong data-title="">Mac OS X搭建.Net环境 进行C#开发</strong></p>
+在 Mac 下想要用 C# 语言的话，首先得有个跨平台的 .Net 环境－ Mono:
+<p>Mono 官方下载地址: <a href="javascript:window.open('http://www.mono-project.com/');" target="_blank" rel="noopener nofollow">http://www.mono-project.com/</a></p>
 
-<pre>Console.ReadKey();</pre>
-<p>编写 <strong>Console.Readkey();</strong> 这个函数是为了在控制台窗口停留一下，直到敲击键盘为止。</p>
+<p>有了 Mono 平台之后，还得有一个好工具:</p>
+<p>Xmarin Studio下载地址：<a href="javascript:window.open('http://www.monodevelop.com/');" target="_blank" rel="noopener nofollow">http://www.monodevelop.com/</a></p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:window.open('https://www.runoob.com/note/36275');">Mouron</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Mouron</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Mou***@qq.com</p></div></span>1年前 (2018-10-26)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-38665"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Angry Guitar</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;871***154@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://zhidao.baidu.com/question/342499781.html');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-38665" data-commid="38665" class="upvotejs"><a class="upvote"></a> <span class="count">10</span></div></div><div class="comt-main" id="div-comment-38665"><p><strong data-title="">VC 和 VS 区别</strong></p>
+<p>VS 是 Visual Studio，它是微软提供的一个工具集，由各种各样的工具组成。VS 可以支持 C/C++、VB、JAVA、C# 编程。然了一次只能支持一种编程方式。在 VS 安装完成，第一次运行的时候会让你选择常用语言，如果你选择 C/C++，那么他就成了能够进行 C/C++ 编程的平台也许就是你所说的 VC 了。如果不想用 C/C++ 的话，只需要修改一下他的初始化设置，选择别的编程语言，就成为了另一种的语言的编程环境了。</p>
+<p>VC 是 Visual C++，是一个独立的 C/C++ 的开发工具，比较著名的是 VC6.0，现在的  VC2010其实就是 VC10.0。</p>
+<p>再通俗一点，以 VS2010 和 VC2010 为例，VS2010 相当与 Office2010，包括了 World2010、Excel2010 等，而 VC2010 就相当于是 World2010。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:window.open('https://www.runoob.com/note/38665');">Angry Guitar</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Angry Guitar</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;871***154@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://zhidao.baidu.com/question/342499781.html');">&nbsp;&nbsp;参考地址</a></p></div></span>1年前 (2019-01-04)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-39507"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Yadomin</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;178***7074@qq.com</p></div><div id="runoobvote-id-39507" data-commid="39507" class="upvotejs"><a class="upvote"></a> <span class="count">10</span></div></div><div class="comt-main" id="div-comment-39507"><p>现在可以使用 .Net Core 进行跨平台开发了。</p>
 
-<p>不然运行时，"Hello World!" 这句话会在控制台窗口一闪而过，没法查看。</p>
+<p><strong>dotnet core: </strong><a href="javascript:window.open('https://dotnet.microsoft.com/download');" target="_blank" rel="noopener nofollow">https://dotnet.microsoft.com/download</a></p>
 
-<pre>Console.Readkey();
-//与
-Console.Readline();
-//与
-Console.Read();</pre>
-<p><strong>区别：</strong>第一个在键盘敲击任意键退出；后两个差不多，都是输入任意东西后按回车才会退出。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">ZPK4229</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ZPK4229</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;zha***ngkunwork@163.com</p></div></span>2年前 (2018-03-28)</div></div></li><!-- #comment-## -->
-<li class="comment even thread-even depth-1" id="comment-28431"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Cristiano Ronaldo</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;843***547@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://blog.csdn.net/u010594850/article/details/18940023');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-28431" data-commid="28431" class="upvotejs"><a class="upvote"></a> <span class="count">23</span></div></div><div class="comt-main" id="div-comment-28431"><p data-title="C# Console.ReadLine() 与 Console.ReadKey() 用法" data-commid="25633"><span class="marked">Console.ReadLine()</span> 会等待直到用户按下回车，一次读入一行。</p>
-<p><span class="marked">Console.ReadKey()</span>  则是等待用户按下任意键，一次读入一个字符。</p>
+<p>同时建议用 Visual Studio Code 进行简单的开发：<a href="javascript:window.open('https://code.visualstudio.com/');" target="_blank" rel="noopener nofollow">https://code.visualstudio.com/</a></p>
 
-<pre>class Program
-{
-   private List&lt;Student&gt; allStu = newList&lt;Student&gt;();
-   string yesORno;
-   bool flag = true;
-   
-   public void AddStudent()
-   {
-       while (flag)
-       {
-           Student s = new Student();
-           Console.WriteLine("请输入学生姓名:");
-           s.StuName = Console.ReadLine();
-           Console.WriteLine("请输入学生学号");
-           s.StuNum = Console.ReadLine();
-           allStu.Add(s);
-
-           Console.WriteLine("是否继续输入:请输入y或者n");
-           yesORno =Console.ReadKey().Key.ToString();
-           
-           switch (yesORno)
-           {
-               case "Y":
-                   flag = true;
-                   break;
-               case "N":
-                   flag = false;
-                   break;
-           }
-       }
-   }
-
-   public void ShowStu()
-   {
-       for (int i = 0; i &lt; allStu.Count; i++)
-       {
-           Console.WriteLine(allStu[i].ToString());
-       }
-   }
-
-   static void Main(string[] args)
-   {
-       Program p = new Program();
-       p.AddStudent();
-       p.ShowStu();
-       Console.ReadLine();
-   }
-}
-
- 
-
-class Student
-{
-   private string stuName;
-
-   public string StuName
-   {
-       get { return stuName; }
-       set { stuName = value; }
-   }
-
-   private string stuNum;
-
-   public string StuNum
-   {
-       get { return stuNum; }
-       set { stuNum = value; }
-   }
-
-   public override string ToString()
-   {
-       return "姓名" + stuName + "......." + "学号" + stuNum;
-   }
-}</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="28431.html">Cristiano Ronaldo</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Cristiano Ronaldo</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;843***547@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://blog.csdn.net/u010594850/article/details/18940023');">&nbsp;&nbsp;参考地址</a></p></div></span>2年前 (2018-06-15)</div></div></li><!-- #comment-## -->
-<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-43802"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Modrila</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;330***7468@qq.com</p></div><div id="runoobvote-id-43802" data-commid="43802" class="upvotejs"><a class="upvote"></a> <span class="count">33</span></div></div><div class="comt-main" id="div-comment-43802"><p><strong>输入与输出</strong></p>
-<pre>Console.Write();      输出不换行
-Console.WriteLine();  输出并换行
-Console.ReadLine();   读取键盘输入的所有字符，返回字符串。按下回车键退出 
-Console.Read();       读取键盘输入的第一个字符，返回其对应的ASCII值。按下回车键退出
-Console.ReadKey();    等待用户按下任意键并执行退出，(此函数的作用是为了在控制台窗口停留一下，直到用户敲击键盘为止。不然运行时，"Hello World!" 这句话会在控制台窗口一闪而过，没法查看。)</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Modrila</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Modrila</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;330***7468@qq.com</p></div></span>8个月前 (06-20)</div></div></li><!-- #comment-## -->
+<div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Yadomin</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Yadomin</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;178***7074@qq.com</p></div></span>1年前 (2019-02-01)</div></div></li><!-- #comment-## -->
 	</ol>
 	<div class="pagenav">
 			</div>
@@ -496,7 +408,7 @@ Console.ReadKey();    等待用户按下任意键并执行退出，(此函数的
 			<div id="mded"></div>
 			
 				<div class="comt-ctrl">
-					<div class="comt-tips"><input type='hidden' name='comment_post_ID' value='6575' id='comment_post_ID'>
+					<div class="comt-tips"><input type='hidden' name='comment_post_ID' value='6580' id='comment_post_ID'>
 <input type='hidden' name='comment_parent' id='comment_parent' value='0'>
 </div>
 					<button type="submit" name="submit" id="submit" tabindex="5"><i class="fa fa-pencil" aria-hidden="true"></i> 分享笔记</button>
@@ -564,7 +476,7 @@ $(function() {
 		// 系列化表单数据
 		var comment_parent = 0;
 		var is_user_logged_in = $("#is_user_logged_in").val();
-		var comment_post_ID =  6575;
+		var comment_post_ID =  6580;
 		var _wp_unfiltered_html_comment = $("#_wp_unfiltered_html_comment").val();
 		var comment = noteContent;
 		var author = $("#author").val();
@@ -652,9 +564,9 @@ $(function() {
 		}
 	};
 	if($('#comments').length){
-		$('.upvotejs').upvote({id: 6575, callback: callback});
+		$('.upvotejs').upvote({id: 6580, callback: callback});
 		
-		$.post(ajaxurl,{"action":"pinglun_zan","postid":6575},function(data){  
+		$.post(ajaxurl,{"action":"pinglun_zan","postid":6580},function(data){  
 			$(data).each(function(key,value) {
 				$("#runoobvote-id-" + value.commid + " .upvote").addClass(value.upvotejs_class);
 				$("#runoobvote-id-" + value.commid + " .downvote").addClass(value.downvote_class);
@@ -738,7 +650,7 @@ function isBlank(str) {
 	<div class="sidebar-box sidebar-cate">
 		
 		<div class="sidebar-tree">
-			<ul><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> HTML / CSS</a><ul class="double-li"><li><a title="HTML 教程" href="html-tutorial.html">HTML 教程</a></li><li><a title="HTML5 教程" href="html5-intro.html">HTML5 教程</a></li><li><a title="CSS 教程" href="css-tutorial.html">CSS 教程</a></li><li><a title="CSS3 教程" href="css3-tutorial.html">CSS3 教程</a></li><li><a title="Bootstrap3 教程" href="bootstrap-tutorial.html">Bootstrap3 教程</a></li><li><a title="Bootstrap4 教程" href="bootstrap4-tutorial.html">Bootstrap4 教程</a></li><li><a title="Font Awesome 教程" href="fontawesome-tutorial.html">Font Awesome 教程</a></li><li><a title="Foundation 教程" href="foundation-tutorial.html">Foundation 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> JavaScript</a><ul class="double-li"><li><a title="JavaScript 教程" href="js-tutorial.html">JavaScript 教程</a></li><li><a title="HTML DOM 教程" href="htmldom-tutorial.html">HTML DOM 教程</a></li><li><a title="jQuery 教程" href="jquery-tutorial.html">jQuery 教程</a></li><li><a title="AngularJS 教程" href="angularjs-tutorial.html">AngularJS 教程</a></li><li><a title="AngularJS2 教程" href="angularjs2-tutorial.html">AngularJS2 教程</a></li><li><a title="Vue.js 教程" href="vue-tutorial.html">Vue.js 教程</a></li><li><a title="React 教程" href="react-tutorial.html">React 教程</a></li><li><a title="TypeScript 教程" href="ts-tutorial.html">TypeScript 教程</a></li><li><a title="jQuery UI 教程" href="jqueryui-tutorial.html">jQuery UI 教程</a></li><li><a title="jQuery EasyUI 教程" href="jqueryeasyui-tutorial.html">jQuery EasyUI 教程</a></li><li><a title="Node.js 教程" href="nodejs-tutorial.html">Node.js 教程</a></li><li><a title="AJAX 教程" href="ajax-tutorial.html">AJAX 教程</a></li><li><a title="JSON 教程" href="json-tutorial.html">JSON 教程</a></li><li><a title="Echarts 教程" href="echarts-tutorial.html">Echarts 教程</a></li><li><a title="Highcharts 教程" href="highcharts-tutorial.html">Highcharts 教程</a></li><li><a title="Google 地图 教程" href="google-maps-basic.html">Google 地图 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 服务端</a><ul class="double-li"><li><a title="Python 教程" href="python3-tutorial.html">Python 教程</a></li><li><a title="Python2.x 教程" href="python-tutorial.html">Python2.x 教程</a></li><li><a title="Linux 教程" href="linux-tutorial.html">Linux 教程</a></li><li><a title="Docker 教程" href="docker-tutorial.html">Docker 教程</a></li><li><a title="Ruby 教程" href="ruby-tutorial.html">Ruby 教程</a></li><li><a title="Java 教程" href="java-tutorial.html">Java 教程</a></li><li><a title="C 教程" href="c-tutorial.html">C 教程</a></li><li><a title="C++ 教程" href="cpp-tutorial.html">C++ 教程</a></li><li><a title="Perl 教程" href="perl-tutorial.html">Perl 教程</a></li><li><a title="Servlet 教程" href="servlet-tutorial.html">Servlet 教程</a></li><li><a title="JSP 教程" href="jsp-tutorial.html">JSP 教程</a></li><li><a title="Lua 教程" href="lua-tutorial.html">Lua 教程</a></li><li><a title="Scala 教程" href="scala-tutorial.html">Scala 教程</a></li><li><a title="Go 教程" href="go-tutorial.html">Go 教程</a></li><li><a title="PHP 教程" href="php-tutorial.html">PHP 教程</a></li><li><a title="Django 教程" href="django-tutorial.html">Django 教程</a></li><li><a title="设计模式" href="design-pattern-tutorial.html">设计模式</a></li><li><a title="正则表达式" href="regexp-tutorial.html">正则表达式</a></li><li><a title="Maven 教程" href="maven-tutorial.html">Maven 教程</a></li><li><a title="NumPy 教程" href="numpy-tutorial.html">NumPy 教程</a></li><li><a title="ASP 教程" href="asp-tutorial.html">ASP 教程</a></li><li><a title="AppML 教程" href="appml-tutorial.html">AppML 教程</a></li><li><a title="VBScript 教程" href="vbscript-tutorial.html">VBScript 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 数据库</a><ul class="double-li"><li><a title="SQL 教程" href="sql-tutorial.html">SQL 教程</a></li><li><a title="Mysql 教程" href="mysql-tutorial.html">Mysql 教程</a></li><li><a title="PostgreSQL 教程" href="postgresql-tutorial.html">PostgreSQL 教程</a></li><li><a title="SQLite 教程" href="sqlite-tutorial.html">SQLite 教程</a></li><li><a title="MongoDB 教程" href="mongodb-tutorial.html">MongoDB 教程</a></li><li><a title="Redis 教程" href="redis-tutorial.html">Redis 教程</a></li><li><a title="Memcached 教程" href="memcached-tutorial.html">Memcached 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 移动端</a><ul class="double-li"><li><a title="Android 教程" href="android-tutorial-intro.html">Android 教程</a></li><li><a title="Swift 教程" href="swift-tutorial.html">Swift 教程</a></li><li><a title="jQuery Mobile 教程" href="jquerymobile-tutorial.html">jQuery Mobile 教程</a></li><li><a title="ionic 教程" href="ionic-tutorial.html">ionic 教程</a></li><li><a title="Kotlin 教程" href="kotlin-tutorial.html">Kotlin 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> XML 教程</a><ul class="double-li"><li><a title="XML 教程" href="xml-tutorial.html">XML 教程</a></li><li><a title="DTD 教程" href="dtd-tutorial.html">DTD 教程</a></li><li><a title="XML DOM 教程" href="dom-tutorial.html">XML DOM 教程</a></li><li><a title="XSLT 教程" href="xsl-tutorial.html">XSLT 教程</a></li><li><a title="XPath 教程" href="xpath-tutorial.html">XPath 教程</a></li><li><a title="XQuery 教程" href="xquery-tutorial.html">XQuery 教程</a></li><li><a title="XLink 教程" href="xlink-tutorial.html">XLink 教程</a></li><li><a title="XPointer 教程" href="xlink-tutorial.html">XPointer 教程</a></li><li><a title="XML Schema 教程" href="schema-tutorial.html">XML Schema 教程</a></li><li><a title="XSL-FO 教程" href="xslfo-tutorial.html">XSL-FO 教程</a></li><li><a title="SVG 教程" href="svg-tutorial.html">SVG 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> ASP.NET</a><ul class="double-li"><li><a title="ASP.NET 教程" href="aspnet-tutorial.html">ASP.NET 教程</a></li><li><a title="C# 教程" href="">C# 教程</a></li><li><a title="Web Pages 教程" href="webpages-intro.html">Web Pages 教程</a></li><li><a title="Razor 教程" href="razor-intro.html">Razor 教程</a></li><li><a title="MVC 教程" href="mvc-intro.html">MVC 教程</a></li><li><a title="Web Forms 教程" href="aspnet-intro.html">Web Forms 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> Web Service</a><ul class="double-li"><li><a title="Web Service 教程" href="webservices-tutorial.html">Web Service 教程</a></li><li><a title="WSDL 教程" href="wsdl-tutorial.html">WSDL 教程</a></li><li><a title="SOAP 教程" href="soap-tutorial.html">SOAP 教程</a></li><li><a title="RSS 教程" href="rss-tutorial.html">RSS 教程</a></li><li><a title="RDF 教程" href="rdf-tutorial.html">RDF 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 开发工具</a><ul class="double-li"><li><a title="Eclipse 教程" href="eclipse-tutorial.html">Eclipse 教程</a></li><li><a title="Git 教程" href="git-tutorial.html">Git 教程</a></li><li><a title="Svn 教程" href="svn-tutorial.html">Svn 教程</a></li><li><a title="Markdown 教程" href="md-tutorial.html">Markdown 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 网站建设</a><ul class="double-li"><li><a title="HTTP 教程" href="http-tutorial.html">HTTP 教程</a></li><li><a title="网站建设指南" href="web-buildingprimer.html">网站建设指南</a></li><li><a title="浏览器信息" href="browser-information.html">浏览器信息</a></li><li><a title="网站主机教程" href="hosting-tutorial.html">网站主机教程</a></li><li><a title="TCP/IP 教程" href="tcpip-tutorial.html">TCP/IP 教程</a></li><li><a title="W3C 教程" href="w3c-tutorial.html">W3C 教程</a></li><li><a title="网站品质" href="quality-tutorial.html">网站品质</a></li></ul></li></ul>			</div>
+			<ul><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> HTML / CSS</a><ul class="double-li"><li><a title="HTML 教程" href="html-tutorial.html">HTML 教程</a></li><li><a title="HTML5 教程" href="html5-intro.html">HTML5 教程</a></li><li><a title="CSS 教程" href="css-tutorial.html">CSS 教程</a></li><li><a title="CSS3 教程" href="css3-tutorial.html">CSS3 教程</a></li><li><a title="Bootstrap3 教程" href="bootstrap-tutorial.html">Bootstrap3 教程</a></li><li><a title="Bootstrap4 教程" href="bootstrap4-tutorial.html">Bootstrap4 教程</a></li><li><a title="Font Awesome 教程" href="fontawesome-tutorial.html">Font Awesome 教程</a></li><li><a title="Foundation 教程" href="foundation-tutorial.html">Foundation 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> JavaScript</a><ul class="double-li"><li><a title="JavaScript 教程" href="js-tutorial.html">JavaScript 教程</a></li><li><a title="HTML DOM 教程" href="htmldom-tutorial.html">HTML DOM 教程</a></li><li><a title="jQuery 教程" href="jquery-tutorial.html">jQuery 教程</a></li><li><a title="AngularJS 教程" href="angularjs-tutorial.html">AngularJS 教程</a></li><li><a title="AngularJS2 教程" href="angularjs2-tutorial.html">AngularJS2 教程</a></li><li><a title="Vue.js 教程" href="vue-tutorial.html">Vue.js 教程</a></li><li><a title="React 教程" href="react-tutorial.html">React 教程</a></li><li><a title="TypeScript 教程" href="ts-tutorial.html">TypeScript 教程</a></li><li><a title="jQuery UI 教程" href="jqueryui-tutorial.html">jQuery UI 教程</a></li><li><a title="jQuery EasyUI 教程" href="jqueryeasyui-tutorial.html">jQuery EasyUI 教程</a></li><li><a title="Node.js 教程" href="nodejs-tutorial.html">Node.js 教程</a></li><li><a title="AJAX 教程" href="ajax-tutorial.html">AJAX 教程</a></li><li><a title="JSON 教程" href="json-tutorial.html">JSON 教程</a></li><li><a title="Echarts 教程" href="echarts-tutorial.html">Echarts 教程</a></li><li><a title="Highcharts 教程" href="highcharts-tutorial.html">Highcharts 教程</a></li><li><a title="Google 地图 教程" href="google-maps-basic.html">Google 地图 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 服务端</a><ul class="double-li"><li><a title="Python 教程" href="python3-tutorial.html">Python 教程</a></li><li><a title="Python2.x 教程" href="python-tutorial.html">Python2.x 教程</a></li><li><a title="Linux 教程" href="linux-tutorial.html">Linux 教程</a></li><li><a title="Docker 教程" href="docker-tutorial.html">Docker 教程</a></li><li><a title="Ruby 教程" href="ruby-tutorial.html">Ruby 教程</a></li><li><a title="Java 教程" href="java-tutorial.html">Java 教程</a></li><li><a title="C 教程" href="c-tutorial.html">C 教程</a></li><li><a title="C++ 教程" href="cpp-tutorial.html">C++ 教程</a></li><li><a title="Perl 教程" href="perl-tutorial.html">Perl 教程</a></li><li><a title="Servlet 教程" href="servlet-tutorial.html">Servlet 教程</a></li><li><a title="JSP 教程" href="jsp-tutorial.html">JSP 教程</a></li><li><a title="Lua 教程" href="lua-tutorial.html">Lua 教程</a></li><li><a title="Scala 教程" href="scala-tutorial.html">Scala 教程</a></li><li><a title="Go 教程" href="go-tutorial.html">Go 教程</a></li><li><a title="PHP 教程" href="php-tutorial.html">PHP 教程</a></li><li><a title="Django 教程" href="django-tutorial.html">Django 教程</a></li><li><a title="设计模式" href="design-pattern-tutorial.html">设计模式</a></li><li><a title="正则表达式" href="regexp-tutorial.html">正则表达式</a></li><li><a title="Maven 教程" href="maven-tutorial.html">Maven 教程</a></li><li><a title="NumPy 教程" href="numpy-tutorial.html">NumPy 教程</a></li><li><a title="ASP 教程" href="asp-tutorial.html">ASP 教程</a></li><li><a title="AppML 教程" href="appml-tutorial.html">AppML 教程</a></li><li><a title="VBScript 教程" href="vbscript-tutorial.html">VBScript 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 数据库</a><ul class="double-li"><li><a title="SQL 教程" href="sql-tutorial.html">SQL 教程</a></li><li><a title="Mysql 教程" href="mysql-tutorial.html">Mysql 教程</a></li><li><a title="PostgreSQL 教程" href="postgresql-tutorial.html">PostgreSQL 教程</a></li><li><a title="SQLite 教程" href="sqlite-tutorial.html">SQLite 教程</a></li><li><a title="MongoDB 教程" href="mongodb-tutorial.html">MongoDB 教程</a></li><li><a title="Redis 教程" href="redis-tutorial.html">Redis 教程</a></li><li><a title="Memcached 教程" href="memcached-tutorial.html">Memcached 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 移动端</a><ul class="double-li"><li><a title="Android 教程" href="android-tutorial-intro.html">Android 教程</a></li><li><a title="Swift 教程" href="swift-tutorial.html">Swift 教程</a></li><li><a title="jQuery Mobile 教程" href="jquerymobile-tutorial.html">jQuery Mobile 教程</a></li><li><a title="ionic 教程" href="ionic-tutorial.html">ionic 教程</a></li><li><a title="Kotlin 教程" href="kotlin-tutorial.html">Kotlin 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> XML 教程</a><ul class="double-li"><li><a title="XML 教程" href="xml-tutorial.html">XML 教程</a></li><li><a title="DTD 教程" href="dtd-tutorial.html">DTD 教程</a></li><li><a title="XML DOM 教程" href="dom-tutorial.html">XML DOM 教程</a></li><li><a title="XSLT 教程" href="xsl-tutorial.html">XSLT 教程</a></li><li><a title="XPath 教程" href="xpath-tutorial.html">XPath 教程</a></li><li><a title="XQuery 教程" href="xquery-tutorial.html">XQuery 教程</a></li><li><a title="XLink 教程" href="xlink-tutorial.html">XLink 教程</a></li><li><a title="XPointer 教程" href="xlink-tutorial.html">XPointer 教程</a></li><li><a title="XML Schema 教程" href="schema-tutorial.html">XML Schema 教程</a></li><li><a title="XSL-FO 教程" href="xslfo-tutorial.html">XSL-FO 教程</a></li><li><a title="SVG 教程" href="svg-tutorial.html">SVG 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> ASP.NET</a><ul class="double-li"><li><a title="ASP.NET 教程" href="aspnet-tutorial.html">ASP.NET 教程</a></li><li><a title="C# 教程" href="csharp-tutorial.html">C# 教程</a></li><li><a title="Web Pages 教程" href="webpages-intro.html">Web Pages 教程</a></li><li><a title="Razor 教程" href="razor-intro.html">Razor 教程</a></li><li><a title="MVC 教程" href="mvc-intro.html">MVC 教程</a></li><li><a title="Web Forms 教程" href="aspnet-intro.html">Web Forms 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> Web Service</a><ul class="double-li"><li><a title="Web Service 教程" href="webservices-tutorial.html">Web Service 教程</a></li><li><a title="WSDL 教程" href="wsdl-tutorial.html">WSDL 教程</a></li><li><a title="SOAP 教程" href="soap-tutorial.html">SOAP 教程</a></li><li><a title="RSS 教程" href="rss-tutorial.html">RSS 教程</a></li><li><a title="RDF 教程" href="rdf-tutorial.html">RDF 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 开发工具</a><ul class="double-li"><li><a title="Eclipse 教程" href="eclipse-tutorial.html">Eclipse 教程</a></li><li><a title="Git 教程" href="git-tutorial.html">Git 教程</a></li><li><a title="Svn 教程" href="svn-tutorial.html">Svn 教程</a></li><li><a title="Markdown 教程" href="md-tutorial.html">Markdown 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 网站建设</a><ul class="double-li"><li><a title="HTTP 教程" href="http-tutorial.html">HTTP 教程</a></li><li><a title="网站建设指南" href="web-buildingprimer.html">网站建设指南</a></li><li><a title="浏览器信息" href="browser-information.html">浏览器信息</a></li><li><a title="网站主机教程" href="hosting-tutorial.html">网站主机教程</a></li><li><a title="TCP/IP 教程" href="tcpip-tutorial.html">TCP/IP 教程</a></li><li><a title="W3C 教程" href="w3c-tutorial.html">W3C 教程</a></li><li><a title="网站品质" href="quality-tutorial.html">网站品质</a></li></ul></li></ul>			</div>
 	
 	</div>
 	</div>
@@ -762,7 +674,7 @@ function isBlank(str) {
 </div>
 
 <script>
-var aid = 6575;
+var aid = 6580;
 function coll() {
 	$.post( '/wp-content/themes/runoob/option/user/userinfo.php', {aid:aid, action:"collarticle", opt:'add'},function( data ) {
 		if(data.error==0) {

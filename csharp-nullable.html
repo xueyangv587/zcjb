@@ -4,12 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta property="qc:admins" content="465267610762567726375">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>C# 教程 | 菜鸟教程</title>
+	<title>C# 可空类型 | 菜鸟教程</title>
 
   
-<link rel="canonical" href="http://www.runoob.com/csharp/csharp-tutorial.html">
-<meta name="keywords" content="C# 教程,C#">
-<meta name="description" content="C# 教程   C# 是一个简单的、现代的、通用的、面向对象的编程语言，它是由微软（Microsoft）开发的。 本教程将告诉您基础的 C# 编程，同时将向您讲解 C# 编程语言相关的各种先进理念。 现在开始学习 C#！ C# 在线工具   谁适合阅读本教程？ 本教程有助于初学者理解基础的 C# 编程。在学习完本教程后，您将到达一个中级的 C# 编程水平。  阅读本教程前，您需要了解的知识： C# 编程是基于 C 和 C++ 编程语言的..">
+<link rel="canonical" href="http://www.runoob.com/csharp/csharp-nullable.html">
+<meta name="keywords" content="C# 可空类型">
+<meta name="description" content="C# 可空类型（Nullable）  C# 单问号 ? 与 双问号 ??   ? : 单问号用于对 int,double,bool 等无法直接赋值为 null 的数据类型进行 null 的赋值，意思是这个数据类型是 NullAble 类型的。   int? i = 3  等同于 Nullable i = new Nullable(3);  int i; //默认值0 int? ii; //默认值null  ?? : 双问号 可用于判断一..">
 		
 	
 	<link rel="stylesheet" href="static/css/style-1.154.css" type="text/css" media="all">	
@@ -68,7 +68,7 @@
 				<li><a href="java-tutorial.html">Java</a></li>
 				<li><a href="c-tutorial.html">C</a></li>
 				<li><a href="cpp-tutorial.html">C++</a></li>
-				<li><a href="">C#</a></li>
+				<li><a href="csharp-tutorial.html">C#</a></li>
 				<li><a href="sql-tutorial.html">SQL</a></li>
 				<li><a href="mysql-tutorial.html">MySQL</a></li>
 				<li><a href="php-tutorial.html">PHP</a></li>
@@ -103,7 +103,7 @@
 	</div>
 	<div class="sidebar-box gallery-list">
 		<div class="design" id="leftcolumn">
-						<a target="_top" title="C# 教程" href="">
+						<a target="_top" title="C# 教程" href="csharp-tutorial.html">
 			C# 教程			</a>
 						<a target="_top" title="C# 简介" href="csharp-intro.html">
 			C# 简介			</a>
@@ -131,7 +131,7 @@
 			C# 封装			</a>
 						<a target="_top" title="C# 方法" href="csharp-methods.html">
 			C# 方法			</a>
-						<a target="_top" title="C# 可空类型" href="csharp-nullable.html">
+						<a target="_top" title="C# 可空类型" href="">
 			C# 可空类型			</a>
 						<a target="_top" title="C# 数组（Array）" href="csharp-array.html">
 			C# 数组（Array）			</a>
@@ -194,71 +194,122 @@
 		
 		</div>
 		<div class="previous-next-links">
-			<div class="previous-design-link"> </div>
-			<div class="next-design-link"><a href="csharp-intro.html" rel="next"> C# 简介</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-methods.html');" rel="prev"> C# 方法</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-array.html');" rel="next"> C# 数组（Array）</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
 		<div class="article-body">
 		
 			<div class="article-intro" id="content">
 			
-			<h1>C# <span class="color_h1">教程</span></h1>
+			<h1>C# <span class="color_h1">可空类型（Nullable）</span></h1>
 
-<div class="tutintro">
-<p>C# 是一个简单的、现代的、通用的、面向对象的编程语言，它是由微软（Microsoft）开发的。</p>
-<p>本教程将告诉您基础的 C# 编程，同时将向您讲解 C# 编程语言相关的各种先进理念。</p>
-<p><b><a href="csharp-intro.html">现在开始学习 C#！</a></b></p>
-<p><a href="showcs-helloworld.html" target="_blank">C# 在线工具</a></p>
-</div>
+<h2>C# 单问号 ? 与 双问号 ?? 
+</h2>
+<p><span class="marked">?</span> : 单问号用于对 int,double,bool 等无法直接赋值为 null 的数据类型进行 null 的赋值，意思是这个数据类型是 NullAble 类型的。</p>
 
-<h2 class="tutheader">谁适合阅读本教程？</h2>
-<p>本教程有助于初学者理解基础的 C# 编程。在学习完本教程后，您将到达一个中级的 C# 编程水平。</p>
 
-<h2 class="tutheader">阅读本教程前，您需要了解的知识：</h2>
-<p>C# 编程是基于 C 和 C++ 编程语言的，因此如果您对 C 和 C++ 编程有基本的了解，将有助于您学习 C# 编程语言。</p>
+<pre>int? i = 3 
+等同于
+Nullable&lt;int&gt; i = new Nullable&lt;int&gt;(3);
 
-<h2 class="tutheader">编译/执行 C# 程序</h2>
-<p>菜鸟教程提供了在线的 C# 在线编译环境，您只需进行简单的点击动作，即可在高端的服务器上体验真实的编程经验。这是完全免费的在线工具。</p>
+int i; //默认值0
+int? ii; //默认值null</pre>
+
+<p><span class="marked">??</span> : 双问号 可用于判断一个变量在为 null 时返回一个指定的值。</p>
+
+<p>接下来我们详细说明。</p>
+
+
+<h2 class="tutheader">C# 可空类型（Nullable）</h2>
+<p>C# 提供了一个特殊的数据类型，<b>nullable</b> 类型（可空类型），可空类型可以表示其基础值类型正常范围内的值，再加上一个 null 值。</p>
+<p>例如，Nullable&lt; Int32 &gt;，读作"可空的 Int32"，可以被赋值为 -2,147,483,648 到 2,147,483,647 之间的任意值，也可以被赋值为 null 值。类似的，Nullable&lt; bool &gt; 变量可以被赋值为 true 或 false 或 null。</p>
+<p>在处理数据库和其他包含可能未赋值的元素的数据类型时，将 null 赋值给数值类型或布尔型的功能特别有用。例如，数据库中的布尔型字段可以存储值 true 或 false，或者，该字段也可以未定义。</p>
+<p>声明一个 <b>nullable</b> 类型（可空类型）的语法如下：</p>
+<pre class="prettyprint">
+&lt; data_type&gt; ? &lt;variable_name&gt; = null;
+</pre>
+<p>下面的实例演示了可空数据类型的用法：</p>
 <div class="example"> 
 <h2 class="example">实例</h2> 
 <div class="example_code">
 
 <span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
-<span style="color: #05a; font-weight: bold;">namespace</span> HelloWorldApplication<br>
+<span style="color: #05a; font-weight: bold;">namespace</span> CalculatorApplication<br>
 <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 类名为 HelloWorld */</span><br>
-&nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">class</span> HelloWorld<br>
-&nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* main函数 */</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 我的第一个 C# 程序 */</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Hello World!&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
-&nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">class</span> NullablesAtShow<br>
+&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">?</span> num1 <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">int</span><span style="color: #008000;">?</span> num2 <span style="color: #008000;">=</span> <span style="color: Maroon;">45</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">double</span><span style="color: #008000;">?</span> num3 <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> <span style="color: #6666cc; font-weight: bold;">double</span><span style="color: #008000;">?</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">double</span><span style="color: #008000;">?</span> num4 <span style="color: #008000;">=</span> <span style="color: Maroon;">3.14157</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">bool</span><span style="color: #008000;">?</span> boolval <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> <span style="color: #6666cc; font-weight: bold;">bool</span><span style="color: #008000;">?</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #696969; font-style: italic;">// 显示值</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;显示可空类型的值： {0}, {1}, {2}, {3}&quot;</span>, <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; num1, num2, num3, num4<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;一个可空的布尔值： {0}&quot;</span>, boolval<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadLine</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
 <span style="color: #008000;">&#125;</span><br>
 
-</div><br>
-<a target="_blank" href="showcs-helloworld.html" class="showbtn">运行实例 »</a>
 </div>
-<h2 class="tutheader">C# 有用的资源</h2>
-<p>本教程列出了 C# 网站、书籍和文章。</p>
-<h3>C# 有用的网站</h3>
-<ul class="list">
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://msdn.microsoft.com/en-us/library/67ef8sbd.aspx');">C# Programming Guide</a> - 介绍了有关关键的 C# 语言特征以及如何通过 .NET 框架访问 C# 的详细信息。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('https://visualstudio.microsoft.com/zh-hans/downloads/');">Visual Studio</a> - 下载作为 C# 集成开发环境的 Visual Studio 的最新版本。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://www.mono-project.com/Main_Page');">Go Mono</a> - Mono 是一个允许开发人员简单地创建跨平台应用程序的软件平台。</li>
-<li><a target="_blank" rel="nofollow" href="javascript:window.open('http://en.wikipedia.org/wiki/C_Sharp_(programming_language)');">C Sharp (programming language) </a> - 维基百科解释 C#（编程语言）。</li>
-</ul>
-			<!-- 其他扩展 -->
+</div>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<pre class="result">
+显示可空类型的值： , 45,  , 3.14157
+一个可空的布尔值：
+</pre>
+
+<h2 class="tutheader">Null 合并运算符（ ?? ）</h2>
+<p>Null 合并运算符用于定义可空类型和引用类型的默认值。Null 合并运算符为类型转换定义了一个预设值，以防可空类型的值为 Null。Null 合并运算符把操作数类型隐式转换为另一个可空（或不可空）的值类型的操作数的类型。</p> 
+<p>如果第一个操作数的值为 null，则运算符返回第二个操作数的值，否则返回第一个操作数的值。下面的实例演示了这点：</p>
+<div class="example"> 
+<h2 class="example">实例</h2> 
+<div class="example_code">
+
+<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
+<span style="color: #05a; font-weight: bold;">namespace</span> CalculatorApplication<br>
+<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">class</span> NullablesAtShow<br>
+&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+&nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">double</span><span style="color: #008000;">?</span> num1 <span style="color: #008000;">=</span> <span style="color: #05a; font-weight: bold;">null</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">double</span><span style="color: #008000;">?</span> num2 <span style="color: #008000;">=</span> <span style="color: Maroon;">3.14157</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #6666cc; font-weight: bold;">double</span> num3<span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;num3 <span style="color: #008000;">=</span> num1 <span style="color: #008000;">??</span> <span style="color: Maroon;">5.34</span><span style="color: #008000;">;</span> &nbsp; &nbsp; &nbsp;<span style="color: #696969; font-style: italic;">// num1 如果为空值则返回 5.34</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;num3 的值： {0}&quot;</span>, num3<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;num3 <span style="color: #008000;">=</span> num2 <span style="color: #008000;">??</span> <span style="color: Maroon;">5.34</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;num3 的值： {0}&quot;</span>, num3<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadLine</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+<br>
+&nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
+<span style="color: #008000;">&#125;</span><br>
+
+</div>
+</div>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<pre class="result">
+num3 的值： 5.34
+num3 的值： 3.14157
+</pre>			<!-- 其他扩展 -->
 						
 			</div>
 			
 		</div>
 		
 		<div class="previous-next-links">
-			<div class="previous-design-link"> </div>
-			<div class="next-design-link"><a href="csharp-intro.html" rel="next"> C# 简介</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-methods.html');" rel="prev"> C# 方法</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-array.html');" rel="next"> C# 数组（Array）</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
 		<!-- 笔记列表 -->
 		<style>
@@ -360,124 +411,8 @@
 
 </style>
 
-<div class="title" id="comments">
-	<h2 class="">
-    <div class="altblock">
-				<i style="font-size:28px;margin-top: 8px;" class="fa fa-plus-square" aria-hidden="true"></i>
-		    </div>
-    <span class="mw-headline" id="qa_headline">4  篇笔记</span>
-	<span class="mw-headline" id="user_add_note" style="float:right;line-height: 62px;padding-right: 14px;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>  写笔记</span>
-    </h2>
-</div>
-
-<div id="postcomments" style="display:none;">
-	<ol class="commentlist">
-		<li class="comment even thread-even depth-1" id="comment-17323"><span class="comt-f">#4</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;暗黑系青菜</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;129***1362@qq.com</p></div><div id="runoobvote-id-17323" data-commid="17323" class="upvotejs"><a class="upvote"></a> <span class="count">32</span></div></div><div class="comt-main" id="div-comment-17323"><pre>Console.Write("Hello World!");
-与
-Console.WriteLine("Hello World!");</pre>
-<p data-title="C# Console.Write 与 Console.WriteLine 区别"><strong>区别：</strong>前者输出后不换行，后者输出后自动换行</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="17323.html">暗黑系青菜</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;暗黑系青菜</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;129***1362@qq.com</p></div></span>2年前 (2017-09-09)</div></div></li><!-- #comment-## -->
-<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-25633"><span class="comt-f">#3</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ZPK4229</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;zha***ngkunwork@163.com</p></div><div id="runoobvote-id-25633" data-commid="25633" class="upvotejs"><a class="upvote"></a> <span class="count">24</span></div></div><div class="comt-main" id="div-comment-25633"><p>这里简单介绍一下下面这段语句的作用：</p>
-
-<pre>Console.ReadKey();</pre>
-<p>编写 <strong>Console.Readkey();</strong> 这个函数是为了在控制台窗口停留一下，直到敲击键盘为止。</p>
-
-<p>不然运行时，"Hello World!" 这句话会在控制台窗口一闪而过，没法查看。</p>
-
-<pre>Console.Readkey();
-//与
-Console.Readline();
-//与
-Console.Read();</pre>
-<p><strong>区别：</strong>第一个在键盘敲击任意键退出；后两个差不多，都是输入任意东西后按回车才会退出。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">ZPK4229</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ZPK4229</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;zha***ngkunwork@163.com</p></div></span>2年前 (2018-03-28)</div></div></li><!-- #comment-## -->
-<li class="comment even thread-even depth-1" id="comment-28431"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Cristiano Ronaldo</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;843***547@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://blog.csdn.net/u010594850/article/details/18940023');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-28431" data-commid="28431" class="upvotejs"><a class="upvote"></a> <span class="count">23</span></div></div><div class="comt-main" id="div-comment-28431"><p data-title="C# Console.ReadLine() 与 Console.ReadKey() 用法" data-commid="25633"><span class="marked">Console.ReadLine()</span> 会等待直到用户按下回车，一次读入一行。</p>
-<p><span class="marked">Console.ReadKey()</span>  则是等待用户按下任意键，一次读入一个字符。</p>
-
-<pre>class Program
-{
-   private List&lt;Student&gt; allStu = newList&lt;Student&gt;();
-   string yesORno;
-   bool flag = true;
-   
-   public void AddStudent()
-   {
-       while (flag)
-       {
-           Student s = new Student();
-           Console.WriteLine("请输入学生姓名:");
-           s.StuName = Console.ReadLine();
-           Console.WriteLine("请输入学生学号");
-           s.StuNum = Console.ReadLine();
-           allStu.Add(s);
-
-           Console.WriteLine("是否继续输入:请输入y或者n");
-           yesORno =Console.ReadKey().Key.ToString();
-           
-           switch (yesORno)
-           {
-               case "Y":
-                   flag = true;
-                   break;
-               case "N":
-                   flag = false;
-                   break;
-           }
-       }
-   }
-
-   public void ShowStu()
-   {
-       for (int i = 0; i &lt; allStu.Count; i++)
-       {
-           Console.WriteLine(allStu[i].ToString());
-       }
-   }
-
-   static void Main(string[] args)
-   {
-       Program p = new Program();
-       p.AddStudent();
-       p.ShowStu();
-       Console.ReadLine();
-   }
-}
-
- 
-
-class Student
-{
-   private string stuName;
-
-   public string StuName
-   {
-       get { return stuName; }
-       set { stuName = value; }
-   }
-
-   private string stuNum;
-
-   public string StuNum
-   {
-       get { return stuNum; }
-       set { stuNum = value; }
-   }
-
-   public override string ToString()
-   {
-       return "姓名" + stuName + "......." + "学号" + stuNum;
-   }
-}</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="28431.html">Cristiano Ronaldo</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Cristiano Ronaldo</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;843***547@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://blog.csdn.net/u010594850/article/details/18940023');">&nbsp;&nbsp;参考地址</a></p></div></span>2年前 (2018-06-15)</div></div></li><!-- #comment-## -->
-<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-43802"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Modrila</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;330***7468@qq.com</p></div><div id="runoobvote-id-43802" data-commid="43802" class="upvotejs"><a class="upvote"></a> <span class="count">33</span></div></div><div class="comt-main" id="div-comment-43802"><p><strong>输入与输出</strong></p>
-<pre>Console.Write();      输出不换行
-Console.WriteLine();  输出并换行
-Console.ReadLine();   读取键盘输入的所有字符，返回字符串。按下回车键退出 
-Console.Read();       读取键盘输入的第一个字符，返回其对应的ASCII值。按下回车键退出
-Console.ReadKey();    等待用户按下任意键并执行退出，(此函数的作用是为了在控制台窗口停留一下，直到用户敲击键盘为止。不然运行时，"Hello World!" 这句话会在控制台窗口一闪而过，没法查看。)</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Modrila</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Modrila</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;330***7468@qq.com</p></div></span>8个月前 (06-20)</div></div></li><!-- #comment-## -->
-	</ol>
-	<div class="pagenav">
-			</div>
-</div>
 <div id="respond" class="no_webshot"> 
-		<div class="comment-signarea" style="display:none; padding: 20px 20px;"> 
+		<div class="comment-signarea" style=" padding: 20px 20px;"> 
 	<h3 class="text-muted" id="share_code" style="color: #799961;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 点我分享笔记</h3>
 	<!--
 	<p style="font-size:14px;">笔记需要是本篇文章的内容扩展！</p><br>
@@ -496,7 +431,7 @@ Console.ReadKey();    等待用户按下任意键并执行退出，(此函数的
 			<div id="mded"></div>
 			
 				<div class="comt-ctrl">
-					<div class="comt-tips"><input type='hidden' name='comment_post_ID' value='6575' id='comment_post_ID'>
+					<div class="comt-tips"><input type='hidden' name='comment_post_ID' value='6628' id='comment_post_ID'>
 <input type='hidden' name='comment_parent' id='comment_parent' value='0'>
 </div>
 					<button type="submit" name="submit" id="submit" tabindex="5"><i class="fa fa-pencil" aria-hidden="true"></i> 分享笔记</button>
@@ -564,7 +499,7 @@ $(function() {
 		// 系列化表单数据
 		var comment_parent = 0;
 		var is_user_logged_in = $("#is_user_logged_in").val();
-		var comment_post_ID =  6575;
+		var comment_post_ID =  6628;
 		var _wp_unfiltered_html_comment = $("#_wp_unfiltered_html_comment").val();
 		var comment = noteContent;
 		var author = $("#author").val();
@@ -652,9 +587,9 @@ $(function() {
 		}
 	};
 	if($('#comments').length){
-		$('.upvotejs').upvote({id: 6575, callback: callback});
+		$('.upvotejs').upvote({id: 6628, callback: callback});
 		
-		$.post(ajaxurl,{"action":"pinglun_zan","postid":6575},function(data){  
+		$.post(ajaxurl,{"action":"pinglun_zan","postid":6628},function(data){  
 			$(data).each(function(key,value) {
 				$("#runoobvote-id-" + value.commid + " .upvote").addClass(value.upvotejs_class);
 				$("#runoobvote-id-" + value.commid + " .downvote").addClass(value.downvote_class);
@@ -738,7 +673,7 @@ function isBlank(str) {
 	<div class="sidebar-box sidebar-cate">
 		
 		<div class="sidebar-tree">
-			<ul><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> HTML / CSS</a><ul class="double-li"><li><a title="HTML 教程" href="html-tutorial.html">HTML 教程</a></li><li><a title="HTML5 教程" href="html5-intro.html">HTML5 教程</a></li><li><a title="CSS 教程" href="css-tutorial.html">CSS 教程</a></li><li><a title="CSS3 教程" href="css3-tutorial.html">CSS3 教程</a></li><li><a title="Bootstrap3 教程" href="bootstrap-tutorial.html">Bootstrap3 教程</a></li><li><a title="Bootstrap4 教程" href="bootstrap4-tutorial.html">Bootstrap4 教程</a></li><li><a title="Font Awesome 教程" href="fontawesome-tutorial.html">Font Awesome 教程</a></li><li><a title="Foundation 教程" href="foundation-tutorial.html">Foundation 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> JavaScript</a><ul class="double-li"><li><a title="JavaScript 教程" href="js-tutorial.html">JavaScript 教程</a></li><li><a title="HTML DOM 教程" href="htmldom-tutorial.html">HTML DOM 教程</a></li><li><a title="jQuery 教程" href="jquery-tutorial.html">jQuery 教程</a></li><li><a title="AngularJS 教程" href="angularjs-tutorial.html">AngularJS 教程</a></li><li><a title="AngularJS2 教程" href="angularjs2-tutorial.html">AngularJS2 教程</a></li><li><a title="Vue.js 教程" href="vue-tutorial.html">Vue.js 教程</a></li><li><a title="React 教程" href="react-tutorial.html">React 教程</a></li><li><a title="TypeScript 教程" href="ts-tutorial.html">TypeScript 教程</a></li><li><a title="jQuery UI 教程" href="jqueryui-tutorial.html">jQuery UI 教程</a></li><li><a title="jQuery EasyUI 教程" href="jqueryeasyui-tutorial.html">jQuery EasyUI 教程</a></li><li><a title="Node.js 教程" href="nodejs-tutorial.html">Node.js 教程</a></li><li><a title="AJAX 教程" href="ajax-tutorial.html">AJAX 教程</a></li><li><a title="JSON 教程" href="json-tutorial.html">JSON 教程</a></li><li><a title="Echarts 教程" href="echarts-tutorial.html">Echarts 教程</a></li><li><a title="Highcharts 教程" href="highcharts-tutorial.html">Highcharts 教程</a></li><li><a title="Google 地图 教程" href="google-maps-basic.html">Google 地图 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 服务端</a><ul class="double-li"><li><a title="Python 教程" href="python3-tutorial.html">Python 教程</a></li><li><a title="Python2.x 教程" href="python-tutorial.html">Python2.x 教程</a></li><li><a title="Linux 教程" href="linux-tutorial.html">Linux 教程</a></li><li><a title="Docker 教程" href="docker-tutorial.html">Docker 教程</a></li><li><a title="Ruby 教程" href="ruby-tutorial.html">Ruby 教程</a></li><li><a title="Java 教程" href="java-tutorial.html">Java 教程</a></li><li><a title="C 教程" href="c-tutorial.html">C 教程</a></li><li><a title="C++ 教程" href="cpp-tutorial.html">C++ 教程</a></li><li><a title="Perl 教程" href="perl-tutorial.html">Perl 教程</a></li><li><a title="Servlet 教程" href="servlet-tutorial.html">Servlet 教程</a></li><li><a title="JSP 教程" href="jsp-tutorial.html">JSP 教程</a></li><li><a title="Lua 教程" href="lua-tutorial.html">Lua 教程</a></li><li><a title="Scala 教程" href="scala-tutorial.html">Scala 教程</a></li><li><a title="Go 教程" href="go-tutorial.html">Go 教程</a></li><li><a title="PHP 教程" href="php-tutorial.html">PHP 教程</a></li><li><a title="Django 教程" href="django-tutorial.html">Django 教程</a></li><li><a title="设计模式" href="design-pattern-tutorial.html">设计模式</a></li><li><a title="正则表达式" href="regexp-tutorial.html">正则表达式</a></li><li><a title="Maven 教程" href="maven-tutorial.html">Maven 教程</a></li><li><a title="NumPy 教程" href="numpy-tutorial.html">NumPy 教程</a></li><li><a title="ASP 教程" href="asp-tutorial.html">ASP 教程</a></li><li><a title="AppML 教程" href="appml-tutorial.html">AppML 教程</a></li><li><a title="VBScript 教程" href="vbscript-tutorial.html">VBScript 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 数据库</a><ul class="double-li"><li><a title="SQL 教程" href="sql-tutorial.html">SQL 教程</a></li><li><a title="Mysql 教程" href="mysql-tutorial.html">Mysql 教程</a></li><li><a title="PostgreSQL 教程" href="postgresql-tutorial.html">PostgreSQL 教程</a></li><li><a title="SQLite 教程" href="sqlite-tutorial.html">SQLite 教程</a></li><li><a title="MongoDB 教程" href="mongodb-tutorial.html">MongoDB 教程</a></li><li><a title="Redis 教程" href="redis-tutorial.html">Redis 教程</a></li><li><a title="Memcached 教程" href="memcached-tutorial.html">Memcached 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 移动端</a><ul class="double-li"><li><a title="Android 教程" href="android-tutorial-intro.html">Android 教程</a></li><li><a title="Swift 教程" href="swift-tutorial.html">Swift 教程</a></li><li><a title="jQuery Mobile 教程" href="jquerymobile-tutorial.html">jQuery Mobile 教程</a></li><li><a title="ionic 教程" href="ionic-tutorial.html">ionic 教程</a></li><li><a title="Kotlin 教程" href="kotlin-tutorial.html">Kotlin 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> XML 教程</a><ul class="double-li"><li><a title="XML 教程" href="xml-tutorial.html">XML 教程</a></li><li><a title="DTD 教程" href="dtd-tutorial.html">DTD 教程</a></li><li><a title="XML DOM 教程" href="dom-tutorial.html">XML DOM 教程</a></li><li><a title="XSLT 教程" href="xsl-tutorial.html">XSLT 教程</a></li><li><a title="XPath 教程" href="xpath-tutorial.html">XPath 教程</a></li><li><a title="XQuery 教程" href="xquery-tutorial.html">XQuery 教程</a></li><li><a title="XLink 教程" href="xlink-tutorial.html">XLink 教程</a></li><li><a title="XPointer 教程" href="xlink-tutorial.html">XPointer 教程</a></li><li><a title="XML Schema 教程" href="schema-tutorial.html">XML Schema 教程</a></li><li><a title="XSL-FO 教程" href="xslfo-tutorial.html">XSL-FO 教程</a></li><li><a title="SVG 教程" href="svg-tutorial.html">SVG 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> ASP.NET</a><ul class="double-li"><li><a title="ASP.NET 教程" href="aspnet-tutorial.html">ASP.NET 教程</a></li><li><a title="C# 教程" href="">C# 教程</a></li><li><a title="Web Pages 教程" href="webpages-intro.html">Web Pages 教程</a></li><li><a title="Razor 教程" href="razor-intro.html">Razor 教程</a></li><li><a title="MVC 教程" href="mvc-intro.html">MVC 教程</a></li><li><a title="Web Forms 教程" href="aspnet-intro.html">Web Forms 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> Web Service</a><ul class="double-li"><li><a title="Web Service 教程" href="webservices-tutorial.html">Web Service 教程</a></li><li><a title="WSDL 教程" href="wsdl-tutorial.html">WSDL 教程</a></li><li><a title="SOAP 教程" href="soap-tutorial.html">SOAP 教程</a></li><li><a title="RSS 教程" href="rss-tutorial.html">RSS 教程</a></li><li><a title="RDF 教程" href="rdf-tutorial.html">RDF 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 开发工具</a><ul class="double-li"><li><a title="Eclipse 教程" href="eclipse-tutorial.html">Eclipse 教程</a></li><li><a title="Git 教程" href="git-tutorial.html">Git 教程</a></li><li><a title="Svn 教程" href="svn-tutorial.html">Svn 教程</a></li><li><a title="Markdown 教程" href="md-tutorial.html">Markdown 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 网站建设</a><ul class="double-li"><li><a title="HTTP 教程" href="http-tutorial.html">HTTP 教程</a></li><li><a title="网站建设指南" href="web-buildingprimer.html">网站建设指南</a></li><li><a title="浏览器信息" href="browser-information.html">浏览器信息</a></li><li><a title="网站主机教程" href="hosting-tutorial.html">网站主机教程</a></li><li><a title="TCP/IP 教程" href="tcpip-tutorial.html">TCP/IP 教程</a></li><li><a title="W3C 教程" href="w3c-tutorial.html">W3C 教程</a></li><li><a title="网站品质" href="quality-tutorial.html">网站品质</a></li></ul></li></ul>			</div>
+			<ul><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> HTML / CSS</a><ul class="double-li"><li><a title="HTML 教程" href="html-tutorial.html">HTML 教程</a></li><li><a title="HTML5 教程" href="html5-intro.html">HTML5 教程</a></li><li><a title="CSS 教程" href="css-tutorial.html">CSS 教程</a></li><li><a title="CSS3 教程" href="css3-tutorial.html">CSS3 教程</a></li><li><a title="Bootstrap3 教程" href="bootstrap-tutorial.html">Bootstrap3 教程</a></li><li><a title="Bootstrap4 教程" href="bootstrap4-tutorial.html">Bootstrap4 教程</a></li><li><a title="Font Awesome 教程" href="fontawesome-tutorial.html">Font Awesome 教程</a></li><li><a title="Foundation 教程" href="foundation-tutorial.html">Foundation 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> JavaScript</a><ul class="double-li"><li><a title="JavaScript 教程" href="js-tutorial.html">JavaScript 教程</a></li><li><a title="HTML DOM 教程" href="htmldom-tutorial.html">HTML DOM 教程</a></li><li><a title="jQuery 教程" href="jquery-tutorial.html">jQuery 教程</a></li><li><a title="AngularJS 教程" href="angularjs-tutorial.html">AngularJS 教程</a></li><li><a title="AngularJS2 教程" href="angularjs2-tutorial.html">AngularJS2 教程</a></li><li><a title="Vue.js 教程" href="vue-tutorial.html">Vue.js 教程</a></li><li><a title="React 教程" href="react-tutorial.html">React 教程</a></li><li><a title="TypeScript 教程" href="ts-tutorial.html">TypeScript 教程</a></li><li><a title="jQuery UI 教程" href="jqueryui-tutorial.html">jQuery UI 教程</a></li><li><a title="jQuery EasyUI 教程" href="jqueryeasyui-tutorial.html">jQuery EasyUI 教程</a></li><li><a title="Node.js 教程" href="nodejs-tutorial.html">Node.js 教程</a></li><li><a title="AJAX 教程" href="ajax-tutorial.html">AJAX 教程</a></li><li><a title="JSON 教程" href="json-tutorial.html">JSON 教程</a></li><li><a title="Echarts 教程" href="echarts-tutorial.html">Echarts 教程</a></li><li><a title="Highcharts 教程" href="highcharts-tutorial.html">Highcharts 教程</a></li><li><a title="Google 地图 教程" href="google-maps-basic.html">Google 地图 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 服务端</a><ul class="double-li"><li><a title="Python 教程" href="python3-tutorial.html">Python 教程</a></li><li><a title="Python2.x 教程" href="python-tutorial.html">Python2.x 教程</a></li><li><a title="Linux 教程" href="linux-tutorial.html">Linux 教程</a></li><li><a title="Docker 教程" href="docker-tutorial.html">Docker 教程</a></li><li><a title="Ruby 教程" href="ruby-tutorial.html">Ruby 教程</a></li><li><a title="Java 教程" href="java-tutorial.html">Java 教程</a></li><li><a title="C 教程" href="c-tutorial.html">C 教程</a></li><li><a title="C++ 教程" href="cpp-tutorial.html">C++ 教程</a></li><li><a title="Perl 教程" href="perl-tutorial.html">Perl 教程</a></li><li><a title="Servlet 教程" href="servlet-tutorial.html">Servlet 教程</a></li><li><a title="JSP 教程" href="jsp-tutorial.html">JSP 教程</a></li><li><a title="Lua 教程" href="lua-tutorial.html">Lua 教程</a></li><li><a title="Scala 教程" href="scala-tutorial.html">Scala 教程</a></li><li><a title="Go 教程" href="go-tutorial.html">Go 教程</a></li><li><a title="PHP 教程" href="php-tutorial.html">PHP 教程</a></li><li><a title="Django 教程" href="django-tutorial.html">Django 教程</a></li><li><a title="设计模式" href="design-pattern-tutorial.html">设计模式</a></li><li><a title="正则表达式" href="regexp-tutorial.html">正则表达式</a></li><li><a title="Maven 教程" href="maven-tutorial.html">Maven 教程</a></li><li><a title="NumPy 教程" href="numpy-tutorial.html">NumPy 教程</a></li><li><a title="ASP 教程" href="asp-tutorial.html">ASP 教程</a></li><li><a title="AppML 教程" href="appml-tutorial.html">AppML 教程</a></li><li><a title="VBScript 教程" href="vbscript-tutorial.html">VBScript 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 数据库</a><ul class="double-li"><li><a title="SQL 教程" href="sql-tutorial.html">SQL 教程</a></li><li><a title="Mysql 教程" href="mysql-tutorial.html">Mysql 教程</a></li><li><a title="PostgreSQL 教程" href="postgresql-tutorial.html">PostgreSQL 教程</a></li><li><a title="SQLite 教程" href="sqlite-tutorial.html">SQLite 教程</a></li><li><a title="MongoDB 教程" href="mongodb-tutorial.html">MongoDB 教程</a></li><li><a title="Redis 教程" href="redis-tutorial.html">Redis 教程</a></li><li><a title="Memcached 教程" href="memcached-tutorial.html">Memcached 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 移动端</a><ul class="double-li"><li><a title="Android 教程" href="android-tutorial-intro.html">Android 教程</a></li><li><a title="Swift 教程" href="swift-tutorial.html">Swift 教程</a></li><li><a title="jQuery Mobile 教程" href="jquerymobile-tutorial.html">jQuery Mobile 教程</a></li><li><a title="ionic 教程" href="ionic-tutorial.html">ionic 教程</a></li><li><a title="Kotlin 教程" href="kotlin-tutorial.html">Kotlin 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> XML 教程</a><ul class="double-li"><li><a title="XML 教程" href="xml-tutorial.html">XML 教程</a></li><li><a title="DTD 教程" href="dtd-tutorial.html">DTD 教程</a></li><li><a title="XML DOM 教程" href="dom-tutorial.html">XML DOM 教程</a></li><li><a title="XSLT 教程" href="xsl-tutorial.html">XSLT 教程</a></li><li><a title="XPath 教程" href="xpath-tutorial.html">XPath 教程</a></li><li><a title="XQuery 教程" href="xquery-tutorial.html">XQuery 教程</a></li><li><a title="XLink 教程" href="xlink-tutorial.html">XLink 教程</a></li><li><a title="XPointer 教程" href="xlink-tutorial.html">XPointer 教程</a></li><li><a title="XML Schema 教程" href="schema-tutorial.html">XML Schema 教程</a></li><li><a title="XSL-FO 教程" href="xslfo-tutorial.html">XSL-FO 教程</a></li><li><a title="SVG 教程" href="svg-tutorial.html">SVG 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> ASP.NET</a><ul class="double-li"><li><a title="ASP.NET 教程" href="aspnet-tutorial.html">ASP.NET 教程</a></li><li><a title="C# 教程" href="csharp-tutorial.html">C# 教程</a></li><li><a title="Web Pages 教程" href="webpages-intro.html">Web Pages 教程</a></li><li><a title="Razor 教程" href="razor-intro.html">Razor 教程</a></li><li><a title="MVC 教程" href="mvc-intro.html">MVC 教程</a></li><li><a title="Web Forms 教程" href="aspnet-intro.html">Web Forms 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> Web Service</a><ul class="double-li"><li><a title="Web Service 教程" href="webservices-tutorial.html">Web Service 教程</a></li><li><a title="WSDL 教程" href="wsdl-tutorial.html">WSDL 教程</a></li><li><a title="SOAP 教程" href="soap-tutorial.html">SOAP 教程</a></li><li><a title="RSS 教程" href="rss-tutorial.html">RSS 教程</a></li><li><a title="RDF 教程" href="rdf-tutorial.html">RDF 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 开发工具</a><ul class="double-li"><li><a title="Eclipse 教程" href="eclipse-tutorial.html">Eclipse 教程</a></li><li><a title="Git 教程" href="git-tutorial.html">Git 教程</a></li><li><a title="Svn 教程" href="svn-tutorial.html">Svn 教程</a></li><li><a title="Markdown 教程" href="md-tutorial.html">Markdown 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit"> 网站建设</a><ul class="double-li"><li><a title="HTTP 教程" href="http-tutorial.html">HTTP 教程</a></li><li><a title="网站建设指南" href="web-buildingprimer.html">网站建设指南</a></li><li><a title="浏览器信息" href="browser-information.html">浏览器信息</a></li><li><a title="网站主机教程" href="hosting-tutorial.html">网站主机教程</a></li><li><a title="TCP/IP 教程" href="tcpip-tutorial.html">TCP/IP 教程</a></li><li><a title="W3C 教程" href="w3c-tutorial.html">W3C 教程</a></li><li><a title="网站品质" href="quality-tutorial.html">网站品质</a></li></ul></li></ul>			</div>
 	
 	</div>
 	</div>
@@ -762,7 +697,7 @@ function isBlank(str) {
 </div>
 
 <script>
-var aid = 6575;
+var aid = 6628;
 function coll() {
 	$.post( '/wp-content/themes/runoob/option/user/userinfo.php', {aid:aid, action:"collarticle", opt:'add'},function( data ) {
 		if(data.error==0) {
