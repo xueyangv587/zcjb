@@ -118,7 +118,7 @@
 				Bootstrap—switch开关控件	</a>
 				<a target="_top" href="bootstrap-tooltip提示工具插件.html">
 					Bootstrap-tooltip提示工具插件	</a>
-					<a target="_top" href="bootstrap-tooltip提示工具插件.html">
+					<a target="_top" href="bootstrap弹窗-Modal插件.html">
 						Bootstrap弹窗-Modal插件	</a>
 	<!-- <a target="_top" href="javascript:;">
 		Bootstrap 网格系统	</a>
@@ -264,24 +264,38 @@
 				</ol>
 			</div>
 			<div>
-				<h3>配置项</h3>
-				<img src="img/图片6.png" alt="">
+				<h3>产品实例</h3>
+				<p>此实例来自爱康项目中数据看板的一个提交窗口。					</p>
+				<img src="img/产品实例.png" alt="">
 			</div>
 			<div>
-				<h3>方法</h3>
-				<p style="color: red;font-size: 18px;">注：上图的配置项可以直接通过data属性调用，下图的方法则需要使用js配置。
-					</p>
-					<img src="img/图片7.png" alt="">
+				<h3>代码讲解</h3>
+				<ol>
+					<li>使用模态窗口，您需要有某种触发器。此实例为按钮触发。						</li>
+					<li>
+							在模态框中需要注意两点：
+							<p>第一是 .modal，用来把 &lt;div&gt; 的内容识别为模态框。</p>
+							<p>第二是 .fade class。当模态框被切换时，它会引起内容淡入淡出。</p>						
+					</li>
+					<li>aria-labelledby="myModalLabel"，该属性引用模态框的标题。						</li>
+					<li>属性 aria-hidden="true" 用于保持模态窗口不可见，直到触发器被触发为止（比如点击在相关的按钮上）。						</li>
+					<li>&lt;div class="modal-header"&gt;，modal-header 是为模态窗口的头部定义样式的类。						</li>
+					<li>class="close"，close 是一个 CSS class，用于为模态窗口的关闭按钮设置样式。						</li>
+					<li>data-dismiss="modal"，是一个自定义的 HTML5 data 属性。在这里它被用于关闭模态窗口。						</li>
+					<li>class="modal-body"，是 Bootstrap CSS 的一个 CSS class，用于为模态窗口的主体设置样式。						</li>
+					<li>class="modal-footer"，是 Bootstrap CSS 的一个 CSS class，用于为模态窗口的底部设置样式。						</li>
+					<li>data-toggle="modal"，HTML5 自定义的 data 属性 data-toggle 用于打开模态窗口。						</li>
+				</ol>
 			</div>
 			<div>
-				<h3>在调用方法时可用到的事件					</h3>
-				<img src="img/图片8.png" alt="">
-			</div>
-			<div>
-				<h3>效果展示</h3>
-				<img src="img/效果展示1.png" alt="">
-				<img src="img/效果展示2.png" alt="">
-				<img src="img/效果展示3.png" alt="">
+				<h3>注意事项					</h3>
+				<ol>
+					<li>实例中未使用js环节，是因为#myModal在引用的框架js中有生成。若换成其他id，或者一个页面多个弹窗时需写入js：
+							$('#identifier').modal(options)
+						</li>
+					<li>公司虽然采用Bootstarp框架，但大多数的弹窗仍然采用的layui，请根据实际情况选用。
+						</li>
+				</ol>
 			</div>
 		</div>
 		<!-- 笔记列表 -->
