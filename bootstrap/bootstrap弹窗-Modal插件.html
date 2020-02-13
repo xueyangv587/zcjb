@@ -246,17 +246,22 @@
 		</div>
 		<h3>弹窗效果图</h3>
 			<div>
-				<img src="" alt="">
+				<img src="img/弹窗效果图.png" alt="">
 			</div>
-			<h3>代码示例</h3>
+			<h3>插件用法</h3>
 			<div>
-				<p>
-					<h3>方法一:</h3>通过 data 属性：如需添加一个提示工具（tooltip），只需向一个锚标签添加 data-toggle=“tooltip” 即可。
-				</p>
-				<p>
-						<h3>方法二:</h3>$('#identifier').tooltip(options)
-					</p>
-					<img src="img/图片5.png" alt="">
+				<ol>
+					<li>引用Bootstarp插件的js。					</li>
+					<li>
+						<p>
+								通过 data 属性：在控制器元素（比如按钮或者链接）上设置属性 data-toggle="modal"，同时设置 data-target="# identifier " 或 href="# identifier " 来指定要切换的特定的模态框（带有 id=" identifier "）。
+						</p>
+						<p>
+								通过 JavaScript：使用这种技术，您可以通过简单的一行 JavaScript 来调用带有 id="identifier" 的模态框：
+								$('#identifier').modal(options)						
+						</p>
+					</li>
+				</ol>
 			</div>
 			<div>
 				<h3>配置项</h3>
