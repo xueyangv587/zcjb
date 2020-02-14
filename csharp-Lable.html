@@ -4,12 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta property="qc:admins" content="465267610762567726375">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>C# 结构体（Struct） | 菜鸟教程</title>
+	<title>C# 变量 | 菜鸟教程</title>
 
   
-<link rel="canonical" href="http://www.runoob.com/csharp/csharp-struct.html">
-<meta name="keywords" content="C# 结构体（Struct）">
-<meta name="description" content="C# 结构体（Struct）   在 C# 中，结构体是值类型数据结构。它使得一个单一变量可以存储各种数据类型的相关数据。struct 关键字用于创建结构体。 结构体是用来代表一个记录。假设您想跟踪图书馆中书的动态。您可能想跟踪每本书的以下属性：  Title Author Subject Book ID    定义结构体 为了定义一个结构体，您必须使用 struct 语句。struct 语句为程序定义了一个带有多个成员的新的数据类型。..">
+<link rel="canonical" href="http://www.runoob.com/csharp/csharp-variables.html">
+<meta name="keywords" content="C# 变量">
+<meta name="description" content="C# 变量   一个变量只不过是一个供程序操作的存储区的名字。在 C# 中，每个变量都有一个特定的类型，类型决定了变量的内存大小和布局。范围内的值可以存储在内存中，可以对变量进行一系列操作。 我们已经讨论了各种数据类型。C# 中提供的基本的值类型大致可以分为以下几类：  类型举例 整数类型sbyte、byte、short、ushort、int、uint、long、ulong 和 char 浮点型float 和 double 十进制类型d..">
 		
 	
 	<link rel="stylesheet" href="static/css/style-1.154.css" type="text/css" media="all">	
@@ -73,7 +73,7 @@
 				<li><a href="mysql-tutorial.html">MySQL</a></li>
 				<li><a href="php-tutorial.html">PHP</a></li>
 				
-				<li><a href="browser-history.html">本地书签</a></li>
+				<li><a href="../browser-history.html">本地书签</a></li>
 				<!--
 					<li><a style="font-weight:bold;" href="https://www.runoob.com/linux/linux-cloud-server.html" target="_blank" onclick="_hmt.push(['_trackEvent', 'aliyun', 'click', 'aliyun'])"  title="kkb">云服务器</a></li>
 			
@@ -137,7 +137,7 @@
 			C# 数组（Array）			</a>
 						<a target="_top" title="C# 字符串（String）" href="csharp-string.html">
 			C# 字符串（String）			</a>
-						<a target="_top" title="C# 结构体（Struct）" href="">
+						<a target="_top" title="C# 结构体（Struct）" href="csharp-struct.html">
 			C# 结构体（Struct）			</a>
 						<a target="_top" title="C# 枚举（Enum）" href="csharp-enum.html">
 			C# 枚举（Enum）			</a>
@@ -205,195 +205,115 @@
 		
 		</div>
 		<div class="previous-next-links">
-			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-string.html');" rel="prev"> C# 字符串（String）</a> </div>
-			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-enum.html');" rel="next"> C# 枚举（Enum）</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-type-conversion.html');" rel="prev"> C# 类型转换</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-constants.html');" rel="next"> C# 常量</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
 		<div class="article-body">
 		
 			<div class="article-intro" id="content">
 			
-			<h1>C# <span class="color_h1">结构体（Struct）</span></h1>
+			<h1>C# <span class="color_h1">变量</span></h1>
 
 <div class="tutintro">
-<p>在 C# 中，结构体是值类型数据结构。它使得一个单一变量可以存储各种数据类型的相关数据。<b>struct</b> 关键字用于创建结构体。</p>
-<p>结构体是用来代表一个记录。假设您想跟踪图书馆中书的动态。您可能想跟踪每本书的以下属性：</p>
-<ul class="list">
-<li>Title</li>
-<li>Author</li>
-<li>Subject</li>
-<li>Book ID</li>
-</ul>
+<p>一个变量只不过是一个供程序操作的存储区的名字。在 C# 中，每个变量都有一个特定的类型，类型决定了变量的内存大小和布局。范围内的值可以存储在内存中，可以对变量进行一系列操作。</p>
+<p>我们已经讨论了各种数据类型。C# 中提供的基本的值类型大致可以分为以下几类：</p>
+<table class="reference notranslate">
+<tr><th style="width:25%;">类型</th><th>举例</th></tr>
+<tr><td>整数类型</td><td>sbyte、byte、short、ushort、int、uint、long、ulong 和 char</td></tr>
+<tr><td>浮点型</td><td>float 和 double</td></tr>
+<tr><td>十进制类型</td><td>decimal</td></tr>
+<tr><td>布尔类型</td><td>true 或 false 值，指定的值</td></tr>
+<tr><td>空类型</td><td>可为空值的数据类型</td></tr>
+</table>
+<p>C# 允许定义其他值类型的变量，比如 <b>enum</b>，也允许定义引用类型变量，比如 <b>class</b>。这些我们将在以后的章节中进行讨论。在本章节中，我们只研究基本变量类型。</p>
 </div>
 
-<h2 class="tutheader">定义结构体</h2>
-<p>为了定义一个结构体，您必须使用 struct 语句。struct 语句为程序定义了一个带有多个成员的新的数据类型。</p> 
-<p>例如，您可以按照如下的方式声明 Book 结构：</p>
-<pre>
-struct Books
-{
-   public string title;
-   public string author;
-   public string subject;
-   public int book_id;
-};  
+<h2 class="tutheader">C# 中的变量定义</h2>
+<p>C# 中变量定义的语法：</p>
+<pre class="prettyprint">
+&lt;data_type&gt; &lt;variable_list&gt;;
 </pre>
-<p>下面的程序演示了结构的用法：</p>
+<p>在这里，data_type 必须是一个有效的 C# 数据类型，可以是 char、int、float、double 或其他用户自定义的数据类型。variable_list 可以由一个或多个用逗号分隔的标识符名称组成。</p>
+<p>一些有效的变量定义如下所示：</p>
+<pre>
+int i, j, k;
+char c, ch;
+float f, salary;
+double d;
+</pre>
+<p>您可以在变量定义时进行初始化：</p>
+<pre>
+int i = 100;
+</pre>
+<h2 class="tutheader">C# 中的变量初始化</h2>
+<p>变量通过在等号后跟一个常量表达式进行初始化（赋值）。初始化的一般形式为：</p>
+<pre>
+variable_name = value;
+</pre>
+<p>变量可以在声明时被初始化（指定一个初始值）。初始化由一个等号后跟一个常量表达式组成，如下所示：</p>
+<pre class="prettyprint">
+&lt;data_type&gt; &lt;variable_name&gt; = value;
+</pre>
+<p>一些实例：</p>
+<pre>
+int d = 3, f = 5;    /* 初始化 d 和 f. */
+byte z = 22;         /* 初始化 z. */
+double pi = 3.14159; /* 声明 pi 的近似值 */
+char x = 'x';        /* 变量 x 的值为 'x' */
+</pre>
+<p>正确地初始化变量是一个良好的编程习惯，否则有时程序会产生意想不到的结果。</p>
+<p>请看下面的实例，使用了各种类型的变量：</p>
 <div class="example"> 
 <h2 class="example">实例</h2> 
 <div class="example_code">
 
-<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
-<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System.Text</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp;<br>
-<span style="color: #6666cc; font-weight: bold;">struct</span> Books<br>
+<span style="color: #05a; font-weight: bold;">namespace</span> VariableDefinition<br>
 <span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> title<span style="color: #008000;">;</span><br>
-&nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> author<span style="color: #008000;">;</span><br>
-&nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">string</span> subject<span style="color: #008000;">;</span><br>
-&nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">int</span> book_id<span style="color: #008000;">;</span><br>
-<span style="color: #008000;">&#125;</span><span style="color: #008000;">;</span> &nbsp;<br>
+&nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">class</span> Program<br>
+&nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#123;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">short</span> a<span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">int</span> b <span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #6666cc; font-weight: bold;">double</span> c<span style="color: #008000;">;</span><br>
 <br>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> testStructure<br>
-<span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
-&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
-<br>
-&nbsp; &nbsp; &nbsp; Books Book1<span style="color: #008000;">;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #696969; font-style: italic;">/* 声明 Book1，类型为 Book */</span><br>
-&nbsp; &nbsp; &nbsp; Books Book2<span style="color: #008000;">;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #696969; font-style: italic;">/* 声明 Book2，类型为 Book */</span><br>
-<br>
-&nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* book 1 详述 */</span><br>
-&nbsp; &nbsp; &nbsp; Book1<span style="color: #008000;">.</span><span style="color: #05a;">title</span> <span style="color: #008000;">=</span> <span style="color: #a11;">&quot;C Programming&quot;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Book1<span style="color: #008000;">.</span><span style="color: #05a;">author</span> <span style="color: #008000;">=</span> <span style="color: #a11;">&quot;Nuha Ali&quot;</span><span style="color: #008000;">;</span> <br>
-&nbsp; &nbsp; &nbsp; Book1<span style="color: #008000;">.</span><span style="color: #05a;">subject</span> <span style="color: #008000;">=</span> <span style="color: #a11;">&quot;C Programming Tutorial&quot;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Book1<span style="color: #008000;">.</span><span style="color: #05a;">book_id</span> <span style="color: #008000;">=</span> <span style="color: Maroon;">6495407</span><span style="color: #008000;">;</span><br>
-<br>
-&nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* book 2 详述 */</span><br>
-&nbsp; &nbsp; &nbsp; Book2<span style="color: #008000;">.</span><span style="color: #05a;">title</span> <span style="color: #008000;">=</span> <span style="color: #a11;">&quot;Telecom Billing&quot;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Book2<span style="color: #008000;">.</span><span style="color: #05a;">author</span> <span style="color: #008000;">=</span> <span style="color: #a11;">&quot;Zara Ali&quot;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Book2<span style="color: #008000;">.</span><span style="color: #05a;">subject</span> <span style="color: #008000;">=</span> &nbsp;<span style="color: #a11;">&quot;Telecom Billing Tutorial&quot;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Book2<span style="color: #008000;">.</span><span style="color: #05a;">book_id</span> <span style="color: #008000;">=</span> <span style="color: Maroon;">6495700</span><span style="color: #008000;">;</span><br>
-<br>
-&nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 打印 Book1 信息 */</span><br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span> <span style="color: #a11;">&quot;Book 1 title : {0}&quot;</span>, Book1<span style="color: #008000;">.</span><span style="color: #05a;">title</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Book 1 author : {0}&quot;</span>, Book1<span style="color: #008000;">.</span><span style="color: #05a;">author</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Book 1 subject : {0}&quot;</span>, Book1<span style="color: #008000;">.</span><span style="color: #05a;">subject</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Book 1 book_id :{0}&quot;</span>, Book1<span style="color: #008000;">.</span><span style="color: #05a;">book_id</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-<br>
-&nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 打印 Book2 信息 */</span><br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Book 2 title : {0}&quot;</span>, Book2<span style="color: #008000;">.</span><span style="color: #05a;">title</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Book 2 author : {0}&quot;</span>, Book2<span style="color: #008000;">.</span><span style="color: #05a;">author</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Book 2 subject : {0}&quot;</span>, Book2<span style="color: #008000;">.</span><span style="color: #05a;">subject</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Book 2 book_id : {0}&quot;</span>, Book2<span style="color: #008000;">.</span><span style="color: #05a;">book_id</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> &nbsp; &nbsp; &nbsp; <br>
-<br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-<br>
-&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 实际初始化 */</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a <span style="color: #008000;">=</span> <span style="color: Maroon;">10</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b <span style="color: #008000;">=</span> <span style="color: Maroon;">20</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c <span style="color: #008000;">=</span> a <span style="color: #008000;">+</span> b<span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;a = {0}, b = {1}, c = {2}&quot;</span>, a, b, c<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadLine</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
+&nbsp; &nbsp; <span style="color: #008000;">&#125;</span><br>
 <span style="color: #008000;">&#125;</span><br>
 
 </div>
 </div>
 <p>当上面的代码被编译和执行时，它会产生下列结果：</p>
 <pre>
-Book 1 title : C Programming
-Book 1 author : Nuha Ali
-Book 1 subject : C Programming Tutorial
-Book 1 book_id : 6495407
-Book 2 title : Telecom Billing
-Book 2 author : Zara Ali
-Book 2 subject : Telecom Billing Tutorial
-Book 2 book_id : 6495700
+a = 10, b = 20, c = 30
 </pre>
-
-<h2 class="tutheader">C# 结构的特点</h2>
-<p>您已经用了一个简单的名为 Books 的结构。在 C# 中的结构与传统的 C 或 C++ 中的结构不同。C# 中的结构有以下特点：</p>
-<ul class="list">
-<li>结构可带有方法、字段、索引、属性、运算符方法和事件。</li>
-<li>结构可定义构造函数，但不能定义析构函数。但是，您不能为结构定义无参构造函数。无参构造函数(默认)是自动定义的，且不能被改变。</li>
-<li>与类不同，结构不能继承其他的结构或类。</li>
-<li>结构不能作为其他结构或类的基础结构。</li>
-<li>结构可实现一个或多个接口。</li>
-<li>结构成员不能指定为 abstract、virtual 或 protected。</li>
-<li>当您使用 <b>New</b> 操作符创建一个结构对象时，会调用适当的构造函数来创建结构。与类不同，结构可以不使用 New 操作符即可被实例化。</li>
-<li>如果不使用 New 操作符，只有在所有的字段都被初始化之后，字段才被赋值，对象才被使用。</li>
-</ul>
-
-<h2 class="tutheader">类 vs 结构</h2>
-<p>类和结构有以下几个基本的不同点：</p>
-<ul class="list">
-<li>类是引用类型，结构是值类型。</li>
-<li>结构不支持继承。</li>
-<li>结构不能声明默认的构造函数。</li>
-</ul>
-<p>针对上述讨论，让我们重写前面的实例：</p>
-<div class="example"> 
-<h2 class="example">实例</h2> 
-<div class="example_code">
-
-<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System</span><span style="color: #008000;">;</span><br>
-<span style="color: #05a; font-weight: bold;">using</span> <span style="color: #696969;">System.Text</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp;<br>
-<span style="color: #6666cc; font-weight: bold;">struct</span> Books<br>
-<span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">private</span> <span style="color: #6666cc; font-weight: bold;">string</span> title<span style="color: #008000;">;</span><br>
-&nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">private</span> <span style="color: #6666cc; font-weight: bold;">string</span> author<span style="color: #008000;">;</span><br>
-&nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">private</span> <span style="color: #6666cc; font-weight: bold;">string</span> subject<span style="color: #008000;">;</span><br>
-&nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">private</span> <span style="color: #6666cc; font-weight: bold;">int</span> book_id<span style="color: #008000;">;</span><br>
-&nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">void</span> getValues<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span> t, <span style="color: #6666cc; font-weight: bold;">string</span> a, <span style="color: #6666cc; font-weight: bold;">string</span> s, <span style="color: #6666cc; font-weight: bold;">int</span> id<span style="color: #008000;">&#41;</span><br>
-&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; &nbsp; title <span style="color: #008000;">=</span> t<span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; author <span style="color: #008000;">=</span> a<span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; subject <span style="color: #008000;">=</span> s<span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; book_id <span style="color: #008000;">=</span>id<span style="color: #008000;">;</span> <br>
-&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
-&nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">void</span> display<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><br>
-&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Title : {0}&quot;</span>, title<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Author : {0}&quot;</span>, author<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Subject : {0}&quot;</span>, subject<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">WriteLine</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Book_id :{0}&quot;</span>, book_id<span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
-<br>
-<span style="color: #008000;">&#125;</span><span style="color: #008000;">;</span> &nbsp;<br>
-<br>
-<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #6666cc; font-weight: bold;">class</span> testStructure<br>
-<span style="color: #008000;">&#123;</span><br>
-&nbsp; &nbsp;<span style="color: #05a; font-weight: bold;">public</span> <span style="color: #05a; font-weight: bold;">static</span> <span style="color: #6666cc; font-weight: bold;">void</span> Main<span style="color: #008000;">&#40;</span><span style="color: #6666cc; font-weight: bold;">string</span><span style="color: #008000;">&#91;</span><span style="color: #008000;">&#93;</span> args<span style="color: #008000;">&#41;</span><br>
-&nbsp; &nbsp;<span style="color: #008000;">&#123;</span><br>
-<br>
-&nbsp; &nbsp; &nbsp; Books Book1 <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Books<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">/* 声明 Book1，类型为 Book */</span><br>
-&nbsp; &nbsp; &nbsp; Books Book2 <span style="color: #008000;">=</span> <span style="color: #008000;">new</span> Books<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> <span style="color: #696969; font-style: italic;">/* 声明 Book2，类型为 Book */</span><br>
-<br>
-&nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* book 1 详述 */</span><br>
-&nbsp; &nbsp; &nbsp; Book1<span style="color: #008000;">.</span><span style="color: #05a;">getValues</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;C Programming&quot;</span>,<br>
-&nbsp; &nbsp; &nbsp; <span style="color: #a11;">&quot;Nuha Ali&quot;</span>, <span style="color: #a11;">&quot;C Programming Tutorial&quot;</span>,<span style="color: Maroon;">6495407</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-<br>
-&nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* book 2 详述 */</span><br>
-&nbsp; &nbsp; &nbsp; Book2<span style="color: #008000;">.</span><span style="color: #05a;">getValues</span><span style="color: #008000;">&#40;</span><span style="color: #a11;">&quot;Telecom Billing&quot;</span>,<br>
-&nbsp; &nbsp; &nbsp; <span style="color: #a11;">&quot;Zara Ali&quot;</span>, <span style="color: #a11;">&quot;Telecom Billing Tutorial&quot;</span>, <span style="color: Maroon;">6495700</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-<br>
-&nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 打印 Book1 信息 */</span><br>
-&nbsp; &nbsp; &nbsp; Book1<span style="color: #008000;">.</span><span style="color: #05a;">display</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-<br>
-&nbsp; &nbsp; &nbsp; <span style="color: #696969; font-style: italic;">/* 打印 Book2 信息 */</span><br>
-&nbsp; &nbsp; &nbsp; Book2<span style="color: #008000;">.</span><span style="color: #05a;">display</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span> <br>
-<br>
-&nbsp; &nbsp; &nbsp; Console<span style="color: #008000;">.</span><span style="color: #05a;">ReadKey</span><span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span><span style="color: #008000;">;</span><br>
-<br>
-&nbsp; &nbsp;<span style="color: #008000;">&#125;</span><br>
-<span style="color: #008000;">&#125;</span><br>
-
-</div>
-</div>
-<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<h2 class="tutheader">接受来自用户的值</h2>
+<b>System</b> 命名空间中的 <b>Console</b> 类提供了一个函数 <b>ReadLine()</b>，用于接收来自用户的输入，并把它存储到一个变量中。 
+<p>例如：</p>
 <pre>
-Title : C Programming
-Author : Nuha Ali
-Subject : C Programming Tutorial
-Book_id : 6495407
-Title : Telecom Billing
-Author : Zara Ali
-Subject : Telecom Billing Tutorial
-Book_id : 6495700
+int num;
+num = Convert.ToInt32(Console.ReadLine());
+</pre>
+<p>函数 <b>Convert.ToInt32()</b> 把用户输入的数据转换为 int 数据类型，因为 <b>Console.ReadLine()</b> 只接受字符串格式的数据。</p> 
+<h2 class="tutheader">C# 中的 Lvalues 和 Rvalues</h2>
+<p>C# 中的两种表达式：</p>
+<ol class="list">
+<li><p><b>lvalue</b>：lvalue 表达式可以出现在赋值语句的左边或右边。</p></li>
+<li><p><b>rvalue</b>：rvalue 表达式可以出现在赋值语句的右边，不能出现在赋值语句的左边。</p></li>
+</ol>
+<p>变量是 lvalue 的，所以可以出现在赋值语句的左边。数值是 rvalue 的，因此不能被赋值，不能出现在赋值语句的左边。下面是一个有效的语句：</p>
+<pre>
+int g = 20;
+</pre>
+<p>下面是一个无效的语句，会产生编译时错误：</p>
+<pre>
+10 = 20;
 </pre>			<!-- 其他扩展 -->
 						
 			</div>
@@ -401,8 +321,8 @@ Book_id : 6495700
 		</div>
 		
 		<div class="previous-next-links">
-			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-string.html');" rel="prev"> C# 字符串（String）</a> </div>
-			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-enum.html');" rel="next"> C# 枚举（Enum）</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
+			<div class="previous-design-link"><i style="font-size:16px;" class="fa fa-arrow-left" aria-hidden="true"></i> <a href="javascript:window.open('http://www.runoob.com/csharp/csharp-type-conversion.html');" rel="prev"> C# 类型转换</a> </div>
+			<div class="next-design-link"><a href="javascript:window.open('http://www.runoob.com/csharp/csharp-constants.html');" rel="next"> C# 常量</a> <i style="font-size:16px;" class="fa fa-arrow-right" aria-hidden="true"></i></div>
 		</div>
 		<!-- 笔记列表 -->
 		<style>
@@ -507,50 +427,64 @@ Book_id : 6495700
 <div class="title" id="comments">
 	<h2 class="">
     <div class="altblock">
-		    	<i style="font-size:28px;margin-top: 8px;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-    	    </div>
-    <span class="mw-headline" id="qa_headline">2  篇笔记</span>
+				<i style="font-size:28px;margin-top: 8px;" class="fa fa-plus-square" aria-hidden="true"></i>
+		    </div>
+    <span class="mw-headline" id="qa_headline">3  篇笔记</span>
 	<span class="mw-headline" id="user_add_note" style="float:right;line-height: 62px;padding-right: 14px;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>  写笔记</span>
     </h2>
 </div>
 
-<div id="postcomments">
+<div id="postcomments" style="display:none;">
 	<ol class="commentlist">
-		<li class="comment even thread-even depth-1" id="comment-26399"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;轩哥</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;104***4136@qq.com</p></div><div id="runoobvote-id-26399" data-commid="26399" class="upvotejs"><a class="upvote"></a> <span class="count">36</span></div></div><div class="comt-main" id="div-comment-26399"><p data-title="C# 类与结构体的区别">补充：类与结构体的区别</p>
+		<li class="comment even thread-even depth-1" id="comment-25738"><span class="comt-f">#3</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ZPK4229</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;zha***ngkunwork@163.com</p></div><div id="runoobvote-id-25738" data-commid="25738" class="upvotejs"><a class="upvote"></a> <span class="count">16</span></div></div><div class="comt-main" id="div-comment-25738"><p>不同类型变量进行运算的问题：</p>
 
-<p>1、结构体中声明的字段无法赋予初值，类可以:</p>
 
-<pre>struct test001
-{
-    private int aa = 1;
+<pre>double a = 42.29;
+int b = 4229;
+int c = a + b;
+Console.WriteLine("c = {0}",c);
+Console.ReadKey();</pre>
+
+
+<p>上面这种编程方法是错误的，会出现错误提示：</p>
+<pre>"无法将类型'double'隐式转换为'int'。"</pre>
+
+<p>举例说明，当一个精度高的数据类型与一个精度低的数据类型进行运算时，定义运算结果的变量类型必须与精度最高的变量类型相同。这是为了防止在运算过程中造成数据丢失。</p>
+<p>下面是正确代码：</p>
+
+
+<pre>double a = 42.29;
+int b = 4229;
+double c = a + b;
+Console.WriteLine("c = {0}",c);
+Console.ReadKey();</pre>
+
+
+<p>能输出运算结果：</p>
+
+<pre>c = 4271.29</pre><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">ZPK4229</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ZPK4229</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;zha***ngkunwork@163.com</p></div></span>2年前 (2018-03-30)</div></div></li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-29161"><span class="comt-f">#2</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Sorari</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Sor***@live.cn</p></div><div id="runoobvote-id-29161" data-commid="29161" class="upvotejs"><a class="upvote"></a> <span class="count">14</span></div></div><div class="comt-main" id="div-comment-29161"><p><strong>关于静态变量</strong></p>
+
+<p>在 C# 中没有全局变量的概念，所有变量必须由该类的实例进行操作，这样做提升了安全性，但是在某些情况下却显得力不从心。</p>
+
+<p>因此，我们在保存一些类的公共信息时，就会使用静态变量。</p>
+
+<pre>static &lt;data_type&gt; &lt;variable_name&gt; = value;</pre>
+<p>在变量之前加上 static 关键字，即可声明为静态变量。</p>
+
+<div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Sorari</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Sorari</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Sor***@live.cn</p></div></span>2年前 (2018-07-05)</div></div></li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-36323"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Mouron</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Mou***@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://www.runoob.com/w3cnote/csharp-init-variable.html');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-36323" data-commid="36323" class="upvotejs"><a class="upvote"></a> <span class="count">8</span></div></div><div class="comt-main" id="div-comment-36323"><p>方法的局部变量必须在代码中显式初始化，之后才能在语句中使用它们的值。此时，初始化不是在声明该变量时进行的，但编译器会通过方法检查所有可能的路径，如果检测到局部变量在初始化之前就使用了它的值，就会产生错误。</p>
+
+<p>例如：</p>  
+<pre>public static int Main(){
+    int d;
+    Console.WriteLine(d);
 }</pre>
+<p>在这段代码中，演示了如何定义 Main()，使之返回一个 int 类型的数据，而不是 void。但在编译这些代码时，会得到下面的错误消息：</p>
 
-<p>执行以上代码将出现“<strong>结构中不能实例属性或字段初始值设定</strong>”的报错，而类中无此限制，代码如下：</p>
+<pre> Use of unassigned local variable 'd' </pre>
 
-<pre>class test002
-{
-    private int aa = 1;
-}</pre>
-
-<p>2、结构体的构造函数中，必须为结构体所有字段赋值，类的构造函数无此限制:</p>
-
-<p><strong>补充：类与结构的选择</strong></p>
-
-<p>首先明确，类的对象是存储在堆空间中，结构存储在栈中。堆空间大，但访问速度较慢，栈空间小，访问速度相对更快。故而，当我们描述一个轻量级对象的时候，结构可提高效率，成本更低。当然，这也得从需求出发，假如我们在传值的时候希望传递的是对象的引用地址而不是对象的拷贝，就应该使用类了。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:window.open('https://www.runoob.com/note/26399');">轩哥</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;轩哥</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;104***4136@qq.com</p></div></span>2年前 (2018-04-17)</div></div></li><!-- #comment-## -->
-<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-28203"><span class="comt-f">#1</span><div class="comt-avatar wrapper"><i style="font-size:36px;" class="fa fa-user-circle" aria-hidden="true"></i><div class="tooltip"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;King</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;136***0456@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://zhidao.baidu.com/question/92095348.html');">&nbsp;&nbsp;参考地址</a></p></div><div id="runoobvote-id-28203" data-commid="28203" class="upvotejs"><a class="upvote"></a> <span class="count">29</span></div></div><div class="comt-main" id="div-comment-28203"><p data-title="C# 结构类型和类类型的区别">C# 中结构类型和类类型在语法上非常相似，他们都是一种数据结构，都可以包括数据成员和方法成员。</p>
-<p><strong>结构和类的区别：</strong></p>
-<ul><li>1、结构是值类型，它在栈中分配空间；而类是引用类型，它在堆中分配空间，栈中保存的只是引用。
-</li><li>2、结构类型直接存储成员数据，让其他类的数据位于堆中，位于栈中的变量保存的是指向堆中数据对象的引用。</li></ul>
-<p>C# 中的简单类型，如int、double、bool等都是结构类型。如果需要的话，甚至可以使用结构类型结合运算符运算重载，再为 C# 语言创建出一种新的值类型来。</p>
-<p>由于结构是值类型，并且直接存储数据，因此在一个对象的主要成员为数据且数据量不大的情况下，使用结构会带来更好的性能。</p>
-<p>因为结构是值类型，因此在为结构分配内存，或者当结构超出了作用域被删除时，性能会非常好，因为他们将内联或者保存在堆栈中。当把一个结构类型的变量赋值给另一个结构时，对性能的影响取决于结构的大小，如果结构的数据成员非常多而且复杂，就会造成损失，接下来使用一段代码来说明这个问题。</p>
-<p>结构和类的适用场合分析：</p>
-<ul><li>
-1、当堆栈的空间很有限，且有大量的逻辑对象时，创建类要比创建结构好一些；
-</li><li>
-2、对于点、矩形和颜色这样的轻量对象，假如要声明一个含有许多个颜色对象的数组，则CLR需要为每个对象分配内存，在这种情况下，使用结构的成本较低；
-</li><li>3、在表现抽象和多级别的对象层次时，类是最好的选择，因为结构不支持继承。
-</li><li>4、大多数情况下，目标类型只是含有一些数据，或者以数据为主。</li></ul><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:window.open('https://www.runoob.com/note/28203');">King</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;King</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;136***0456@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://zhidao.baidu.com/question/92095348.html');">&nbsp;&nbsp;参考地址</a></p></div></span>2年前 (2018-06-08)</div></div></li><!-- #comment-## -->
+<p>正确的做法是初始化它 <span class="marked">int d = 0</span> 或者其他值。</p><div class="comt-meta wrapper"><span class="comt-author"><a target="_blank" href="javascript:;">Mouron</a><div class="tooltip tooltip1"><p><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Mouron</p><p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;Mou***@qq.com</p><p><i class="fa fa-external-link" aria-hidden="true"></i> <a rel="nofollow" target="_blank" href="javascript:window.open('https://www.runoob.com/w3cnote/csharp-init-variable.html');">&nbsp;&nbsp;参考地址</a></p></div></span>1年前 (2018-10-27)</div></div></li><!-- #comment-## -->
 	</ol>
 	<div class="pagenav">
 			</div>
@@ -575,7 +509,7 @@ Book_id : 6495700
 			<div id="mded"></div>
 			
 				<div class="comt-ctrl">
-					<div class="comt-tips"><input type='hidden' name='comment_post_ID' value='6636' id='comment_post_ID'>
+					<div class="comt-tips"><input type='hidden' name='comment_post_ID' value='6585' id='comment_post_ID'>
 <input type='hidden' name='comment_parent' id='comment_parent' value='0'>
 </div>
 					<button type="submit" name="submit" id="submit" tabindex="5"><i class="fa fa-pencil" aria-hidden="true"></i> 分享笔记</button>
@@ -643,7 +577,7 @@ $(function() {
 		// 系列化表单数据
 		var comment_parent = 0;
 		var is_user_logged_in = $("#is_user_logged_in").val();
-		var comment_post_ID =  6636;
+		var comment_post_ID =  6585;
 		var _wp_unfiltered_html_comment = $("#_wp_unfiltered_html_comment").val();
 		var comment = noteContent;
 		var author = $("#author").val();
@@ -731,9 +665,9 @@ $(function() {
 		}
 	};
 	if($('#comments').length){
-		$('.upvotejs').upvote({id: 6636, callback: callback});
+		$('.upvotejs').upvote({id: 6585, callback: callback});
 		
-		$.post(ajaxurl,{"action":"pinglun_zan","postid":6636},function(data){  
+		$.post(ajaxurl,{"action":"pinglun_zan","postid":6585},function(data){  
 			$(data).each(function(key,value) {
 				$("#runoobvote-id-" + value.commid + " .upvote").addClass(value.upvotejs_class);
 				$("#runoobvote-id-" + value.commid + " .downvote").addClass(value.downvote_class);
@@ -841,7 +775,7 @@ function isBlank(str) {
 </div>
 
 <script>
-var aid = 6636;
+var aid = 6585;
 function coll() {
 	$.post( '/wp-content/themes/runoob/option/user/userinfo.php', {aid:aid, action:"collarticle", opt:'add'},function( data ) {
 		if(data.error==0) {
